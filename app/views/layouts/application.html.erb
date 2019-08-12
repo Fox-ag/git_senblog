@@ -12,6 +12,20 @@
   <body>
     <%= render partial: 'common/header' %>
     <%= bootstrap_flash %>
+    
+     <header class="header">
+      <div class="header__bar row">
+        <h1 class="grid-6"><a href="/">Applicationhtmlページ</a></h1>
+        <div class="user_nav grid-6">
+          <a class="post" href="/blogs/new">投稿する</a>
+        </div>
+      </div>
+    </header>
+
+    
     <%= yield %>
+    <footer class = 'row text-center'>
+      <p>(C) Senblog 2019</p>
+    </footer>
   </body>
 </html>
