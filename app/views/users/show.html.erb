@@ -5,5 +5,10 @@
     <p><%= "#{@user.birthdate}" %></p>
     <p><%= "#{@user.country}" %></p>
     <p><%= "#{@user.city}" %></p>
+    <% if current_user.id == @user.id %>
+      <div class="profile_edit">
+        <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
+      </div>
+    <% end %>
   </div>
 </div>
