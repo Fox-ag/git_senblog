@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
+    
+    def mypage
+         @blogs = Blog.where(user_id: current_user.id).page(params[:page]).per(5)
+    end
+    
     def show
         @user = User.find(params[:id])
     end
+    
     def edit
         
     end
