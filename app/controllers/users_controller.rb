@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     
     def mypage
          @blogs = Blog.where(user_id: current_user.id).page(params[:page]).per(5)
+          @journals = Journal.where(user_id: current_user.id).page(params[:page]).per(5)
     end
     
     def show

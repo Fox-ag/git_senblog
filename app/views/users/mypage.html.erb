@@ -3,6 +3,10 @@
     
       <%= simple_format(blog.text) %>
     
-    </div>
-  <% end %>
+    <% end %>
+     <% @journals.each do |journal| %>
+    
+      <%= simple_format(journal.text) %>
+    
+    <% end %>
 </div>
