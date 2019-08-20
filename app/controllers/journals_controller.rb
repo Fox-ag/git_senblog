@@ -4,7 +4,7 @@ class JournalsController < ApplicationController
     end
     
     def create
-        Journal.create(journal_params)
+        Journal.create(user_name: journal_params[:user_name], image: journal_params[:image], text: journal_params[:text], user_id: current_user.id)
     end
     
     private

@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
     end
     
     def create
-        Blog.create(blog_params)
+        Blog.create(user_name: blog_params[:user_name], image: blog_params[:image], text: blog_params[:text], user_id: current_user.id)
     end
     
     private

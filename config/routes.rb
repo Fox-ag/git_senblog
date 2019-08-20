@@ -7,8 +7,6 @@ Rails.application.routes.draw do
         get 'mypage'
       end
     end
-    get 'blogs' => 'blogs#index'
-    get 'blogs/new' => 'blogs#new'
-    post 'blogs' => 'blogs#create'
-    resources :journals
+    resources :blogs,  only: [:new, :create]
+    resources :journals, only: [:new, :create]
 end
