@@ -7,6 +7,6 @@ Rails.application.routes.draw do
         get 'mypage'
       end
     end
-    resources :blogs,  only: [:new, :create]
-    resources :journals, only: [:new, :create]
+    resources :blogs,  only: [:index, :new, :create, :destroy]
+    resources :journals, only: [:new, :create, :destroy]
 end

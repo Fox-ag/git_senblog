@@ -10,6 +10,13 @@ class BlogsController < ApplicationController
         Blog.create(user_name: blog_params[:user_name], image: blog_params[:image], text: blog_params[:text], user_id: current_user.id)
     end
     
+    def destroy
+       blog = Blog.find(params[:id])
+       if blog.user_id == current_user.id
+           blog.destroy
+       end
+    end
+    
     private
     def blog_params
         params.permit(:user_name, :image, :text)
