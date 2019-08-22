@@ -1,22 +1,17 @@
 <div class="mypage">
-    
-    <% @blogs.each do |blog| %>
-    
-    <% if user_signed_in? && current_user.id == blog.user_id %>
-        <%= link_to '削除', "/blogs/#{blog.id}", method: :delete %>
-        <li><%= link_to "ブログを削除する", blog_path(current_user) %></li>
-    <% end %>
-    
-      <%= simple_format(blog.text) %>
-    
-    <% end %>
-     <% @journals.each do |journal| %>
-     
-      <% if user_signed_in? && current_user.id == journal.user_id %>
-        <%= link_to '削除', "/journals/#{journal.id}", method: :delete %>
-      <% end %>
-    
-      <%= simple_format(journal.text) %>
-    
-    <% end %>
+    <div class="mypage_contents">
+            <% @blogs.each do |blog| %>
+                    <% if user_signed_in? && current_user.id == blog.user_id %>
+                        <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
+                    <% end %>
+              <%= simple_format(blog.text) %>
+            <% end %>
+            
+             <% @journals.each do |journal| %>
+                    <% if user_signed_in? && current_user.id == journal.user_id %>
+                        <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>
+                    <% end %>
+              <%= simple_format(journal.text) %>
+            <% end %>
+    </div>
 </div>
