@@ -14,6 +14,17 @@ class JournalsController < ApplicationController
        end
     end
     
+    def edit
+        @journal = Journal.find(params[:id])
+    end
+    
+    def update
+        journal = Journal.find(params[:id])
+        if journal.user_id == current_user.id
+            journal.update(journal_params)
+        end
+    end
+    
     private
     def journal_params
         params.permit(:user_name, :title, :text)

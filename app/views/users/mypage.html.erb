@@ -2,6 +2,7 @@
     <div class="mypage_contents">
             <% @blogs.each do |blog| %>
                     <% if user_signed_in? && current_user.id == blog.user_id %>
+                        <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>
                         <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
                     <% end %>
               <%= simple_format(blog.title) %>
@@ -10,6 +11,7 @@
             
              <% @journals.each do |journal| %>
                     <% if user_signed_in? && current_user.id == journal.user_id %>
+                        <%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %>
                         <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>
                     <% end %>
               <%= simple_format(journal.title) %>
