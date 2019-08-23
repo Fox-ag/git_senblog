@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :confirmable
   has_many :blogs
   has_many :journals
+  
+  has_one_attached :image
 end

@@ -100,3 +100,12 @@ html {
   line-height: 50px;
   letter-spacing: 0.1em;
 }
+
+  .image {
+    background-position: center center;
+    background-size: cover;
+    min-height: 200px;
+    height: 100%;
+    width: 200px;
+    float: left;
+  }
