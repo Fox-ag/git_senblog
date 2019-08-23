@@ -3,12 +3,9 @@
       <% @blogs.each do |blog| %>
              <div class="article"> 
                 <div class="article-text">
+                    <%= simple_format(blog.title) %>
                     <%= simple_format(blog.text) %>
-                    <span class="name"><%= blog.user_name %></span>
-                </div>
-                
-                <div class="article-image" style="background-image: url(<%= blog.image %>);"></div>
-                <div class="image">
+                    <span class="name"><%= blog.user.nickname%></span>
                 </div>
              </div>
       <% end %>

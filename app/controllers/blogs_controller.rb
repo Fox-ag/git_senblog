@@ -7,7 +7,7 @@ class BlogsController < ApplicationController
     end
     
     def create
-        Blog.create(user_name: blog_params[:user_name], image: blog_params[:image], text: blog_params[:text], user_id: current_user.id)
+        Blog.create(user_name: blog_params[:user_name], title: blog_params[:title], text: blog_params[:text], user_id: current_user.id)
     end
     
     def destroy
@@ -19,6 +19,6 @@ class BlogsController < ApplicationController
     
     private
     def blog_params
-        params.permit(:user_name, :image, :text)
+        params.permit(:user_name, :title, :text)
     end
 end

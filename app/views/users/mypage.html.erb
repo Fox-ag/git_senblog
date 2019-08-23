@@ -4,6 +4,7 @@
                     <% if user_signed_in? && current_user.id == blog.user_id %>
                         <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
                     <% end %>
+              <%= simple_format(blog.title) %>
               <%= simple_format(blog.text) %>
             <% end %>
             
@@ -11,6 +12,7 @@
                     <% if user_signed_in? && current_user.id == journal.user_id %>
                         <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>
                     <% end %>
+              <%= simple_format(journal.title) %>
               <%= simple_format(journal.text) %>
             <% end %>
     </div>

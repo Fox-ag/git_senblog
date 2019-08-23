@@ -4,7 +4,7 @@ class JournalsController < ApplicationController
     end
     
     def create
-        Journal.create(user_name: journal_params[:user_name], image: journal_params[:image], text: journal_params[:text], user_id: current_user.id)
+        Journal.create(user_name: journal_params[:user_name], title: journal_params[:title], text: journal_params[:text], user_id: current_user.id)
     end
     
     def destroy
@@ -16,6 +16,6 @@ class JournalsController < ApplicationController
     
     private
     def journal_params
-        params.permit(:user_name, :image, :text)
+        params.permit(:user_name, :title, :text)
     end
 end
