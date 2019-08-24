@@ -4,6 +4,7 @@
                     <% if user_signed_in? && current_user.id == blog.user_id %>
                         <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>
                         <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
+                        <%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %>
                     <% end %>
               <%= simple_format(blog.title) %>
               <%= simple_format(blog.text) %>
@@ -13,6 +14,7 @@
                     <% if user_signed_in? && current_user.id == journal.user_id %>
                         <%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %>
                         <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>
+                        <%= link_to '詳細', "/journals/#{journal.id}", method: :get %>
                     <% end %>
               <%= simple_format(journal.title) %>
               <%= simple_format(journal.text) %>

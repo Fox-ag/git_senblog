@@ -3,6 +3,10 @@ class JournalsController < ApplicationController
     def new
     end
     
+    def show
+        @journal = Journal.find(params[:id])
+    end
+    
     def create
         Journal.create(user_name: journal_params[:user_name], title: journal_params[:title], text: journal_params[:text], user_id: current_user.id)
     end

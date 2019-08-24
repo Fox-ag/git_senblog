@@ -1,0 +1,24 @@
+<div class="contents row">
+    
+    <% if user_signed_in? && current_user.id == @journal.user_id %>
+      <div class="more">
+        <span><%= image_tag 'arrow_top.png' %></span>
+        <ul class="more_list">
+          <li>
+            <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>
+          </li>
+          <li>
+            <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+    <%= simple_format(@journal.title) %>
+    <%= simple_format(@journal.text) %>
+    <span class="name">
+      <a href="/users/<%= @journal.user.id %>">
+        <span>投稿者</span><%= @journal.user.nickname %>
+      </a>
+    </span>
+ 
+</div>

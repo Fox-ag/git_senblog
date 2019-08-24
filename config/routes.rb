@@ -7,6 +7,10 @@ Rails.application.routes.draw do
         get 'mypage'
       end
     end
-    resources :blogs,  only: [:index, :new, :create, :destroy, :edit, :update]
-    resources :journals, only: [:new, :create, :destroy, :edit, :update]
+    resources :blogs,  only: [:index, :new, :create, :destroy, :edit, :update, :show] do
+      member do
+        get 'detailpage'
+      end
+    end
+    resources :journals, only: [:new, :create, :destroy, :edit, :update, :show]
 end

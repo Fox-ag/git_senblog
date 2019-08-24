@@ -3,7 +3,15 @@ class BlogsController < ApplicationController
         @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
     end
     
+    def detailpage
+        @blog = Blog.find(params[:id])
+    end
+    
     def new
+    end
+    
+    def show
+        @blog = Blog.find(params[:id])
     end
     
     def create
