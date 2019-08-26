@@ -1,10 +1,12 @@
 class Journal < ApplicationRecord
-    # after_create :create_feed_content
-    belongs_to :user
-    # has_one :feed_content, as: :content, dependent: :destroy
+    after_create :create_feed_content
     
-    # private
-    # def create_feed_content
-    #     self.feed_content = FeedContent.create(update_at: updated_at)
-    # end
+    
+    belongs_to :user
+    has_one :feed_content, as: :content, dependent: :destroy
+    
+    private
+    def create_feed_content
+        self.feed_content = FeedContent.create(user_id: user_id, updated_at: updated_at)
+    end
 end

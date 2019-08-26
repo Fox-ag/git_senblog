@@ -2,7 +2,7 @@
     <div class="mypage_contents">
            
             
-             <% @journals.each do |journal| %>
+            
                     <% if user_signed_in? && current_user.id == journal.user_id %>
                         <%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %>
                         <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>
@@ -10,7 +10,6 @@
                     <% end %>
               <%= simple_format(journal.title) %>
               <%= simple_format(journal.text) %>
-            <% end %>
             
         
     </div>

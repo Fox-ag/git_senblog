@@ -7,5 +7,5 @@ class User < ApplicationRecord
   has_many :journals
   
   has_one_attached :image
-  # has_many :feed_contents, ->{ order("updated_at DESC") }
+  has_many :feed_contents, ->{ order("updated_at DESC") }
 end
