@@ -11,6 +11,14 @@
       <% if @blog.image_url %>
     <%= image_tag @blog.image_url %>
  <% end %>
+ 
+       <% if current_user.already_liked?(@blog) %>
+  <%= button_to 'いいねを取り消す', blog_like_path(@blog), method: :delete %>
+<% else %>
+  <%= button_to 'いいね', blog_likes_path(@blog) %>
+<% end %>
+<h3>いいね件数: <%= @blog.likes.count %></h3>
+ 
     <span class="name">
       <a href="/users/<%= @blog.user.id %>">
         <span>投稿者</span><%= @blog.user.nickname %>
