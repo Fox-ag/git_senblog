@@ -2,6 +2,9 @@ class Blog < ApplicationRecord
     after_create :create_feed_content
     
     
+    mount_uploader :image, ImageUploader
+    
+    
     belongs_to :user
     has_one :feed_content, as: :content, dependent: :destroy
 

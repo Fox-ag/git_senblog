@@ -1,6 +1,7 @@
 class BlogsController < ApplicationController
     def index
         @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
+      
     end
     
     def detailpage
@@ -8,6 +9,7 @@ class BlogsController < ApplicationController
     end
     
     def new
+        @blog = Blog.new
     end
     
     def show
@@ -15,7 +17,8 @@ class BlogsController < ApplicationController
     end
     
     def create
-        Blog.create(user_name: blog_params[:user_name], title: blog_params[:title], text: blog_params[:text], user_id: current_user.id)
+        Blog.create(user_name: blog_params[:user_name], title: blog_params[:title], text: blog_params[:text], user_id: current_user.id, image: blog_params[:image])
+       
     end
     
     def destroy
@@ -38,6 +41,6 @@ class BlogsController < ApplicationController
     
     private
     def blog_params
-        params.permit(:user_name, :title, :text)
+        params.require(:blog).permit(:user_name, :title, :text, :image)
     end
 end

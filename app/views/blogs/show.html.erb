@@ -11,6 +11,10 @@
             <%= link_to '削除しちゃおう', "/blogs/#{@blog.id}", method: :delete %>
           </li>
         </ul>
+          <% if @blog.image_url %>
+          <%= image_tag @blog.image_url %>
+          <% end %>
+         
       </div>
     <% end %>
     <%= simple_format(@blog.title) %>

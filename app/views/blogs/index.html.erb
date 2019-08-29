@@ -5,5 +5,13 @@
       <span class="name"><%= blog.user_name %></span>
     </div>
   <% end %>
+  <p>
+  <strong>Image:</strong>
+  <% if @blog.image? %>
+    <div class="thumbnail">
+      <%= image_tag @blog.image.url %>
+    </div>
+  <% end %>
+</p>
   <%= paginate(@blogs) %>
 </div>

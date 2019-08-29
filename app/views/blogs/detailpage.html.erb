@@ -8,6 +8,9 @@
     <% end %>
     <%= simple_format(@blog.title) %>
     <%= simple_format(@blog.text) %>
+      <% if @blog.image_url %>
+    <%= image_tag @blog.image_url %>
+ <% end %>
     <span class="name">
       <a href="/users/<%= @blog.user.id %>">
         <span>投稿者</span><%= @blog.user.nickname %>

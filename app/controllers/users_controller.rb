@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     
     def mypage
-         @blogs = Blog.where(user_id: current_user.id).page(params[:page]).per(5)
+         @blogs = Blog.where(user_id: current_user.id)
           @journals = Journal.where(user_id: current_user.id).page(params[:page]).per(5)
          feed_contents = current_user.feed_contents.includes(:content)
         @feed_contents = feed_contents.map(&:content)
