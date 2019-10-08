@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       member do
         get 'detailpage'
       end
+      resources :likes, only: [:create, :destroy]
     end
     resources :journals, only: [:new, :create, :destroy, :edit, :update, :show]
 end

@@ -4,6 +4,9 @@ class Blog < ApplicationRecord
     
     belongs_to :user
     has_one :feed_content, as: :content, dependent: :destroy
+    
+    has_many :likes
+    has_many :liked_users, through: :likes, source: :user
 
     private
     def create_feed_content

@@ -12,6 +12,7 @@ class BlogsController < ApplicationController
     
     def show
         @blog = Blog.find(params[:id])
+        @like = Like.new
     end
     
     def create
