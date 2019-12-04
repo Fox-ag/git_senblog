@@ -1,4 +1,8 @@
-<% if user_signed_in? %>
+<!--<header class="header">-->
+<!--      <div class="header_main"><h1 class="grid-6"><a href="/">Senblog</a></h1></div>-->
+<!--      <div class="header__bar">-->
+
+<!--<% if user_signed_in? %>-->
   <!--<div class='navbar navbar-default navbar-fixed-top'>-->
   <!--  <div class='container'>-->
       <!--<button type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-responsive-collapse'>-->
@@ -9,15 +13,15 @@
       <!--<%= link_to root_path, :class => 'navbar-brand' do %>-->
       <!--  <%= image_tag 'logo.png' %> <small class='hidden-xs hidden-sm'>ヘッダーだよ！</small>-->
       <!--<% end %>-->
-      <div class='nav__bar'>
-        <ul class='options'>
-          <li><%= link_to 'Timeline', root_path %></li>
-          <li><%= link_to "マイページ", mypage_user_path(current_user) %></li>
-          <li><%= link_to "ブログ投稿", new_blog_path %></li>
-          <li><%= link_to "日記を書く", new_journal_path %></li>
-          <li><%= link_to "プロフィール", user_path(current_user) %></li>
-          <li><%= link_to "プロフィール編集", edit_user_path(current_user) %></li>
-          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+<!--      <div class='nav__bar'>-->
+<!--        <ul class='options'>-->
+<!--          <li><%= link_to 'Timeline', root_path %></li>-->
+<!--          <li><%= link_to "マイページ", mypage_user_path(current_user) %></li>-->
+<!--          <li><%= link_to "ブログ投稿", new_blog_path %></li>-->
+<!--          <li><%= link_to "日記を書く", new_journal_path %></li>-->
+<!--          <li><%= link_to "プロフィール", user_path(current_user) %></li>-->
+<!--          <li><%= link_to "プロフィール編集", edit_user_path(current_user) %></li>-->
+<!--          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>-->
           
           <!--User after learning Javascript-->
           <!--<li class="dropdown">-->
@@ -35,8 +39,34 @@
           <!--    <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>-->
           <!--  </ul>-->
           <!--</li>-->
-        </ul>
-      </div>
+<!--        </ul>-->
+<!--      </div>-->
   <!--  </div>-->
   <!--</div>-->
-<% end %>
+<!--<% end %>-->
+<!-- </div>-->
+<!--        <%= bootstrap_flash %>-->
+<!--</header>-->
+
+
+<!-- ここから下が新ヘッダー -->
+<div>
+  <% if user_signed_in? %>
+<div class="section-13">
+    <div class="div-block-17">
+      <h1><a href="/">Sen</a></h1>
+    </div>
+    <div class="div-block-18">
+      <div class="text-block-13"><%= link_to 'Timeline', root_path %></div>
+        <div class="text-block-15"><%= link_to "マイページ", mypage_user_path(current_user) %></div>
+        <div class="text-block-15"><%= link_to "ブログ投稿", new_blog_path %></div>
+        <div class="text-block-15"><%= link_to "日記を書く", new_journal_path %></div>
+        <div class="text-block-15"><%= link_to "プロフィール", user_path(current_user) %></div>
+        <div class="text-block-15"><%= link_to "プロフィール編集", edit_user_path(current_user) %></div>
+        <div class="text-block-15"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+    </div>
+  </div>
+  <% end %>  
+  <%= bootstrap_flash %>
+</div>
+  <!-- ここから上が新ヘッダー -->

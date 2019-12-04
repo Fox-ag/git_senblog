@@ -14,18 +14,43 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header_main"><h1 class="grid-6"><a href="/">Senblog</a></h1></div>
-      <div class="header__bar">
+    <!--古いヘッダーは輸出済み　ここから下-->
+    <!--<header class="header">-->
+    <!--  <div class="header_main"><h1 class="grid-6"><a href="/">Senblog</a></h1></div>-->
+    <!--  <div class="header__bar">-->
         <%= render partial: 'common/header' %>
-      </div>
-        <%= bootstrap_flash %>
-    </header>
+    <!--  </div>-->
+    <!--    <%= bootstrap_flash %>-->
+    <!--</header>-->
+    <!--古いヘッダーは輸出済み　ここから上-->
 
     <%= yield %>
 
-    <footer class = "footer">
-      <p>Copyright © 2012-2019 TECHTREE All Rights Reserved.</p>
-    </footer>
-  </body>
+    <!-- ここから旧フッターはじまり -->
+    <!--<footer class = "footer">-->
+    <!--  <p>Copyright © 2012-2019 TECHTREE All Rights Reserved.</p>-->
+    <!--</footer>-->
+    <!-- ここまで旧フッターおわり -->
+    
+    
+    <!-- ここから新フッターのカスタムはじまり -->
+    <div class="section-7">
+      <div class="text-block-11">Copyright @ 2019 Sen All Rights Reserved.</div>
+    </div>
+    <!-- ここまで新フッターのカスタムおわり -->
+    
+    
+  <!--</body>-->
+  
+  <!-- ここからヘッダーのカスタムはじまり -->
+  <!--<body>-->
+  
+  
+  
+　</body>
+　<!-- ここまでヘッダーのカスタムおわり -->
+  
+  
+  
+  
 </html>

@@ -1,19 +1,53 @@
+<%= stylesheet_link_tag "stylesheets/users", :media => "all" %>
 <div class="row form user_profile">
   <div class="col-lg-12">
-   <% if nil? %>
-    <div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
-   <% else %>
-   
-   <% end %>
-    <h2><%= "#{@user.family_name}#{@user.first_name}" %><span><%= "#{@user.family_name_kana}#{@user.first_name_kana}" %></span></h2>
-    <p><%= "#{@user.nickname}" %></p>
-    <p><%= "#{@user.birthdate}" %></p>
-    <p><%= "#{@user.country}" %></p>
-    <p><%= "#{@user.city}" %></p>
-    <% if current_user.id == @user.id %>
-      <div class="profile_edit">
-        <%= link_to "プロフィール編集", edit_user_path(current_user), {:class => "btn btn-primary withripple" }%>
+  
+    <!--<div class="image" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>-->
+  
+    <!--<h2><%= "#{@user.family_name}#{@user.first_name}" %><span><%= "#{@user.family_name_kana}#{@user.first_name_kana}" %></span></h2>-->
+    <!--<p><%= "#{@user.nickname}" %></p>-->
+    <!--<p><%= "#{@user.birthdate}" %></p>-->
+    <!--<p><%= "#{@user.country}" %></p>-->
+    <!--<p><%= "#{@user.city}" %></p>-->
+    
+    
+    <!--<div>-->
+    <!--<div class="container-18 w-container"><img src="images/Snip20180216_2.png" width="250" srcset="images/Snip20180216_2-p-500.png 500w, images/Snip20180216_2.png 734w" sizes="(max-width: 479px) 100vw, 250px" alt=""></div>-->
+    <!--<div class="container-18 w-container" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>-->
+    <div class="image-profile" style="background-image: url(<%= rails_blob_path(@user.image) %>) "></div>
+  <!--</div>-->
+  <div class="section-11">
+    <div class="div-block-8">
+      <div class="w-layout-grid grid-2">
+        <h2>Last Name</h2>
+        <h2>First Name</h2>
+        <h2><%= "#{@user.family_name}" %></h2>
+        <h2><%= "#{@user.first_name}" %></h2>
       </div>
-    <% end %>
-  </div>
-</div>
+      <div class="div-block-3">
+        <h2>ニックネーム：</h2>
+        <h2 class="heading-16"><%= "#{@user.nickname}" %></h2>
+      </div>
+      <div class="div-block-4">
+        <h3>生年月日：</h3>
+        <h3 class="heading-17"><%= "#{@user.birthdate}" %></h3>
+      </div>
+      <div class="div-block-5">
+        <h3>国籍：</h3>
+        <h3 class="heading-18"><%= "#{@user.country}" %></h3>
+      </div>
+      <div class="div-block-6">
+        <h3>町：</h3>
+        <h3><%= "#{@user.city}" %></h3>
+      </div>
+      <div class="div-block-7">
+        <h3 class="heading-19">自己紹介：</h3>
+        <p class="paragraph-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+      </div>
+    </div>
+ 
+     
+    
+</div>  
+  
+  
