@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
     
     def detailpage
         @blog = Blog.find(params[:id])
+        @like = Like.new
     end
     
     def new
