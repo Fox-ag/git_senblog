@@ -1,17 +1,38 @@
-<div class="contents" >
-  <div class="main-contents">
+<!--<div class="contents" >-->
+<!--  <div class="main-contents">-->
+<!--      <% @blogs.each do |blog| %>-->
+<!--             <div class="article"> -->
+<!--                <div class="article-text">-->
+<!--                    <%= simple_format(blog.title) %>-->
+<!--                    <%= simple_format(blog.text) %>-->
+<!--                   <h3>いいね件数: <%= blog.likes.count %></h3>-->
+<!--                    <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %>-->
+                   
+<!--                </div>-->
+<!--             </div>-->
+<!--      <% end %>-->
+       
+<!--  </div>-->
+<!--</div>-->
+
+<div class="section-120" >
+  <div class="div-block-15">
       <% @blogs.each do |blog| %>
-             <div class="article"> 
-                <div class="article-text">
-                    <%= simple_format(blog.title) %>
-                    <%= simple_format(blog.text) %>
+             
+                <div class="div-block-16">
+                    <h2><%= simple_format(blog.title) %></h2>
+                    <p class="paragraph-4"><%= simple_format(blog.text) %></p>
                    <h3>いいね件数: <%= blog.likes.count %></h3>
                     <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %>
                    
                 </div>
-             </div>
+             
       <% end %>
        
   </div>
 </div>
+
+
+
+
 <%= paginate(@blogs) %>
