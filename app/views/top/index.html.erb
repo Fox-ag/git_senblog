@@ -17,6 +17,12 @@
 
 <div class="section-120" >
   <div class="div-block-15">
+      <%= form_tag('/blogs/search', method: :get) do %>
+                <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value="">
+                <button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
+                <%= submit_tag("Search") %>
+              <% end %>
+      <!--%= link_to 'ブログ検索!', "/blogs/search", method: :get %>-->
       <% @blogs.each do |blog| %>
              
                 <div class="div-block-16">

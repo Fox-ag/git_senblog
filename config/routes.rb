@@ -8,6 +8,9 @@ Rails.application.routes.draw do
       end
     end
     resources :blogs,  only: [:index, :new, :create, :destroy, :edit, :update, :show] do
+      collection do
+        get 'search'
+      end
       member do
         get 'detailpage'
       end

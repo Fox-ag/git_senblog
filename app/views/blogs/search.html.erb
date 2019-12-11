@@ -1,0 +1,37 @@
+<div>
+    <h2 class="text-middle">
+        <i class="icon-movie color-gray-light"></i>検索！
+    </h2>
+    <%= form_tag('/blogs/search', method: :get) do %>
+                <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value="">
+                <button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
+                <%= submit_tag("Search") %>
+              <% end %>
+              <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
+              </form>
+              
+                <% @blogs.each do |blog| %>
+                <li>
+                  <a class="listview__element--right-icon" href="/blogs/<%= blog.id %>/reviews/new" title="<%= blog.title %>">
+                    <div class="position-right p1em">
+                      <i class="icon-chevron-right color-sub"></i>
+                    </div>
+                    <div class="row no-space-bottom">
+                      <div class="col2">
+                        <div class="thumbnail thumbnail--movies">
+                          <div class="thumbnail__figure" title="<%= blog.title %>"></div>
+                        </div>
+                      </div>
+                      <div class="col6 push6">
+                        <h3 class="text-middle text-break">
+                          <span class="color-sub"><%= blog.title %></span>
+                        </h3>
+                        <p class="text-xsmall text-overflow">
+                          <%= blog.text %>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <% end %>
+</div>

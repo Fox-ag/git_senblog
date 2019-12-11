@@ -38,6 +38,10 @@ class BlogsController < ApplicationController
         end
     end
     
+    def search
+        @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%")
+    end
+    
     private
     def blog_params
         params.permit(:user_name, :title, :text)
