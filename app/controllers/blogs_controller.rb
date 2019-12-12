@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
     end
     
     def new
+        @blog = Blog.new
     end
     
     def show
@@ -44,6 +45,6 @@ class BlogsController < ApplicationController
     
     private
     def blog_params
-        params.permit(:user_name, :title, :text)
+        params.require(:blog).permit(:user_name, :title, :text)
     end
 end
