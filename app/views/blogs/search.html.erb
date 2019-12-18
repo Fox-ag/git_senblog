@@ -35,3 +35,14 @@
                 </li>
                 <% end %>
 </div>
+    <h2 class="text-middle">
+        <i class="icon-movie color-gray-light"></i>検索結果！
+    </h2>
+     <% @bloges.each do |bloge| %>
+       <%= bloge.title %>
+       <%= bloge.emotions.map{|emotion_id| Emotion.find(emotion_id.id).feeling}.join(',') %>
+     
+     <% end %>
+<div>
+  
+</div>

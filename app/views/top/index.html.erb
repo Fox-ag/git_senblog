@@ -1,16 +1,16 @@
 <!--<div class="contents" >-->
 <!--  <div class="main-contents">-->
-<!--      <% @blogs.each do |blog| %>-->
+<!--      % @blogs.each do |blog| %>-->
 <!--             <div class="article"> -->
 <!--                <div class="article-text">-->
-<!--                    <%= simple_format(blog.title) %>-->
-<!--                    <%= simple_format(blog.text) %>-->
-<!--                   <h3>いいね件数: <%= blog.likes.count %></h3>-->
-<!--                    <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %>-->
+<!--                    %= simple_format(blog.title) %>-->
+<!--                    %= simple_format(blog.text) %>-->
+<!--                   <h3>いいね件数: %= blog.likes.count %></h3>-->
+<!--                    %= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %>-->
                    
 <!--                </div>-->
 <!--             </div>-->
-<!--      <% end %>-->
+<!--      % end %>-->
        
 <!--  </div>-->
 <!--</div>-->
@@ -22,6 +22,27 @@
                 <button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
                 <%= submit_tag("Search") %>
               <% end %>
+              
+        <!--%= form_for @q, url: '/blogs/search', method: :get do |f| %>-->
+            <!--%= f.collection_check_boxes :favorite_ids, Favorite.all, :id, :name, checked: @form.favorite_ids %>-->
+        
+        <!--    %= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>-->
+        <!--        %= b.label {b.check_box + b.text} %> -->
+        <!--        %= submit_tag("Search") %>-->
+        <!--    % end %>-->
+            
+        <!--% end %>-->
+   
+       <%= search_form_for(@q, url: '/blogs/search') do |f| %>
+            <!--%= f.collection_check_boxes :favorite_ids, Favorite.all, :id, :name, checked: @form.favorite_ids %>-->
+            
+            <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>
+            
+        <%= f.submit("Search") %>
+            
+        <% end %>
+       
+        
       <!--%= link_to 'ブログ検索!', "/blogs/search", method: :get %>-->
       <% @blogs.each do |blog| %>
              
@@ -38,7 +59,4 @@
   </div>
 </div>
 
-
-
-
-<%= paginate(@blogs) %>
+<!--%= paginate(@blogs) %>-->

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_103706) do
+ActiveRecord::Schema.define(version: 2019_12_17_105612) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -33,6 +33,15 @@ ActiveRecord::Schema.define(version: 2019_10_08_103706) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "blog_feelings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "blog_id"
+    t.bigint "emotion_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_blog_feelings_on_blog_id"
+    t.index ["emotion_id"], name: "index_blog_feelings_on_emotion_id"
+  end
+
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_name"
     t.text "text"
@@ -40,6 +49,12 @@ ActiveRecord::Schema.define(version: 2019_10_08_103706) do
     t.datetime "updated_at"
     t.integer "user_id"
     t.string "title"
+  end
+
+  create_table "emotions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "feeling"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "feed_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -93,6 +108,8 @@ ActiveRecord::Schema.define(version: 2019_10_08_103706) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "blog_feelings", "blogs"
+  add_foreign_key "blog_feelings", "emotions"
   add_foreign_key "likes", "blogs"
   add_foreign_key "likes", "users"
 end

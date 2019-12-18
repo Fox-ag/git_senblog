@@ -7,6 +7,10 @@ class Blog < ApplicationRecord
     
     has_many :likes
     has_many :liked_users, through: :likes, source: :user
+    
+    has_many :blog_feelings
+    has_many :emotions, through: :blog_feelings
+    accepts_nested_attributes_for :blog_feelings, allow_destroy: true
 
     private
     def create_feed_content

@@ -43,6 +43,16 @@
             <!--  %= f.check_box :color, {multiple: true}, "blue", nil %>blue-->
             <!--  %= f.check_box :color, {multiple: true}, "brown", nil %>brown-->
             <!--</div>-->
+            
+             <div class="check_box" >          
+       
+            <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
+                <%= b.label {b.check_box + b.text} %>
+                
+            
+            <% end %>
+       
+            </div>
            
             <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
             <% end %>

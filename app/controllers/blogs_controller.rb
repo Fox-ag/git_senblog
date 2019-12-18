@@ -10,6 +10,8 @@ class BlogsController < ApplicationController
     
     def new
         @blog = Blog.new
+        @emotions = Emotion.all
+        @blog.blog_feelings.build
     end
     
     def show
@@ -18,7 +20,9 @@ class BlogsController < ApplicationController
     end
     
     def create
-        Blog.create(blog_params)
+        # Blog.create(blog_params)
+        @blog = Blog.new(blog_params) 
+        @blog.save
     end
     
     def destroy
@@ -39,12 +43,25 @@ class BlogsController < ApplicationController
         end
     end
     
+    # def search
+    #     @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%")
+    # end
+    
     def search
+        # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
         @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%")
+        @q = Blog.search(search_params)
+        @bloges = @q.result.includes(:emotions)
+    end
+    
+    private
+    def search_params
+        params.require(:q).permit!
     end
     
     private
     def blog_params
-        params.require(:blog).permit(:user_name, :title, :text).merge(user_id: current_user.id)
+        params.require(:blog).permit(:user_name, :title, :text, emotion_ids: []).merge(user_id: current_user.id)
     end
+    
 end
