@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_17_105612) do
+ActiveRecord::Schema.define(version: 2019_12_19_105003) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -40,6 +40,13 @@ ActiveRecord::Schema.define(version: 2019_12_17_105612) do
     t.datetime "updated_at", null: false
     t.index ["blog_id"], name: "index_blog_feelings_on_blog_id"
     t.index ["emotion_id"], name: "index_blog_feelings_on_emotion_id"
+  end
+
+  create_table "blog_photos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "blog_id"
+    t.string "photo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

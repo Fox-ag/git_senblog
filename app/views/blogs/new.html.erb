@@ -17,56 +17,37 @@
   <div class="section-10">
     
     <div class="div-block-90">
-      <%= form_for [@blog] do |f| %>
-      <!--%= form_tag('/blogs', method: :post) do %>-->
-      <div class="div-block-11">
-        
-        <h2>ブログを投稿する</h2>
-      </div>
-      <div>
-        
-        <div class="form-block-2 w-form">
-          
-            <!--<div class="div-block-13"><label for="name">Title</label><input type="text" class="w-input" maxlength="256" name="title" data-name="Name" id="name" placeholder="Title" style="background-color:white"></div>-->
-            <!--<div class="div-block-13"><label for="email">Sentence</label><textarea placeholder="Example Text" maxlength="5000" id="field" name="text" class="w-input" style="background-color:white"></textarea></div>-->
-            <!--<div class="div-block-12"><label>Image</label><textarea placeholder="Example Text" maxlength="5000" id="field-2" name="field-2" class="w-input" style="background-color:white"></textarea></div><label class="w-checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="w-checkbox-input"><span class="w-form-label">Checkbox</span></label>-->
-            <!--<div class="div-block-10"><input type="submit" value="Submit"></div>-->
-            
-            <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
-            <div class="div-block-13"><%= f.text_area :text, placeholder:"text" %></div>
-            <div class="div-block-12"><%= f.label :image %></div>
-            <!--%= f.file_field :image %>-->
-            <!--<div class="field">-->
-            <!--  %= f.label :color %>-->
-            <!--  %= f.check_box :color, {multiple: true}, "black", nil %>black-->
-            <!--  %= f.check_box :color, {multiple: true}, "white", nil %>white-->
-            <!--  %= f.check_box :color, {multiple: true}, "blue", nil %>blue-->
-            <!--  %= f.check_box :color, {multiple: true}, "brown", nil %>brown-->
-            <!--</div>-->
-            
-             <div class="check_box" >          
-       
-            <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
-                <%= b.label {b.check_box + b.text} %>
-                
-            
-            <% end %>
-       
-            </div>
-           
-            <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
-            <% end %>
-            
-           </div>
-           
-           
-           
-          
-        </div>
-        
-      </div>
-      <% end %>
+      
+              <div class="div-block-11">
+                <h2>ブログを投稿する</h2>
+              </div>
+              <div>
+                <div class="form-block-2 w-form">
+                   <%= form_for @blog, html: {multipart: true} do |f| %>
+                   <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
+                   <div class="div-block-13"><%= f.text_area :text, placeholder:"text" %></div>
+                   <div class="div-block-12"><%= f.label :image %></div>
+                   <div class="div-block-120">
+                   <%= f.fields_for :blog_photos do |p| %>
+                    <div class="field">
+                      <%= p.label :photo %><br>
+                      <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                      <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                    </div>
+                     <% end %>
+                   </div>
+                   <div class="check_box" >          
+                      <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
+                          <%= b.label {b.check_box + b.text} %>
+                      <% end %>
+                   </div>
+                   <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
+                    <% end %>
+                   </div>
+                   <% end %>
+                </div>
+              </div>
+      
     </div>
-    
   </div>
   

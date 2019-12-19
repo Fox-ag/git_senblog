@@ -6,12 +6,14 @@ class BlogsController < ApplicationController
     def detailpage
         @blog = Blog.find(params[:id])
         @like = Like.new
+        @blog_photos = @blog.blog_photos.all
     end
     
     def new
         @blog = Blog.new
         @emotions = Emotion.all
         @blog.blog_feelings.build
+        @blog_photo = @blog.blog_photos.build
     end
     
     def show
@@ -22,7 +24,16 @@ class BlogsController < ApplicationController
     def create
         # Blog.create(blog_params)
         @blog = Blog.new(blog_params) 
-        @blog.save
+      respond_to do |format|
+        if @blog.save
+          params[:blog_photos]['photo'].each do |a|
+           @blog_photo = @blog.blog_photos.create!(:photo => a)
+          end
+           format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+        else
+          format.html { redirect_to @blog, notice: 'Item was not created.' }
+        end
+      end
     end
     
     def destroy
@@ -59,9 +70,8 @@ class BlogsController < ApplicationController
         params.require(:q).permit!
     end
     
-    private
     def blog_params
-        params.require(:blog).permit(:user_name, :title, :text, emotion_ids: []).merge(user_id: current_user.id)
+        params.require(:blog).permit(:user_name, :title, :text, blog_photos_attributes: [:id, :blog_id, :photo], emotion_ids: []).merge(user_id: current_user.id)
     end
     
 end

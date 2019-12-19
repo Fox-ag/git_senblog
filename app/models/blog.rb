@@ -1,6 +1,8 @@
 class Blog < ApplicationRecord
     after_create :create_feed_content
     
+    has_many :blog_photos
+    accepts_nested_attributes_for :blog_photos, allow_destroy: true, reject_if: proc { |attributes| attributes['photo'].blank? }
     
     belongs_to :user
     has_one :feed_content, as: :content, dependent: :destroy
