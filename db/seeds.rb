@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Emotion.create(feeling:'good')
+Emotion.create(feeling:'okey')
+Emotion.create(feeling:'bad')
