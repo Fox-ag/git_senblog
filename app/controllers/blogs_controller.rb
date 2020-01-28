@@ -24,16 +24,22 @@ class BlogsController < ApplicationController
     def create
         # Blog.create(blog_params)
         @blog = Blog.new(blog_params) 
-      respond_to do |format|
-        if @blog.save
-          params[:blog_photos]['photo'].each do |a|
-           @blog_photo = @blog.blog_photos.create!(:photo => a)
-          end
-           format.html { redirect_to @blog, notice: 'Item was successfully created.' }
-        else
-          format.html { redirect_to @blog, notice: 'Item was not created.' }
-        end
-      end
+        
+        
+            respond_to do |format|
+                if params[:blog_photos]==nil && @blog.save
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+                elsif @blog.save
+                  params[:blog_photos]['photo'].each do |a|
+                   @blog_photo = @blog.blog_photos.create!(:photo => a)
+                  end
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+                else
+                format.html { redirect_to @blog, notice: 'Item was not created.' }
+                end
+            end
     end
     
     def destroy
@@ -60,8 +66,10 @@ class BlogsController < ApplicationController
     
     def search
         # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
+        
         @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%")
         @q = Blog.search(search_params)
+        params.require(:q).permit(:title_cont)
         @bloges = @q.result.includes(:emotions)
     end
     

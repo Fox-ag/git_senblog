@@ -1,7 +1,7 @@
 class Blog < ApplicationRecord
     after_create :create_feed_content
     
-    has_many :blog_photos
+    has_many :blog_photos, foreign_key: :blog_id, dependent: :destroy
     accepts_nested_attributes_for :blog_photos, allow_destroy: true, reject_if: proc { |attributes| attributes['photo'].blank? }
     
     belongs_to :user
@@ -10,7 +10,7 @@ class Blog < ApplicationRecord
     has_many :likes
     has_many :liked_users, through: :likes, source: :user
     
-    has_many :blog_feelings
+    has_many :blog_feelings, dependent: :destroy
     has_many :emotions, through: :blog_feelings
     accepts_nested_attributes_for :blog_feelings, allow_destroy: true
 

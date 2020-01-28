@@ -76,3 +76,6 @@ gem 'font-awesome-rails'
 gem 'mini_magick'
 gem 'ransack'
 gem 'carrierwave'
+group :production do
+  gem 'rails_12factor'
+end
