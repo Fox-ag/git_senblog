@@ -9,3 +9,4 @@
 Emotion.create(feeling:'good')
 Emotion.create(feeling:'okey')
 Emotion.create(feeling:'bad')
+User.create(email:'e.iwatsuka@gmail.com', password:'12345qwert')
