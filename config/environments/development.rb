@@ -61,7 +61,7 @@ Rails.application.configure do
   # Use during develepment at AWS
   # config.action_mailer.default_url_options = { protocol: 'https', host: 'https://53d511034171492591668ac79ea97ce0.vfs.cloud9.ap-southeast-1.amazonaws.com/' }
   # Use during develepment at Heroku
-  config.action_mailer.default_url_options = { :host=> 'heroku.permablog.com' }
+  config.action_mailer.default_url_options = { :host=> 'permablog.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
