@@ -78,6 +78,21 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  
+  # Added for heroku
+  config.action_mailer.default_url_options = { :host=> 'permablog.herokuapp.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.gmail.com",
+    :port => 587,
+    # :domain => 'smtp.gmail.com',
+    :domain => 'heroku.com',
+    :user_name => "eijieiji.iwatsuka@gmail.com", #先ほど作成した送信用gmailアドレス
+    :password => "aztngotzhwxdeshf", #2段階認証したアカウントで発行したアプリパスワード
+    :authentication => 'login'
+}
+  # Added for heroku end
 
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
