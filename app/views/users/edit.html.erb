@@ -99,9 +99,15 @@
         </div>
       </div>
       <div class="div-block-16">
-        <h3>自己紹介</h3>
+        <h3><%=f.label :selfanalysis,"自己分析"%></h3>
         <div>
-          <p class="paragraph-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.</p>
+          <p class="paragraph-4"><%= f.text_area :selfanalysis, placeholder:"自己分析を記入してください", class:"form-control" %></p>
+        </div>
+      </div>
+      <div class="div-block-16">
+        <h3><%=f.label :selfintroduction,"自己紹介"%></h3>
+        <div>
+          <p class="paragraph-4"><%= f.text_area :selfintroduction, placeholder:"自己紹介を記入してください", class:"form-control" %></p>
         </div>
       </div>
       <div class="div-block-16">

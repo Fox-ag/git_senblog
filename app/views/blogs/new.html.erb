@@ -25,7 +25,7 @@
                 <div class="form-block-2 w-form">
                    <%= form_for @blog, html: {multipart: true} do |f| %>
                    <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
-                   <div class="div-block-13"><%= f.text_area :text, placeholder:"text" %></div>
+                   <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
                    <div class="div-block-12"><%= f.label :image %></div>
                    <div class="div-block-120">
                    <%= f.fields_for :blog_photos do |p| %>

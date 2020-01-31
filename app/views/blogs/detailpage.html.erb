@@ -8,6 +8,8 @@
     <% end %>
     <%= simple_format(@blog.title) %>
     <%= simple_format(@blog.text) %>
+    <%= simple_format(@blog.user.nickname) %>
+    <%= simple_format(@blog.user.selfintroduction) %>
     
     <% @blog_photos.each do |p| %>
       <%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %>

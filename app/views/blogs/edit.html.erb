@@ -18,8 +18,24 @@
             <div>
               <div class="form-block-2 w-form">
                   <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
-                  <div class="div-block-13"><%= f.text_area :text, placeholder:"text" %></div>
+                  <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
                   <div class="div-block-12"><%= f.label :image %></div>
+                  
+                  <div class="div-block-120">
+                   <%= f.fields_for :blog_photos do |p| %>
+                    <div class="field">
+                      <%= p.label :photo %><br>
+                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                    </div>
+                     <% end %>
+                   </div>
+                   <div class="check_box" >          
+                      <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
+                          <%= b.label {b.check_box + b.text} %>
+                      <% end %>
+                   </div>
+                  
                   <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>編集する
                   <% end %>
               </div>
