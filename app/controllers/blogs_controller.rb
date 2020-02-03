@@ -55,10 +55,28 @@ class BlogsController < ApplicationController
     end
     
     def update
-        blog = Blog.find(params[:id])
-        if blog.user_id == current_user.id
-            blog.update(blog_params)
-        end
+        # blog = Blog.find(params[:id])
+        # if blog.user_id == current_user.id
+        #     blog.update(blog_params)
+        # end
+        
+        @blog = Blog.find(params[:id])
+        respond_to do |format|
+                if params[:blog_photos]==nil && @blog.update(blog_params)
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+                elsif @blog.update(blog_params)
+                  params[:blog_photos]['photo'].each do |a|
+                   @blog_photo = @blog.blog_photos.create!(:photo => a)
+                  end
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+                else
+                format.html { redirect_to @blog, notice: 'Item was not created.' }
+                end
+            end
+        
+        
     end
     
     # def search

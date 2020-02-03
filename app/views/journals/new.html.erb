@@ -11,24 +11,60 @@
 
 <div class="section-100">
     
-    <div class="div-block-91">
-      <%= form_tag('/journals', method: :post) do %>
-      <div class="div-block-11">
+    <!--<div class="div-block-91">-->
+    <!--  %= form_tag('/journals', method: :post) do %>-->
+    <!--  <div class="div-block-11">-->
         
-        <h2>日記を書き込む</h2>
-      </div>
-      <div>
-        <div class="form-block-2 w-form">
+    <!--    <h2>日記を書き込む</h2>-->
+    <!--  </div>-->
+    <!--  <div>-->
+    <!--    <div class="form-block-2 w-form">-->
           
-            <div class="div-block-13"><label for="name">Title</label><input type="text" class="w-input" maxlength="256" name="title" data-name="Name" id="name" placeholder="Title" style="background-color:white"></div>
-            <div class="div-block-13"><label for="email">Sentence</label><textarea placeholder="Example Text" maxlength="5000" id="field" name="text" class="w-input" style="background-color:white"></textarea></div>
-            <div class="div-block-12"><label>Image</label><textarea placeholder="Example Text" maxlength="5000" id="field-2" name="field-2" class="w-input" style="background-color:white"></textarea></div><label class="w-checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="w-checkbox-input"><span class="w-form-label">Checkbox</span></label>
-            <div class="div-block-10"><input type="submit" value="Submit" data-wait="Please wait..." class="w-button"></div>
+    <!--        <div class="div-block-13"><label for="name">Title</label><input type="text" class="w-input" maxlength="256" name="title" data-name="Name" id="name" placeholder="Title" style="background-color:white"></div>-->
+    <!--        <div class="div-block-13"><label for="email">Sentence</label><textarea placeholder="Example Text" maxlength="5000" id="field" name="text" class="w-input" style="background-color:white"></textarea></div>-->
+    <!--        <div class="div-block-12"><label>Image</label><textarea placeholder="Example Text" maxlength="5000" id="field-2" name="field-2" class="w-input" style="background-color:white"></textarea></div><label class="w-checkbox"><input type="checkbox" id="checkbox" name="checkbox" data-name="Checkbox" class="w-checkbox-input"><span class="w-form-label">Checkbox</span></label>-->
+    <!--        <div class="div-block-10"><input type="submit" value="Submit" data-wait="Please wait..." class="w-button"></div>-->
           
           
-        </div>
-      </div>
-      <% end %>
+    <!--    </div>-->
+    <!--  </div>-->
+    <!--  % end %>-->
+    <!--</div>-->
+  
+  
+  <div class="div-block-90">
+      
+              <div class="div-block-11">
+                <h2>ブログを投稿する</h2>
+              </div>
+              <div>
+                <div class="form-block-2 w-form">
+                   <%= form_for @journal, html: {multipart: true} do |f| %>
+                   <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
+                   <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
+                   <div class="div-block-12"><%= f.label :image %></div>
+                   <div class="div-block-120">
+                   <%= f.fields_for :journal_photos do |p| %>
+                    <div class="field">
+                      <%= p.label :photo %><br>
+                      <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
+                      <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
+                    </div>
+                     <% end %>
+                   </div>
+                   <!--<div class="check_box" >          -->
+                   <!--   %= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>-->
+                   <!--       %= b.label {b.check_box + b.text} %>-->
+                   <!--   % end %>-->
+                   <!--</div>-->
+                   <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
+                    <% end %>
+                   </div>
+                   <% end %>
+                </div>
+              </div>
+      
     </div>
     
-  </div>
+    
+</div>

@@ -13,6 +13,10 @@
         </ul>
       </div>
     <% end %>
+    <% @journal_photos.each do |p| %>
+      <%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %>
+      
+    <% end %>
     <%= simple_format(@journal.title) %>
     <%= simple_format(@journal.text) %>
     <span class="name">

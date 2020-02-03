@@ -1,10 +1,40 @@
 <div class="contents row">
-  <%= form_tag("/journals/#{@journal.id}", method: :patch ) do %>
-    <h3>
-      編集しちゃおう
-    </h3>
-    <input type="text" name="title" value="<%= @journal.title %>" placeholder="Title" autofocus="true">
-    <textarea name="text" placeholder="text" rows="10" cols="30"><%= @journal.text %></textarea>
-    <input type="submit" value="SEND">
-  <% end %>
+  <!--%= form_tag("/journals/#{@journal.id}", method: :patch ) do %>-->
+  <!--  <h3>-->
+  <!--    編集しちゃおう-->
+  <!--  </h3>-->
+  <!--  <input type="text" name="title" value="<%= @journal.title %>" placeholder="Title" autofocus="true">-->
+  <!--  <textarea name="text" placeholder="text" rows="10" cols="30"><%= @journal.text %></textarea>-->
+  <!--  <input type="submit" value="SEND">-->
+  <!--% end %>-->
+  
+   <div class="div-block-90">
+      <%= form_for [@journal] do |f| %>
+      <!--%= form_tag('/blogs', method: :post) do %>-->
+      <div class="div-block-11">
+          <h2>日記を編集しちゃおう</h2>
+            <div>
+              <div class="form-block-2 w-form">
+                  <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
+                  <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
+                  <div class="div-block-12"><%= f.label :image %></div>
+                  
+                  <div class="div-block-120">
+                   <%= f.fields_for :journal_photos do |p| %>
+                    <div class="field">
+                      <%= p.label :photo %><br>
+                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
+                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
+                    </div>
+                     <% end %>
+                   </div>
+                  
+                  
+                  <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>編集する
+                  <% end %>
+              </div>
+            </div>
+      </div>
+      <% end %>
+    </div>
 </div>
