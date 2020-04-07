@@ -1,11 +1,41 @@
-<div class="mypage">
-    <div class="mypage_contents">
-            <% if user_signed_in? && current_user.id == journal.user_id %>
-                <%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %>
-                <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>
-                <%= link_to '詳細', "/journals/#{journal.id}", method: :get %>
-            <% end %>
-            <%= simple_format(journal.title) %>
-            <%= simple_format(journal.text) %>
-    </div>
-</div>
+<!-- ここから下が旧マイページ2019ver -->
+<!--<div class="mypage">-->
+<!--    <div class="mypage_contents">-->
+<!--            <% if user_signed_in? && current_user.id == journal.user_id %>-->
+<!--                <%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %>-->
+<!--                <%= link_to '削除する', "/journals/#{journal.id}", method: :delete %>-->
+<!--                <%= link_to '詳細', "/journals/#{journal.id}", method: :get %>-->
+<!--            <% end %>-->
+<!--            <%= simple_format(journal.title) %>-->
+<!--            <%= simple_format(journal.text) %>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- ここから上が旧マイページ2019ver -->
+
+<!-- ここから下が新マイページ2020ver -->
+      <!--<% if user_signed_in? && current_user.id == journal.user_id %>-->
+      <!--<div class="mypage-journal">-->
+      <!--  <h2 class="mypage-content-title"><%= simple_format(journal.title) %></h2>-->
+      <!--  <p class="mypage-content-paragraph"><%= simple_format(journal.text) %></p>-->
+      <!--  <div class="mypage-blog-detail-block">-->
+      <!--    <a href="#" class="w-button"><%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %></a>-->
+      <!--    <a href="#" class="w-button"><%= link_to '削除する', "/journals/#{journal.id}", method: :delete %></a>-->
+      <!--    <a href="#" class="w-button"><%= link_to '詳細', "/journals/#{journal.id}", method: :get %></a>-->
+      <!--  </div>-->
+      <!--</div>-->
+      <!--<% end %>-->
+<!-- ここから上が新マイページ2020ver -->
+
+<!-- ここから下が新マイページ2020ver new -->
+      <% if user_signed_in? && current_user.id == journal.user_id %>
+      <div class="div-block-28">
+        <h2 class="heading-23"><%= simple_format(journal.title) %></h2>
+        <p class="paragraph-6"><%= simple_format(journal.text) %></p>
+        <div class="div-block-27">
+          <a href="#" class="w-button"><%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %></a>
+          <a href="#" class="w-button"><%= link_to '削除する', "/journals/#{journal.id}", method: :delete %></a>
+          <a href="#" class="w-button"><%= link_to '詳細', "/journals/#{journal.id}", method: :get %></a>
+        </div>
+      </div>
+      <% end %>
+<!-- ここから上が新マイページ2020ver new -->

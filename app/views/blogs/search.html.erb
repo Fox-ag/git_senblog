@@ -41,6 +41,7 @@
      <% @bloges.each do |bloge| %>
        <%= bloge.title %>
        <%= bloge.emotions.map{|emotion_id| Emotion.find(emotion_id.id).feeling}.join(',') %>
+       <%= bloge.themes.map{|theme_id| Theme.find(theme_id.id).topic}.join(',') %>
      
      <% end %>
 <div>

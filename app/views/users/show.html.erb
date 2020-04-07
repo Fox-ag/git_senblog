@@ -1,6 +1,7 @@
+<!-- ここまで旧プロフィール2019はじまり! -->
 <!--<%= stylesheet_link_tag "stylesheets/users", :media => "all" %>-->
-<div class="row form user_profile">
-  <div class="col-lg-12">
+<!--<div class="row form user_profile">-->
+<!--  <div class="col-lg-12">-->
     <!--% if nil? %>-->
      <!--% else %>-->
      <!--<div class="image" style="background-image: url(%= rails_blob_path(@user.image) %>) "></div>-->
@@ -12,49 +13,102 @@
     <!--<p>%= "#{@user.city}" %></p>-->
     
     
-  <% if @user.image.nil? %>
+<!--  <% if @user.image.nil? %>-->
     
    　
-   <div>No image</div>
-    <% else %>
-    <div class="image-profile" style="background-image: url(<%= rails_blob_path(@user.image) if @user.image.attached? %>) "></div>
-  <% end %>
+<!--   <div>No image</div>-->
+<!--    <% else %>-->
+<!--    <div class="image-profile" style="background-image: url(<%= rails_blob_path(@user.image) if @user.image.attached? %>) "></div>-->
+<!--  <% end %>-->
   
   
-  </div>
-  <div class="section-11">
-    <div class="div-block-8">
-      <div class="w-layout-grid grid-2">
-        <h2>Last Name</h2>
-        <h2>First Name</h2>
-        <h2><%= "#{@user.family_name}" %></h2>
-        <h2><%= "#{@user.first_name}" %></h2>
+<!--  </div>-->
+<!--  <div class="section-11">-->
+<!--    <div class="div-block-8">-->
+<!--      <div class="w-layout-grid grid-2">-->
+<!--        <h2>Last Name</h2>-->
+<!--        <h2>First Name</h2>-->
+<!--        <h2><%= "#{@user.family_name}" %></h2>-->
+<!--        <h2><%= "#{@user.first_name}" %></h2>-->
+<!--      </div>-->
+<!--      <div class="div-block-3">-->
+<!--        <h2>ニックネーム：</h2>-->
+<!--        <h2 class="heading-16"><%= "#{@user.nickname}" %></h2>-->
+<!--      </div>-->
+<!--      <div class="div-block-4">-->
+<!--        <h3>生年月日：</h3>-->
+<!--        <h3 class="heading-17"><%= "#{@user.birthdate}" %></h3>-->
+<!--      </div>-->
+<!--      <div class="div-block-5">-->
+<!--        <h3>国籍：</h3>-->
+<!--        <h3 class="heading-18"><%= "#{@user.country}" %></h3>-->
+<!--      </div>-->
+<!--      <div class="div-block-6">-->
+<!--        <h3>町：</h3>-->
+<!--        <h3><%= "#{@user.city}" %></h3>-->
+<!--      </div>-->
+<!--      <div class="div-block-7">-->
+<!--        <h3 class="heading-19">自己分析：</h3>-->
+<!--        <p class="paragraph-3"><%= "#{@user.selfanalysis}" %></p>-->
+<!--      </div>-->
+<!--      <div class="div-block-7">-->
+<!--        <h3 class="heading-19">自己紹介：</h3>-->
+<!--        <p class="paragraph-3"><%= "#{@user.selfintroduction}" %></p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--</div>  -->
+  
+<!-- ここまで旧プロフィール2019おわり! -->
+
+<!-- ここから新プロフィール2020はじまり! -->
+<div class="self-introduction-body">
+    <div class="private-section">
+      <div class="col-lg-12">
+          <% if @user.image.nil? %>
+            <div>No image</div>
+          <% else %>
+          　<div class="image-profile" style="background-image: url(<%= rails_blob_path(@user.image) if @user.image.attached? %>) "></div>
+          <% end %>
       </div>
-      <div class="div-block-3">
-        <h2>ニックネーム：</h2>
-        <h2 class="heading-16"><%= "#{@user.nickname}" %></h2>
+      <!--<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" width="223" alt="" class="image-8">-->
+      <div class="name-position">
+        <div class="text-block-14">性 Last Name</div>
+        <div class="text-block-15">名 First Name</div>
       </div>
-      <div class="div-block-4">
-        <h3>生年月日：</h3>
-        <h3 class="heading-17"><%= "#{@user.birthdate}" %></h3>
+      <div class="name-section">
+        <div class="text-block-16"><%= "#{@user.family_name}" %></div>
+        <div class="text-block-17"><%= "#{@user.first_name}" %></div>
       </div>
-      <div class="div-block-5">
-        <h3>国籍：</h3>
-        <h3 class="heading-18"><%= "#{@user.country}" %></h3>
+      <div class="birthdate-area">
+        <div class="birthdate-position">ニックネーム</div>
+        <div class="birthdate-section"><%= "#{@user.nickname}" %></div>
       </div>
-      <div class="div-block-6">
-        <h3>町：</h3>
-        <h3><%= "#{@user.city}" %></h3>
+      <div class="birthdate-area">
+        <div class="birthdate-position">生年月日:</div>
+        <div class="birthdate-section"><%= "#{@user.birthdate}" %></div>
       </div>
-      <div class="div-block-7">
-        <h3 class="heading-19">自己分析：</h3>
-        <p class="paragraph-3"><%= "#{@user.selfanalysis}" %></p>
+      <div class="country-area">
+        <div class="country-position">お住まいの国:</div>
+        <div class="country-section"><%= "#{@user.country}" %></div>
       </div>
-      <div class="div-block-7">
-        <h3 class="heading-19">自己紹介：</h3>
-        <p class="paragraph-3"><%= "#{@user.selfintroduction}" %></p>
+      <div class="city-area">
+        <div class="city-position">お住まいの町:</div>
+        <div class="city-section"><%= "#{@user.city}" %></div>
+      </div>
+      <div class="self-introduction-sentence">
+        <h2 class="self-introduction-title">自己分析：</h2>
+        <div class="self-introduction-section">
+          <p class="self-introduction-position"><%= "#{@user.selfanalysis}" %><br><br><br>‍</p>
+        </div>
       </div>
     </div>
-</div>  
-  
-  
+    <div class="public-section">
+      <div class="public-title-section">
+        <h1 class="public-title">自分：</h1>
+      </div>
+      <div class="public-sentence-section">
+        <div class="public-sentence-position"><%= "#{@user.selfintroduction}" %></div>
+      </div>
+    </div>
+  </div>
+<!-- ここまで新プロフィール2020おわり! -->

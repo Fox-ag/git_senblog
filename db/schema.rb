@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_31_124920) do
+ActiveRecord::Schema.define(version: 2020_02_03_105334) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +47,15 @@ ActiveRecord::Schema.define(version: 2020_01_31_124920) do
     t.string "photo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "blog_topics", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "blog_id"
+    t.bigint "theme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_blog_topics_on_blog_id"
+    t.index ["theme_id"], name: "index_blog_topics_on_theme_id"
   end
 
   create_table "blogs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -97,6 +106,12 @@ ActiveRecord::Schema.define(version: 2020_01_31_124920) do
     t.index ["user_id"], name: "index_likes_on_user_id"
   end
 
+  create_table "themes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "topic"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -126,6 +141,8 @@ ActiveRecord::Schema.define(version: 2020_01_31_124920) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "blog_feelings", "blogs"
   add_foreign_key "blog_feelings", "emotions"
+  add_foreign_key "blog_topics", "blogs"
+  add_foreign_key "blog_topics", "themes"
   add_foreign_key "likes", "blogs"
   add_foreign_key "likes", "users"
 end

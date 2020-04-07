@@ -4,10 +4,11 @@ class TopController < ApplicationController
         
         @q = Blog.ransack(params[:q])
         @emotions = Emotion.all
+        @themes = Theme.all
+        @bloges = @q.result.includes(:emotions, :themes)
         
-        @bloges = @q.result.includes(:emotions)
-        
-        @blogs = Blog.all
+        # @blogs = Blog.all
+        @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
     end
     
    

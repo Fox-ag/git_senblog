@@ -1,28 +1,71 @@
-<div class="contents row">
+<!-- ここから日記詳細2019はじまり! -->
+<!--<div class="contents row">-->
     
-    <% if user_signed_in? && current_user.id == @journal.user_id %>
-      <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
-        <ul class="more_list">
-          <li>
-            <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>
-          </li>
-        </ul>
-      </div>
-    <% end %>
-    <% @journal_photos.each do |p| %>
-      <%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %>
+<!--    <% if user_signed_in? && current_user.id == @journal.user_id %>-->
+<!--      <div class="more">-->
+<!--        <span><%= image_tag 'arrow_top.png' %></span>-->
+<!--        <ul class="more_list">-->
+<!--          <li>-->
+<!--            <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+<!--    <% end %>-->
+<!--    <% @journal_photos.each do |p| %>-->
+<!--      <%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %>-->
       
-    <% end %>
-    <%= simple_format(@journal.title) %>
-    <%= simple_format(@journal.text) %>
-    <span class="name">
-      <a href="/users/<%= @journal.user.id %>">
-        <span>投稿者</span><%= @journal.user.nickname %>
-      </a>
-    </span>
- 
-</div>
+<!--    <% end %>-->
+<!--    <%= simple_format(@journal.title) %>-->
+<!--    <%= simple_format(@journal.text) %>-->
+<!--    <span class="name">-->
+<!--      <a href="/users/<%= @journal.user.id %>">-->
+<!--        <span>投稿者</span><%= @journal.user.nickname %>-->
+<!--      </a>-->
+<!--    </span>-->
+<!--</div>-->
+<!-- ここまで日記詳細2019おわり! -->
+
+<!-- ここから新日記詳細2020 new はじまり! -->
+<div class="journal-detail-body">
+    <div class="journal-detail-section">
+      <div class="journal-detail-title">
+        <h1 class="heading-26"><%= simple_format(@journal.title) %></h1>
+      </div>
+      <div class="journal-detail-paragraph">
+        <p class="journal-detail-paragraph-words"><%= simple_format(@journal.text) %></p>
+      </div>
+      <div class="journal-detail-photo-section">
+        <% @journal_photos.each do |p| %>
+        <div class="journal-detail-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>
+        <% end %>
+        <!--<div class="journal-detail-photo-right"></div>-->
+      </div>
+      <div class="journal-detail-create-date">
+        <div class="jouranl-detail-create-date-words">作成日時 : 2020年2月22日</div>
+      </div>
+       <div class="journal-detail-create-date">
+        <div class="jouranl-detail-create-date-words">
+          <a href="/users/<%= @journal.user.id %>">
+          <span>投稿者</span>
+          <%= @journal.user.nickname %>
+          </a>
+        </div>
+      </div>
+      <div class="journal-detail-create-date">
+        <% if user_signed_in? && current_user.id == @journal.user_id %>
+          <ul class="more_list">
+            <li>
+              <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>
+            </li>
+            <li>
+              <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<!-- ここまで新日記詳細2020 new おわり! -->

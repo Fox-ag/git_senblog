@@ -13,6 +13,8 @@ class BlogsController < ApplicationController
         @blog = Blog.new
         @emotions = Emotion.all
         @blog.blog_feelings.build
+        @themes = Theme.all
+        @blog.blog_topics.build
         @blog_photo = @blog.blog_photos.build
     end
     
@@ -89,7 +91,7 @@ class BlogsController < ApplicationController
         @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%")
         @q = Blog.search(search_params)
         params.require(:q).permit(:title_cont)
-        @bloges = @q.result.includes(:emotions)
+        @bloges = @q.result.includes(:emotions,:themes)
     end
     
     private
@@ -98,7 +100,7 @@ class BlogsController < ApplicationController
     end
     
     def blog_params
-        params.require(:blog).permit(:user_name, :title, :text, blog_photos_attributes: [:id, :blog_id, :photo], emotion_ids: []).merge(user_id: current_user.id)
+        params.require(:blog).permit(:user_name, :title, :text, blog_photos_attributes: [:id, :blog_id, :photo], emotion_ids: [], theme_ids: []).merge(user_id: current_user.id)
     end
     
 end

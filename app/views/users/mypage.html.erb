@@ -1,5 +1,24 @@
-<div class="mypage">
-    <div class="mypage_contents">
-            <%= render @feed_contents %>
+<!-- ここから下が旧マイページ2019ver -->
+<!--<div class="mypage">-->
+<!--    <div class="mypage_contents">-->
+<!--            %= render @feed_contents %>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- ここから上が旧マイページ2019ver -->
+
+<!-- ここから下が新マイページ2020ver -->
+<!--<div class="mypage-body">-->
+<!--    <div class="mypage-section">-->
+<!--        %= render @feed_contents %>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- ここから上が新マイページ2020ver -->
+
+<!-- ここから下が新マイページ2020ver new -->
+  <div class="section-26">
+    <div class="div-block-25">
+      <%= render @feed_contents_resource %>
     </div>
-</div>
+    <%= paginate(@feed_contents) %>
+  </div>
+<!-- ここから上が新マイページ2020ver new -->

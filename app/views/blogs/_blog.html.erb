@@ -1,11 +1,42 @@
-<div class="mypage">
-    <div class="mypage_contents">
-                    <% if user_signed_in? && current_user.id == blog.user_id %>
-                        <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>
-                        <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
-                        <%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %>
-                    <% end %>
-              <%= simple_format(blog.title) %>
-              <%= simple_format(blog.text) %>
-    </div>
-</div>
+<!--<div class="mypage">-->
+<!--    <div class="mypage_contents">-->
+<!--                    <% if user_signed_in? && current_user.id == blog.user_id %>-->
+<!--                        <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>-->
+<!--                        <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>-->
+<!--                        <%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %>-->
+<!--                    <% end %>-->
+<!--              <%= simple_format(blog.title) %>-->
+<!--              <%= simple_format(blog.text) %>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!-- ここから下が新マイページ2020ver -->
+      <!--<% if user_signed_in? && current_user.id == blog.user_id %>-->
+      <!--<div class="mypage-blog">-->
+      <!--  <h2 class="mypage-content-title"><%= simple_format(blog.title) %></h2>-->
+      <!--  <p class="mypage-content-paragraph"><%= simple_format(blog.text) %></p>-->
+      <!--  <div class="mypage-blog-detail-block">-->
+      <!--    <a href="#" class="w-button"><%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %></a>-->
+      <!--    <a href="#" class="w-button"><%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %></a>-->
+      <!--    <a href="#" class="w-button"><%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %></a>-->
+      <!--  </div>-->
+      <!--</div>-->
+      <!--<% end %>-->
+<!-- ここから上が新マイページ2020ver -->
+
+<!-- ここから下が新マイページ2020ver new -->
+      <% if user_signed_in? && current_user.id == blog.user_id %>
+      <div class="div-block-26">
+        <h2 class="heading-23"><%= simple_format(blog.title) %></h2>
+        <p class="paragraph-6"><%= blog.text %></p>
+        <div class="div-block-27">
+          <!--<a href="#" class="w-button"><%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %></a>-->
+          <!--<a href="#" class="w-button"><%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete%></a>-->
+          <!--<a href="#" class="w-button"><%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %></a>-->
+          <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>
+          <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
+          <%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %>
+        </div>
+      </div>
+      <% end %>
+<!-- ここから上が新マイページ2020ver new -->

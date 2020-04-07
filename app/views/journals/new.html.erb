@@ -9,8 +9,11 @@
 <!--  <% end %>-->
 <!--</div>-->
 
-<div class="section-100">
-    
+
+
+
+<!-- ここから下がマイページ2019ver -->
+<!--<div class="section-100">-->
     <!--<div class="div-block-91">-->
     <!--  %= form_tag('/journals', method: :post) do %>-->
     <!--  <div class="div-block-11">-->
@@ -30,41 +33,77 @@
     <!--  </div>-->
     <!--  % end %>-->
     <!--</div>-->
-  
-  
-  <div class="div-block-90">
-      
-              <div class="div-block-11">
-                <h2>ブログを投稿する</h2>
-              </div>
-              <div>
-                <div class="form-block-2 w-form">
-                   <%= form_for @journal, html: {multipart: true} do |f| %>
-                   <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
-                   <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
-                   <div class="div-block-12"><%= f.label :image %></div>
-                   <div class="div-block-120">
-                   <%= f.fields_for :journal_photos do |p| %>
-                    <div class="field">
-                      <%= p.label :photo %><br>
-                      <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
-                      <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
-                    </div>
-                     <% end %>
-                   </div>
+ 
+<!--  <div class="div-block-90">-->
+<!--              <div class="div-block-11">-->
+<!--                <h2>ブログを投稿する</h2>-->
+<!--              </div>-->
+<!--              <div>-->
+<!--                <div class="form-block-2 w-form">-->
+<!--                   <%= form_for @journal, html: {multipart: true} do |f| %>-->
+<!--                   <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>-->
+<!--                   <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>-->
+<!--                   <div class="div-block-12"><%= f.label :image %></div>-->
+<!--                   <div class="div-block-120">-->
+<!--                   <%= f.fields_for :journal_photos do |p| %>-->
+<!--                    <div class="field">-->
+<!--                      <%= p.label :photo %><br>-->
+<!--                      <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+<!--                      <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+<!--                    </div>-->
+<!--                     <% end %>-->
+<!--                   </div>-->
                    <!--<div class="check_box" >          -->
                    <!--   %= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>-->
                    <!--       %= b.label {b.check_box + b.text} %>-->
                    <!--   % end %>-->
                    <!--</div>-->
-                   <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
-                    <% end %>
-                   </div>
-                   <% end %>
-                </div>
-              </div>
+<!--                   <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>投稿する-->
+<!--                    <% end %>-->
+<!--                   </div>-->
+<!--                   <% end %>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!-- ここから上がマイページ2019ver -->
+
+
+
+<!-- ここから下がマイページ2020ver new -->
+  <div class="journal-write-section-body">
+    <div class="journal-write-section">
+      <%= form_for @journal, html: {multipart: true} do |f| %>
+      <div class="journal-write-title">
+        <h1 class="heading-journal-title"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></h1>
+      </div>
       
+      <div class="journal-explain-sentence">
+        <div class="journal-explain-sentence-word">250文字以上、2000文字以内に記入してください。</div>
+      </div>
+      <div class="journal-write-sentence">
+        <p><%= f.text_area :text, placeholder:'text', style:'height: 68vh; width: 100%;', minlength: "250" ,maxlength: "2000" %></p>
+      </div>
+      <div class="journal-input-photo">
+        <%= f.fields_for :journal_photos do |p| %>
+        <div class="journal-photo-sentence">
+          <div class="journal-photo-sentence-words">ブログ内容の写真を選択してください。（2枚まで)</div>
+        </div>
+        <div class="journal-photo-input-sentence">
+          <div class="journal-sentence-left">
+            <div class="journal-left-words"><%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %></div>
+          </div>
+          <div class="journal-sentence-right">
+            <div class="journal-right-words"><%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %></div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+      <div class="journal-form-button w-form">
+        <%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
+                    <% end %>
+      </div>
+      <% end %>
     </div>
-    
-    
-</div>
+  </div>
+<!-- ここから上がマイページ2020ver new -->

@@ -49,24 +49,53 @@
 <!--</header>-->
 
 
-<!-- ここから下が新ヘッダー -->
+<!-- ここから下が新ヘッダー2019ver -->
+<!--<div>-->
+<!--  <% if user_signed_in? %>-->
+<!--<div class="section-13">-->
+<!--    <div class="div-block-17">-->
+<!--      <h1><a href="/">Sen</a></h1>-->
+<!--    </div>-->
+<!--    <div class="div-block-18">-->
+<!--      <div class="text-block-13"><%= link_to 'Timeline', root_path %></div>-->
+<!--        <div class="text-block-15"><%= link_to "マイページ", mypage_user_path(current_user) %></div>-->
+<!--        <div class="text-block-15"><%= link_to "ブログ投稿", new_blog_path %></div>-->
+<!--        <div class="text-block-15"><%= link_to "日記を書く", new_journal_path %></div>-->
+<!--        <div class="text-block-15"><%= link_to "プロフィール", user_path(current_user) %></div>-->
+<!--        <div class="text-block-15"><%= link_to "プロフィール編集", edit_user_path(current_user) %></div>-->
+<!--        <div class="text-block-15"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <% end %>  -->
+<!--  <%= bootstrap_flash %>-->
+<!--</div>-->
+  <!-- ここから上が新ヘッダー2019ver -->
+  
+<!-- ここから下が新ヘッダー2020ver -->
 <div>
   <% if user_signed_in? %>
-<div class="section-13">
-    <div class="div-block-17">
-      <h1><a href="/">Sen</a></h1>
+<div class="header-class">
+    <div class="header-class-title">
+      <h1 class="header-title"><a href="/">Arkchive</a></h1>
     </div>
-    <div class="div-block-18">
-      <div class="text-block-13"><%= link_to 'Timeline', root_path %></div>
-        <div class="text-block-15"><%= link_to "マイページ", mypage_user_path(current_user) %></div>
-        <div class="text-block-15"><%= link_to "ブログ投稿", new_blog_path %></div>
-        <div class="text-block-15"><%= link_to "日記を書く", new_journal_path %></div>
-        <div class="text-block-15"><%= link_to "プロフィール", user_path(current_user) %></div>
-        <div class="text-block-15"><%= link_to "プロフィール編集", edit_user_path(current_user) %></div>
-        <div class="text-block-15"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></div>
+    
+    <div class="header-class-menu">
+      <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-menu w-nav">
+        <div class="navigation w-container">
+          <nav role="navigation" class="navigation-menu w-nav-menu">
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to 'Timeline', root_path %></a>
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "マイページ", mypage_user_path(current_user) %></a>
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "ブログ投稿", new_blog_path %></a>
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "日記を書く", new_journal_path %></a>
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール", user_path(current_user) %></a>
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール編集", edit_user_path(current_user) %></a>
+            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a>
+          </nav>
+        </div>
+      </div>
     </div>
-  </div>
+</div>
   <% end %>  
   <%= bootstrap_flash %>
 </div>
-  <!-- ここから上が新ヘッダー -->
+<!-- ここから上が新ヘッダー2020ver -->

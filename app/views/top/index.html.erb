@@ -15,8 +15,10 @@
 <!--  </div>-->
 <!--</div>-->
 
-<div class="section-120" >
-  <div class="div-block-15">
+
+<!-- ここから下が旧タイムライン2019ver -->
+<!--<div class="section-120" >-->
+<!--  <div class="div-block-15">-->
       <!--%= form_tag('/blogs/search', method: :get) do %>-->
       <!--          <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value="">-->
       <!--          <button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>-->
@@ -33,31 +35,67 @@
             
         <!--% end %>-->
    
-       <%= search_form_for(@q, url: '/blogs/search') do |f| %>
+<!--       <%= search_form_for(@q, url: '/blogs/search') do |f| %>-->
             <!--%= f.collection_check_boxes :favorite_ids, Favorite.all, :id, :name, checked: @form.favorite_ids %>-->
-            <%= f.label :title_cont, 'キーワード' %>
-            <%= f.search_field :title_cont %>
-            <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>
+<!--            <%= f.label :title_cont, 'キーワード' %>-->
+<!--            <%= f.search_field :title_cont %>-->
+<!--            <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>-->
+<!--            <%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %>-->
             
-        <%= f.submit("Search") %>
+<!--        <%= f.submit("Search") %>-->
             
-        <% end %>
+<!--        <% end %>-->
        
         
       <!--%= link_to 'ブログ検索!', "/blogs/search", method: :get %>-->
-      <% @blogs.each do |blog| %>
+<!--      <% @blogs.each do |blog| %>-->
              
-                <div class="div-block-16">
-                    <h2><%= simple_format(blog.title) %></h2>
-                    <p class="paragraph-4"><%= simple_format(blog.text) %></p>
-                   <h3>いいね件数: <%= blog.likes.count %></h3>
-                    <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %>
+<!--                <div class="div-block-16">-->
+<!--                    <h2><%= simple_format(blog.title) %></h2>-->
+<!--                    <p class="paragraph-4"><%= simple_format(blog.text) %></p>-->
+<!--                   <h3>いいね件数: <%= blog.likes.count %></h3>-->
+<!--                    <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %>-->
                    
-                </div>
+<!--                </div>-->
              
-      <% end %>
+<!--      <% end %>-->
        
-  </div>
-</div>
+<!--  </div>-->
+<!--</div>-->
 
 <!--%= paginate(@blogs) %>-->
+
+<!-- ここから上が旧タイムライン2019ver -->
+
+<!-- ここから下が新タイムライン2020 new ver -->
+  <div class="section-20">
+    <div class="div-block-21">
+      <%= search_form_for(@q, url: '/blogs/search') do |f| %>
+      <div class="w-form">
+        <form id="email-form" name="email-form" data-name="Email Form"><label for="name"><%= f.label :title_cont, 'キーワード一つ' %></label>
+       <%= f.search_field :title_cont %>
+        <label class="w-checkbox checkbox-field">
+          <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>
+        </label>
+        <label class="w-checkbox checkbox-field-2">
+          <%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %>
+        </label>
+        <%= f.submit("Search") %></form>
+        <% end %>
+      </div>
+    </div>
+    <div class="div-block-22">
+      <% @blogs.each do |blog| %>
+      <div class="div-block-23">
+        <h2 class="heading-22"><%= simple_format(blog.title) %></h2>
+        <p class="paragraph-5"><%= blog.text %></p>
+        <h3 class="heading-22">いいね件数: <%= blog.likes.count %></h2>
+        <div class="div-block-24">
+          <!--<a href="#" class="button-3 w-button">-->
+          <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %></a></div>
+      </div>
+      <% end %>
+    </div>
+    <%= paginate(@blogs) %>
+  </div>
+<!-- ここから上が新タイムライン2020 new ver -->
