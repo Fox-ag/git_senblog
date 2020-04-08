@@ -30,7 +30,7 @@
       <% if user_signed_in? && current_user.id == journal.user_id %>
       <div class="div-block-28">
         <h2 class="heading-23"><%= simple_format(journal.title) %></h2>
-        <p class="paragraph-6"><%= simple_format(journal.text) %></p>
+        <p class="paragraph-6"><%= journal.text %></p>
         <div class="div-block-27">
           <a href="#" class="w-button"><%= link_to '編集する', "/journals/#{journal.id}/edit", method: :get %></a>
           <a href="#" class="w-button"><%= link_to '削除する', "/journals/#{journal.id}", method: :delete %></a>

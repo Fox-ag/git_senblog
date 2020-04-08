@@ -1,49 +1,80 @@
-<div>
-    <h2 class="text-middle">
-        <i class="icon-movie color-gray-light"></i>検索！
-    </h2>
-    <%= form_tag('/blogs/search', method: :get) do %>
-                <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value="">
-                <button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>
-                <%= submit_tag("Search") %>
-              <% end %>
-              <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">
-              </form>
+<!-- ここから下が旧サーチライン2019ver -->
+<!--<div>-->
+<!--    <h2 class="text-middle">-->
+<!--        <i class="icon-movie color-gray-light"></i>検索！-->
+<!--    </h2>-->
+<!--    <%= form_tag('/blogs/search', method: :get) do %>-->
+<!--                <input class="search__query" name="keyword" placeholder="作品名で検索" type="text" value="">-->
+<!--                <button class="btn-search" title="検索" type="submit"><i class="icon-search"></i></button></input>-->
+<!--                <%= submit_tag("Search") %>-->
+<!--              <% end %>-->
+<!--              <form accept-charset="utf-8" action="/" class="js-search-submit" method="get">-->
+<!--              </form>-->
               
-                <% @blogs.each do |blog| %>
-                <li>
-                  <a class="listview__element--right-icon" href="/blogs/<%= blog.id %>/reviews/new" title="<%= blog.title %>">
-                    <div class="position-right p1em">
-                      <i class="icon-chevron-right color-sub"></i>
-                    </div>
-                    <div class="row no-space-bottom">
-                      <div class="col2">
-                        <div class="thumbnail thumbnail--movies">
-                          <div class="thumbnail__figure" title="<%= blog.title %>"></div>
-                        </div>
-                      </div>
-                      <div class="col6 push6">
-                        <h3 class="text-middle text-break">
-                          <span class="color-sub"><%= blog.title %></span>
-                        </h3>
-                        <p class="text-xsmall text-overflow">
-                          <%= blog.text %>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </li>
-                <% end %>
-</div>
-    <h2 class="text-middle">
-        <i class="icon-movie color-gray-light"></i>検索結果！
-    </h2>
-     <% @bloges.each do |bloge| %>
-       <%= bloge.title %>
-       <%= bloge.emotions.map{|emotion_id| Emotion.find(emotion_id.id).feeling}.join(',') %>
-       <%= bloge.themes.map{|theme_id| Theme.find(theme_id.id).topic}.join(',') %>
+<!--                <% @blogs.each do |blog| %>-->
+<!--                <li>-->
+<!--                  <a class="listview__element--right-icon" href="/blogs/<%= blog.id %>/reviews/new" title="<%= blog.title %>">-->
+<!--                    <div class="position-right p1em">-->
+<!--                      <i class="icon-chevron-right color-sub"></i>-->
+<!--                    </div>-->
+<!--                    <div class="row no-space-bottom">-->
+<!--                      <div class="col2">-->
+<!--                        <div class="thumbnail thumbnail--movies">-->
+<!--                          <div class="thumbnail__figure" title="<%= blog.title %>"></div>-->
+<!--                        </div>-->
+<!--                      </div>-->
+<!--                      <div class="col6 push6">-->
+<!--                        <h3 class="text-middle text-break">-->
+<!--                          <span class="color-sub"><%= blog.title %></span>-->
+<!--                        </h3>-->
+<!--                        <p class="text-xsmall text-overflow">-->
+<!--                          <%= blog.text %>-->
+<!--                        </p>-->
+<!--                      </div>-->
+<!--                    </div>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <% end %>-->
+<!--</div>-->
+<!--  <div>-->
+<!--    <h2 class="text-middle">-->
+<!--        <i class="icon-movie color-gray-light"></i>検索結果！-->
+<!--    </h2>-->
+<!--     <% @bloges.each do |bloge| %>-->
+<!--       <%= bloge.title %>-->
+<!--       <%= bloge.text %>-->
+<!--       <h3 class="heading-22">いいね件数: <%= bloge.likes.count %></h2>-->
+<!--       <%= bloge.emotions.map{|emotion_id| Emotion.find(emotion_id.id).feeling}.join(',') %>-->
+<!--       <%= bloge.themes.map{|theme_id| Theme.find(theme_id.id).topic}.join(',') %>-->
      
-     <% end %>
-<div>
+<!--     <% end %>-->
+<!--  </div>-->
+<!--<div>-->
   
+<!--</div>-->
+<!-- ここから上が旧サーチライン2019ver -->
+
+<!-- ここから下が新サーチライン2020ver -->
+<div class="section-search-body">
+    <div class="search-result-empty-top-block"></div>
+    <div class="search-result-title">
+      <h1 class="search-result-heading">検索結果</h1>
+    </div>
+    
+    <% @bloges.each do |bloge| %>
+    <div class="search-result-block">
+      <div class="search-result-content">
+        <h2 class="heading-search-content-title"><%= bloge.title %></h2>
+        <p class="paragraph-search-content-title"><%= bloge.text %></p>
+        <div class="search-read-number">
+          <h4 class="search-read-number-title">読んだよ！件数：</h4>
+          <h4 class="search-read-number-amount"><%= bloge.likes.count %></h4>
+        </div>
+        <div class="search-button-area"><%= link_to '詳細!', "/blogs/#{bloge.id}/detailpage", method: :get %></div>
+      </div>
+    </div>
+    <% end %>
+    
+    <div class="search-result-empty-bottom-block"></div>
 </div>
+<!-- ここから上が新サーチライン2020ver -->
