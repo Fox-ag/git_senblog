@@ -80,7 +80,7 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
   
   # Added for heroku
-  config.action_mailer.default_url_options = { :host=> 'permablog.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host=> 'arkchiveproto.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
