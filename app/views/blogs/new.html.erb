@@ -140,7 +140,7 @@
       <div class="blog-segments-choice">
         <div class="text-block-41">ブログ内容に近いものを下記の選択肢より選択してください。（複数選択可）</div>
         <div class="blog-segments-checks">
-          <div class="w-form">
+          <div class="w-form-99">
             <%= f.collection_check_boxes(:theme_ids, Theme.all, :id, :topic) do |c| %>
                           <%= c.label {c.check_box + c.text} %>
             <% end %>

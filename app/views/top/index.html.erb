@@ -71,13 +71,13 @@
   <div class="section-20">
     <div class="div-block-21">
       <%= search_form_for(@q, url: '/blogs/search') do |f| %>
-      <div class="w-form">
+      <div class="w-form-100">
         <form id="email-form" name="email-form" data-name="Email Form"><label for="name"><%= f.label :title_cont, 'キーワード一つ' %></label>
        <%= f.search_field :title_cont %>
-        <label class="w-checkbox checkbox-field">
+        <label class="w-checkbox-111 checkbox-field">
           <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>
         </label>
-        <label class="w-checkbox checkbox-field-2">
+        <label class="w-checkbox-112 checkbox-field-2">
           <%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %>
         </label>
         <%= f.submit("Search") %></form>

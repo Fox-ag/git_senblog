@@ -3208,6 +3208,7 @@
   width: 80vw;
   height: 20vh;
   margin-top: 12vh;
+  padding-top: 2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -4903,4 +4904,36 @@
   -ms-grid-column: 1;
   grid-area: Area;
 }
+
+.w-checkbox-111 {
+  margin-top: 1vh;
+  width: 74vw;  
+}
+
+.w-checkbox-112 {
+  margin-top: 1vh;
+  width: 74vw; 
+}
+
+.w-form-100 {
+  width: 80vw;
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+
+input[type="search"] {
+  border: 1px solid;
+  border-radius: 5px;
+  width: 25vw;
+}
+
+input[type="submit"] {
+  width: 15vw;
+  display: inline-block;
+  background: #668ad8;
+  color: #FFF;
+  border-bottom: solid 4px #627295;
+  border-radius: 3px;
+}
+
 // Timelineカスタム 2020 newおわり
