@@ -8,7 +8,7 @@ class Blog < ApplicationRecord
     has_one :feed_content, as: :content, dependent: :destroy
     
     has_many :likes
-    has_many :liked_users, through: :likes, source: :user
+    has_many :liked_users, through: :likes, source: :user, dependent: :destroy
     
     has_many :blog_feelings, dependent: :destroy
     has_many :emotions, through: :blog_feelings
