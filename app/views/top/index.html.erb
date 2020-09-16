@@ -68,22 +68,57 @@
 <!-- ここから上が旧タイムライン2019ver -->
 
 <!-- ここから下が新タイムライン2020 new ver -->
+  <!--<div class="section-20">-->
+  <!--  <div class="div-block-21">-->
+  <!--    <%= search_form_for(@q, url: '/blogs/search') do |f| %>-->
+  <!--    <div class="w-form-100">-->
+  <!--      <form id="email-form" name="email-form" data-name="Email Form"><label for="name"><%= f.label :title_cont, 'キーワード一つ' %></label>-->
+  <!--     <%= f.search_field :title_cont %>-->
+  <!--      <label class="w-checkbox-111 checkbox-field">-->
+  <!--        <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>-->
+  <!--      </label>-->
+  <!--      <label class="w-checkbox-112 checkbox-field-2">-->
+  <!--        <%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %>-->
+  <!--      </label>-->
+  <!--      <%= f.submit("Search") %></form>-->
+  <!--      <% end %>-->
+  <!--    </div>-->
+  <!--  </div>-->
+    
+    
+    
+  <!--  <div class="div-block-22">-->
+  <!--    <% @blogs.each do |blog| %>-->
+  <!--    <div class="div-block-23">-->
+  <!--      <h2 class="heading-22"><%= simple_format(blog.title) %></h2>-->
+  <!--      <p class="paragraph-5"><%= blog.text %></p>-->
+  <!--      <h3 class="heading-22">いいね件数: <%= blog.likes.count %></h2>-->
+  <!--      <div class="div-block-24">-->
+          <!--<a href="#" class="button-3 w-button">-->
+  <!--        <%= link_to '詳細!', "/blogs/#{blog.id}/detailpage", method: :get %></a></div>-->
+  <!--    </div>-->
+  <!--    <% end %>-->
+  <!--  </div>-->
+  <!--  <%= paginate(@blogs) %>-->
+  <!--</div>-->
+<!-- ここから上が新タイムライン2020 new ver -->
+
+
+<!-- ここから下が新タイムライン2020 new september ver -->
   <div class="section-20">
-    <div class="div-block-21">
+    <div class="div-block-search-box">
       <%= search_form_for(@q, url: '/blogs/search') do |f| %>
-      <div class="w-form-100">
-        <form id="email-form" name="email-form" data-name="Email Form"><label for="name"><%= f.label :title_cont, 'キーワード一つ' %></label>
-       <%= f.search_field :title_cont %>
-        <label class="w-checkbox-111 checkbox-field">
-          <%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %>
-        </label>
-        <label class="w-checkbox-112 checkbox-field-2">
-          <%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %>
-        </label>
-        <%= f.submit("Search") %></form>
-        <% end %>
+      <div class="form-block-search w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form-search">
+          <div class="div-search-block"><label for="name"><%= f.label :title_cont, 'キーワード一つ' %></label for="search"><%= f.search_field :title_cont %></div>
+          <div class="div-check-emotion-block"><label for="emotion" class="w-checkbox"><%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %></label></div>
+          <div class="div-check-theme-block"><label for="theme" class="w-checkbox checkbox-field"><%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %></label></div>
+          <div class="div-submit-block"><%= f.submit("Search") %></div>
+        </form>
       </div>
+      <% end %>
     </div>
+    
     <div class="div-block-22">
       <% @blogs.each do |blog| %>
       <div class="div-block-23">
@@ -98,4 +133,5 @@
     </div>
     <%= paginate(@blogs) %>
   </div>
-<!-- ここから上が新タイムライン2020 new ver -->
+<!-- ここから上が新タイムライン2020 new september ver -->
+
