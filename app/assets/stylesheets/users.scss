@@ -4494,6 +4494,7 @@
   width: 100%;
   height: 8vh;
   background-color: #6B2F00;
+  color: #FFFFFF;
 }
 
 .footer-class {
@@ -5301,6 +5302,7 @@
   width: 20vw;
   height: 8vh;
   background-color: #6B2F00;
+  color: #FFFFFF;
 }
 
 .header-class-menu {
@@ -5357,6 +5359,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   background-color: #6B2F00;
+  color: #FFFFFF;
 }
 
 .nav-link-menu {
@@ -14798,7 +14801,7 @@
   display: flex;
   width: 90vw;
   margin-right: 0px;
-  padding-top: 5vh;
+  padding-top: 0vh;
   padding-right: 10vw;
   padding-bottom: 5vh;
   -webkit-box-orient: vertical;
@@ -14949,19 +14952,22 @@
   display: -ms-flexbox;
   display: flex;
   width: 300px;
-  height: 100px;
+  height: 220px;
   margin-bottom: 3vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   border-radius: 10px;
   background-color: #fff;
+  background-image: url('logo_for_login.png');
+  background-position: 0px 0px;
+  background-size: cover;
 }
+
 
 .login_div_fill_logo_word {
   font-size: 40px;
@@ -15128,7 +15134,7 @@
   display: flex;
   width: 90vw;
   margin-right: 0px;
-  padding-top: 5vh;
+  padding-top: 0vh;
   padding-right: 10vw;
   padding-bottom: 5vh;
   -webkit-box-orient: vertical;
@@ -15279,23 +15285,33 @@
   display: -ms-flexbox;
   display: flex;
   width: 300px;
-  height: 100px;
+  height: 220px;
   margin-bottom: 3vh;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
   border-radius: 10px;
   background-color: #fff;
+  background-image: url('logo_for_login.png');
+  background-position: 0px 0px;
+  background-size: cover;
 }
+
 
 .login_div_fill_logo_word {
   font-size: 40px;
   line-height: 40px;
+}
+
+.image-logologin {
+  border-radius: 10px;
+  background-image: url('logo_for_login.png'), url('logo_for_login.png');
+  background-position: 0px 0px, 0px 0px;
+  background-size: auto, auto;
 }
 
 /* ログイン用ページのための組み入れたcss 2020 new おわり */

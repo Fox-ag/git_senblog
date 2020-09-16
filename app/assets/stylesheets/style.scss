@@ -1693,6 +1693,22 @@ html {
 /* 新ヘッダー用に組み入れたCSSおわり　古いver　プロフィールeditのcssも含まれる */
   
 /* 新ヘッダー用に組み入れたCSSはじまり2020ver　プロフィール部のcssも含まれる */  
+
+h1 a{
+  text-decoration: none;
+  color: white;
+}
+
+p a {
+text-decoration: none;
+color: white;
+}
+
+a {
+text-decoration: none;
+color: black;
+}
+
 .w-checkbox {
   display: block;
   margin-bottom: 5px;
@@ -1957,7 +1973,7 @@ html {
   grid-template-rows: auto auto;
 }
 
-.nav-link {
+--link {
   margin-left: 0px;
   padding-left: 20px;
 }
@@ -3248,6 +3264,7 @@ html {
   width: 100%;
   height: 8vh;
   background-color: #6B2F00;
+  z-index:9999;
 }
 
 .footer-class {
@@ -4112,6 +4129,7 @@ html {
   -ms-flex-pack: center;
   justify-content: center;
   background-color: #fff;
+  color: #FFFFFF;
 }
 
 .nav-link-menu {

@@ -83,13 +83,13 @@
       <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-menu w-nav">
         <div class="navigation w-container">
           <nav role="navigation" class="navigation-menu w-nav-menu">
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to 'Timeline', root_path %></a>
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "マイページ", mypage_user_path(current_user) %></a>
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "ブログ投稿", new_blog_path %></a>
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "日記を書く", new_journal_path %></a>
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール", user_path(current_user) %></a>
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール編集", edit_user_path(current_user) %></a>
-            <a href="#" class="nav-link-menu w-nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to 'タイムライン', root_path %></a></p>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "マイページ", mypage_user_path(current_user) %></a></p>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "ブログ投稿", new_blog_path %></a></p>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "日記を書く", new_journal_path %></a></p>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール", user_path(current_user) %></a></p>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール編集", edit_user_path(current_user) %></a></p>
+            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a></p>
           </nav>
         </div>
       </div>
