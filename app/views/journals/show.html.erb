@@ -29,43 +29,80 @@
 <!-- ここまで日記詳細2019おわり! -->
 
 <!-- ここから新日記詳細2020 new はじまり! -->
-<div class="journal-detail-body">
-    <div class="journal-detail-section">
-      <div class="journal-detail-title">
-        <h1 class="heading-26"><%= simple_format(@journal.title) %></h1>
-      </div>
-      <div class="journal-detail-paragraph">
-        <p class="journal-detail-paragraph-words"><%= simple_format(@journal.text) %></p>
-      </div>
-      <div class="journal-detail-photo-section">
-        <% @journal_photos.each do |p| %>
-        <div class="journal-detail-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>
-        <% end %>
+<!--<div class="journal-detail-body">-->
+<!--    <div class="journal-detail-section">-->
+<!--      <div class="journal-detail-title">-->
+<!--        <h1 class="heading-26"><%= simple_format(@journal.title) %></h1>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-paragraph">-->
+<!--        <p class="journal-detail-paragraph-words"><%= simple_format(@journal.text) %></p>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-photo-section">-->
+<!--        <% @journal_photos.each do |p| %>-->
+<!--        <div class="journal-detail-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>-->
+<!--        <% end %>-->
         <!--<div class="journal-detail-photo-right"></div>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-create-date">-->
+<!--        <div class="jouranl-detail-create-date-words">作成日時 : 2020年2月22日</div>-->
+<!--      </div>-->
+<!--       <div class="journal-detail-create-date">-->
+<!--        <div class="jouranl-detail-create-date-words">-->
+<!--          <a href="/users/<%= @journal.user.id %>">-->
+<!--          <span>投稿者</span>-->
+<!--          <%= @journal.user.nickname %>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-create-date">-->
+<!--        <% if user_signed_in? && current_user.id == @journal.user_id %>-->
+<!--          <ul class="more_list">-->
+<!--            <li>-->
+<!--              <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        <% end %>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!-- ここまで新日記詳細2020 new おわり! -->
+
+<!-- ここから新日記詳細20201109 new はじまり! -->
+  <div class="section-body-journal-submitted">
+    <div class="div-journal-submitted">
+      <div class="div-journal-submitted-title">
+        <h2 class="div-journal-submitted-text"><%= simple_format(@journal.title) %></h2>
       </div>
-      <div class="journal-detail-create-date">
-        <div class="jouranl-detail-create-date-words">作成日時 : 2020年2月22日</div>
-      </div>
-       <div class="journal-detail-create-date">
-        <div class="jouranl-detail-create-date-words">
-          <a href="/users/<%= @journal.user.id %>">
-          <span>投稿者</span>
-          <%= @journal.user.nickname %>
-          </a>
+      <p class="sentence-journal-submitted"><%= simple_format(@journal.text) %></p>
+      <!--<div class="photo-journal-write-submitted">-->
+      <!--  <% @journal_photos.each do |p| %>-->
+      <!--  <div class="left-photo-submitted-journal"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>-->
+        <!--<div class="right-photo-submitted-journal">%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>-->
+      <!--  <% end %>-->
+      <!--</div>-->
+      <div class="detail-journal-subtmitted">
+        <div class="nickname-journal-submitted">
+          <div class="nickname-submitted-title-journal">投稿者:</div>
+          <div class="nickname-submitted-var-journal"><%= @journal.user.nickname %></div>
+        </div>
+        <div class="date-journal-submitted">
+          <div class="date-submitted-title-journal">作成日:</div>
+          <div class="date-submitted-var-journal"><%= @journal.created_at %></div>
         </div>
       </div>
-      <div class="journal-detail-create-date">
+      <div class="div-edit-section-journal">
         <% if user_signed_in? && current_user.id == @journal.user_id %>
-          <ul class="more_list">
-            <li>
-              <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>
-            </li>
-            <li>
-              <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>
-            </li>
-          </ul>
+        <div class="div-edit-journals">
+          <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>
+        </div>
+        <div class="div-delete-journals">
+          <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>
+        </div>
         <% end %>
       </div>
     </div>
   </div>
-<!-- ここまで新日記詳細2020 new おわり! -->
+<!-- ここまで新日記詳細20201109 new おわり! -->

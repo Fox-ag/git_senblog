@@ -30,43 +30,80 @@
 <!-- ここまでブログ詳細2019おわり! -->
 
 <!-- ここから新ブログ詳細2020 new はじまり! -->
-<div class="journal-detail-body">
-    <div class="journal-detail-section">
-      <div class="journal-detail-title">
-        <h1 class="heading-26"><%= simple_format(@blog.title) %></h1>
-      </div>
-      <div class="journal-detail-paragraph">
-        <p class="journal-detail-paragraph-words"><%= simple_format(@blog.text) %></p>
-      </div>
-      <div class="journal-detail-photo-section">
-        <% @blog_photos.each do |p| %>
-        <div class="journal-detail-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>
-        <% end %>
+<!--<div class="journal-detail-body">-->
+<!--    <div class="journal-detail-section">-->
+<!--      <div class="journal-detail-title">-->
+<!--        <h1 class="heading-26"><%= simple_format(@blog.title) %></h1>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-paragraph">-->
+<!--        <p class="journal-detail-paragraph-words"><%= simple_format(@blog.text) %></p>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-photo-section">-->
+<!--        <% @blog_photos.each do |p| %>-->
+<!--        <div class="journal-detail-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>-->
+<!--        <% end %>-->
         <!--<div class="journal-detail-photo-right"></div>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-create-date">-->
+<!--        <div class="jouranl-detail-create-date-words">作成日時 : 2020年2月22日</div>-->
+<!--      </div>-->
+<!--       <div class="journal-detail-create-date">-->
+<!--        <div class="jouranl-detail-create-date-words">-->
+<!--          <a href="/users/<%= @blog.user.id %>">-->
+<!--          <span>投稿者</span>-->
+<!--          <%= @blog.user.nickname %>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="journal-detail-create-date">-->
+<!--        <% if user_signed_in? && current_user.id == @blog.user_id %>-->
+<!--          <ul class="more_list">-->
+<!--            <li>-->
+<!--              <%= link_to '編集しちゃおう', "/blogs/#{@blog.id}/edit", method: :get %>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <%= link_to '削除しちゃおう', "/blogs/#{@blog.id}", method: :delete %>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        <% end %>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!-- ここまで新ブログ詳細2020 new おわり! -->
+
+<!-- ここから新ブログ詳細20201109 new はじまり! -->
+  <div class="section-blog-show">
+    <div class="blog-show">
+      <div class="div-blog-show-title">
+        <h2 class="blog-show-title-word"><%= simple_format(@blog.title) %></h2>
       </div>
-      <div class="journal-detail-create-date">
-        <div class="jouranl-detail-create-date-words">作成日時 : 2020年2月22日</div>
+      <p class="blog-show-sentence"><%= simple_format(@blog.text) %></p>
+      <div class="blog-show-photo">
+        <% @blog_photos.each do |p| %>
+        <div class="blog-show-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>
+        <!--<div class="blog-show-photo-right">%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>-->
+        <% end %>
       </div>
-       <div class="journal-detail-create-date">
-        <div class="jouranl-detail-create-date-words">
-          <a href="/users/<%= @blog.user.id %>">
-          <span>投稿者</span>
-          <%= @blog.user.nickname %>
-          </a>
+      <div class="blog-show-detail">
+        <div class="blog-show-nickname">
+          <div class="blog-show-left-nickname">投稿者:</div>
+          <div class="blog-show-right-nickname"><%= @blog.user.nickname %></div>
+        </div>
+        <div class="blog-show-made-date">
+          <div class="blog-show-left-date">作成日時:</div>
+          <div class="blog-show-right-date"><%= @blog.created_at %></div>
         </div>
       </div>
-      <div class="journal-detail-create-date">
+      <div class="div-edit-section-journal">
         <% if user_signed_in? && current_user.id == @blog.user_id %>
-          <ul class="more_list">
-            <li>
-              <%= link_to '編集しちゃおう', "/blogs/#{@blog.id}/edit", method: :get %>
-            </li>
-            <li>
-              <%= link_to '削除しちゃおう', "/blogs/#{@blog.id}", method: :delete %>
-            </li>
-          </ul>
+        <!--<div class="div-edit-journals">-->
+          <!--%= link_to '編集しちゃおう', "/blogs/#{@blog.id}/edit", method: :get %>-->
+        <!--</div>-->
+        <div class="div-delete-journals">
+          <%= link_to '削除しちゃおう', "/blogs/#{@blog.id}", method: :delete %>
+        </div>
         <% end %>
       </div>
     </div>
   </div>
-<!-- ここまで新ブログ詳細2020 new おわり! -->
+<!-- ここまで新ブログ詳細20201109 new おわり! -->

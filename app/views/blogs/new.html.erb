@@ -109,96 +109,195 @@
 
 <!-- ここから新ブログ投稿2020 new はじまり! -->  
   
-  <div class="section-40">
-    <%= form_for @blog, html: {multipart: true} do |f| %>
-    <div class="blog-writes-section">
-      <div class="blog-writing-title">
-        <h1 class="heading-27"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></h1>
-      </div>
+  <!--<div class="section-40">-->
+  <!--  <%= form_for @blog, html: {multipart: true} do |f| %>-->
+  <!--  <div class="blog-writes-section">-->
+  <!--    <div class="blog-writing-title">-->
+  <!--      <h1 class="heading-27"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></h1>-->
+  <!--    </div>-->
       
-      <div class="blog-writes-sentence-indicate">
-        <div class="text-block-44">記事を250文字以上、2000文字以内に記入してください。</div>
-      </div>
-      <div class="blog-writes-sentence">
-        <div class="text-block-43"><%= f.text_area :text, placeholder:'text', style:'height: 69vh; width: 100%;', minlength: "250" ,maxlength: "2000" %></div>
-      </div>
-      <div class="blog-photos-section">
-        <%= f.fields_for :blog_photos do |p| %>
-        <div class="blog-photos-title">
-          <div class="text-block-42">ブログ内容の写真を選択してください。（2枚まで）</div>
-        </div>
-        <div class="blog-photos-choose">
-          <div class="blog-photos-include-left">
-            <div><%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %></div>
-          </div>
-          <div class="blog-photos-include-right">
-            <div><%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %></div>
-          </div>
-        </div>
-        <% end %>
-      </div>
-      <div class="blog-segments-choice">
-        <div class="text-block-41">ブログ内容に近いものを下記の選択肢より選択してください。（複数選択可）</div>
-        <div class="blog-segments-checks">
-          <div class="w-form-99">
-            <%= f.collection_check_boxes(:theme_ids, Theme.all, :id, :topic) do |c| %>
-                          <%= c.label {c.check_box + c.text} %>
+  <!--    <div class="blog-writes-sentence-indicate">-->
+  <!--      <div class="text-block-44">記事を250文字以上、2000文字以内に記入してください。</div>-->
+  <!--    </div>-->
+  <!--    <div class="blog-writes-sentence">-->
+  <!--      <div class="text-block-43"><%= f.text_area :text, placeholder:'text', style:'height: 69vh; width: 100%;', minlength: "250" ,maxlength: "2000" %></div>-->
+  <!--    </div>-->
+  <!--    <div class="blog-photos-section">-->
+  <!--      <%= f.fields_for :blog_photos do |p| %>-->
+  <!--      <div class="blog-photos-title">-->
+  <!--        <div class="text-block-42">ブログ内容の写真を選択してください。（2枚まで）</div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-photos-choose">-->
+  <!--        <div class="blog-photos-include-left">-->
+  <!--          <div><%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %></div>-->
+  <!--        </div>-->
+  <!--        <div class="blog-photos-include-right">-->
+  <!--          <div><%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %></div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <% end %>-->
+  <!--    </div>-->
+  <!--    <div class="blog-segments-choice">-->
+  <!--      <div class="text-block-41">ブログ内容に近いものを下記の選択肢より選択してください。（複数選択可）</div>-->
+  <!--      <div class="blog-segments-checks">-->
+  <!--        <div class="w-form-99">-->
+  <!--          <%= f.collection_check_boxes(:theme_ids, Theme.all, :id, :topic) do |c| %>-->
+  <!--                        <%= c.label {c.check_box + c.text} %>-->
+  <!--          <% end %>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="blog-segmentation">-->
+  <!--      <div class="blog-segmentation-most-left">-->
+  <!--        <div>例) 社会、経済、政治、法律、ビジネス、情報、教育</div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-segmentation-left">-->
+  <!--        <div>例) テクノロジー、化学、農業、建築、デザイン、医療、食、日用品、等</div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-segmentation-right">-->
+  <!--        <div>例) 環境、地理、自然、災害、宇宙、動物</div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-segmentation-most-right">-->
+  <!--        <div>例) 娯楽、ホビー、病気、思想、哲学、宗教、教育、学問、成長、美容、体調</div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="blog-segmentation-photos">-->
+  <!--      <div class="blog-segmentation-photos-most-left">-->
+  <!--        <div class="div-block-106"></div>-->
+  <!--        <div class="div-block-107"></div>-->
+  <!--        <div class="div-block-108"></div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-segmentation-photos-left">-->
+  <!--        <div class="div-block-109"></div>-->
+  <!--        <div class="div-block-110"></div>-->
+  <!--        <div class="div-block-111"></div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-segmentation-photos-right">-->
+  <!--        <div class="div-block-115"></div>-->
+  <!--        <div class="div-block-116"></div>-->
+  <!--        <div class="div-block-117"></div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-segmentation-photos-most-right">-->
+  <!--        <div class="div-block-112"></div>-->
+  <!--        <div class="div-block-113"></div>-->
+  <!--        <div class="div-block-114"></div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="blog-emotions">-->
+  <!--      <div class="text-block-40">ブログ内容の感情を選択してください。（複数選択可）</div>-->
+  <!--      <div class="blog-emotions-checkbox">-->
+  <!--        <div class="w-form">-->
+  <!--          <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>-->
+  <!--                        <%= b.label {b.check_box + b.text} %>-->
+  <!--          <% end %>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <div class="blog-emotion-ring"></div>-->
+  <!--    </div>-->
+  <!--        <a href="#" class="blogs-button w-button">-->
+  <!--          <%= button_tag type: "submit", class: "btn btn--block" do %>投稿する-->
+  <!--          <% end %>-->
+  <!--        </a>-->
+  <!--    </div>-->
+  <!--    <% end %>-->
+  <!--</div>-->
+<!-- ここまで新ブログ投稿2020 new おわり! -->
+
+<!-- ここから新ブログ投稿20201108 new はじまり! -->  
+<%= form_for @blog, html: {multipart: true} do |f| %>
+  <div class="section-write-blog">
+    <div class="main-section-write-blog">
+      <div class="form-blocjk-for-wb w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form-wb">
+          <div class="wb-title">未来の人へ向けてキーワードを含めて感想文のタイトルを記入してください。</div>
+          <p class="wb-text"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></p>
+          <div class="wb-sentence-title">未来の人へ向けて250文字以上で感想文を記入してください。</div>
+          <p class="wb-word-section"><%= f.text_area :text, placeholder:'text', style:'height: 70vh; width: 100%;', minlength: "250" %></p>
+          <div class="choose-photo">
+            <%= f.fields_for :blog_photos do |p| %>
+            <div class="choose-photo-title">感想文の内容に関する写真を選択してください。（２枚まで）</div>
+            <div class="div-choose-area">
+              <div class="choose-left-photo">
+                <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+              </div>
+              <div class="choose-right-photo">
+                <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+              </div>
+            </div>
             <% end %>
           </div>
+        </form>
+        
+      </div>
+      <div class="select-content">
+        <div class="select-content-title">感想文の内容に近いものを下記の4つの選択肢より選択してください。（複数選択可）</div>
+        <div class="selection-content">
+        <%= f.collection_check_boxes(:theme_ids, Theme.all, :id, :topic) do |c| %>
+                       <%= c.label {c.check_box + c.text} %>          
+        <% end %>  
+        </div>
+        <div class="select-content-photo">
+          <div class="div-block-160">
+            <div class="div-text-01">
+              <div class="div-text-block-01">例）社会、経済、政治、法律、ビジネス、情報、教育、等</div>
+            </div>
+            <div class="div-photo-01"></div>
+            <div class="div-photo-02"></div>
+            <div class="div-photo-03"></div>
+          </div>
+          <div class="select-content-02">
+            <div class="div-text-02">
+              <div class="div-text-block-02">例）テクノロジー、化学、農業、建築、デザイン、医療、食、等</div>
+            </div>
+            <div class="div-photo-001"></div>
+            <div class="div-photo-002"></div>
+            <div class="div-photo-003"></div>
+          </div>
+          <div class="select-content-03">
+            <div class="div-text-03">
+              <div class="div-text-block-03">例）環境、地理、自然、災害、宇宙、動物、等</div>
+            </div>
+            <div class="div-0001"></div>
+            <div class="div-0002"></div>
+            <div class="div-0003"></div>
+          </div>
+          <div class="select-content-04">
+            <div class="div-text-04">
+              <div class="div-text-block-04">例）娯楽、ホビー、病気、思想、哲学、宗教、教育、学問、成長、美容、等</div>
+            </div>
+            <div class="div-photo-00001"></div>
+            <div class="div-photo-00002"></div>
+            <div class="div-photo-00003"></div>
+          </div>
         </div>
       </div>
-      <div class="blog-segmentation">
-        <div class="blog-segmentation-most-left">
-          <div>例) 社会、経済、政治、法律、ビジネス、情報、教育</div>
-        </div>
-        <div class="blog-segmentation-left">
-          <div>例) テクノロジー、化学、農業、建築、デザイン、医療、食、日用品、等</div>
-        </div>
-        <div class="blog-segmentation-right">
-          <div>例) 環境、地理、自然、災害、宇宙、動物</div>
-        </div>
-        <div class="blog-segmentation-most-right">
-          <div>例) 娯楽、ホビー、病気、思想、哲学、宗教、教育、学問、成長、美容、体調</div>
-        </div>
-      </div>
-      <div class="blog-segmentation-photos">
-        <div class="blog-segmentation-photos-most-left">
-          <div class="div-block-106"></div>
-          <div class="div-block-107"></div>
-          <div class="div-block-108"></div>
-        </div>
-        <div class="blog-segmentation-photos-left">
-          <div class="div-block-109"></div>
-          <div class="div-block-110"></div>
-          <div class="div-block-111"></div>
-        </div>
-        <div class="blog-segmentation-photos-right">
-          <div class="div-block-115"></div>
-          <div class="div-block-116"></div>
-          <div class="div-block-117"></div>
-        </div>
-        <div class="blog-segmentation-photos-most-right">
-          <div class="div-block-112"></div>
-          <div class="div-block-113"></div>
-          <div class="div-block-114"></div>
-        </div>
-      </div>
-      <div class="blog-emotions">
-        <div class="text-block-40">ブログ内容の感情を選択してください。（複数選択可）</div>
-        <div class="blog-emotions-checkbox">
-          <div class="w-form">
-            <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
+      <div class="select-emotion">
+        <div class="select-emotion-title">感想文に関する感情に近いものをプルチックの感情の輪を参考に選択してください。(複数選択可)<br></div>
+        <div class="select-checks">
+          <div class="form-block-checks w-form">
+           <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
                           <%= b.label {b.check_box + b.text} %>
             <% end %>
+           
           </div>
         </div>
-        <div class="blog-emotion-ring"></div>
+        <div class="div-color-image">
+          <div class="div-color-photo-image"></div>
+        </div>
       </div>
-          <!--<a href="#" class="blogs-button w-button">-->
-            <%= button_tag type: "submit", class: "btn btn--block" do %>投稿する
-            <% end %>
-          <!--</a>-->
+      
+    </div>
+    <div class="submit-write-blog">
+      <%= button_tag type: "submit", class: "btn btn--block" do %>
+      <div class="submit-button-write-blog">
+        <div class="submit-image-write-blog"></div>
+        <div class="submit-word-write-blog">
+          <div class="submit-write-blog-text">投稿する
+            
+          </div>
+        </div>
       </div>
       <% end %>
-  </div>
-<!-- ここまで新ブログ投稿2020 new おわり! -->
+    </div>
+<% end %>
+<!-- ここまで新ブログ投稿20201108 new おわり! -->

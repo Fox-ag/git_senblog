@@ -55,26 +55,52 @@
 <!-- ここから上が旧サーチライン2019ver -->
 
 <!-- ここから下が新サーチライン2020ver -->
-<div class="section-search-body">
-    <div class="search-result-empty-top-block"></div>
-    <div class="search-result-title">
-      <h1 class="search-result-heading">検索結果</h1>
-    </div>
+<!--<div class="section-search-body">-->
+<!--    <div class="search-result-empty-top-block"></div>-->
+<!--    <div class="search-result-title">-->
+<!--      <h1 class="search-result-heading">検索結果</h1>-->
+<!--    </div>-->
     
-    <% @bloges.each do |bloge| %>
-    <div class="search-result-block">
-      <div class="search-result-content">
-        <h2 class="heading-search-content-title"><%= bloge.title %></h2>
-        <p class="paragraph-search-content-title"><%= bloge.text %></p>
-        <div class="search-read-number">
-          <h4 class="search-read-number-title">読んだよ！件数：</h4>
-          <h4 class="search-read-number-amount"><%= bloge.likes.count %></h4>
-        </div>
-        <div class="search-button-area"><%= link_to '詳細!', "/blogs/#{bloge.id}/detailpage", method: :get %></div>
-      </div>
-    </div>
-    <% end %>
+<!--    <% @bloges.each do |bloge| %>-->
+<!--    <div class="search-result-block">-->
+<!--      <div class="search-result-content">-->
+<!--        <h2 class="heading-search-content-title"><%= bloge.title %></h2>-->
+<!--        <p class="paragraph-search-content-title"><%= bloge.text %></p>-->
+<!--        <div class="search-read-number">-->
+<!--          <h4 class="search-read-number-title">読んだよ！件数：</h4>-->
+<!--          <h4 class="search-read-number-amount"><%= bloge.likes.count %></h4>-->
+<!--        </div>-->
+<!--        <div class="search-button-area"><%= link_to '詳細!', "/blogs/#{bloge.id}/detailpage", method: :get %></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <% end %>-->
     
-    <div class="search-result-empty-bottom-block"></div>
-</div>
+<!--    <div class="search-result-empty-bottom-block"></div>-->
+<!--</div>-->
 <!-- ここから上が新サーチライン2020ver -->
+
+<!-- ここから下が新サーチライン20201110ver -->
+<div class="section-search">
+    <div class="search-title">
+      <h1 class="search-title-heading">検索結果一覧</h1>
+    </div>
+      <% @bloges.each do |bloge| %>
+        <div class="seach-result">
+        <h2 class="sr-heading"><%= bloge.title %></h2>
+        <p class="sr-sentence"><%= bloge.text %></p>
+        <div class="sr-readit">
+          <div class="sr-readit-text">読んだよ！件数:</div>
+          <div class="sr-readit-var"><%= bloge.likes.count %></div>
+        </div>
+      
+          <div class="sr-button">
+            <div class="sr-button-image"></div>
+            <div class="sr-button-word">
+              <div class="sr-button-text"><%= link_to '詳細!', "/blogs/#{bloge.id}/detailpage", method: :get %></div>
+            </div>
+          </div>
+       </div>
+       <% end %>
+</div>
+    
+<!-- ここから上が新サーチライン20201110ver -->

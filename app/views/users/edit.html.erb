@@ -29,7 +29,7 @@
 <!--      </div>-->
 <!--      <div class="form-group">-->
 <!--        <div class="col-lg-6">-->
-<!--          <%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %>-->
+<!--          %= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %>-->
 <!--        </div>-->
 <!--      </div>-->
 <!--      <div class="form-group">-->
@@ -83,7 +83,7 @@
   <!--    <div>-->
   <!--      <h3>生年月日</h3>-->
   <!--      <div>-->
-  <!--        <h3><%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %></h3>-->
+  <!--        <h3>%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %></h3>-->
   <!--      </div>-->
   <!--    </div>-->
   <!--    <div>-->
@@ -146,7 +146,7 @@
   <!--    </div>-->
   <!--    <div class="birthdate-area">-->
   <!--      <div class="birthdate-position">生年月日:</div>-->
-  <!--      <div class="birthdate-section"><%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %></div>-->
+  <!--      <div class="birthdate-section">%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %></div>-->
   <!--    </div>-->
   <!--    <div class="country-area">-->
   <!--      <div class="country-position">お住まいの国:</div>-->
@@ -181,72 +181,156 @@
    
    
     <!-- ここから新プロフィール編集2020 newのカスタムはじまり -->
-  <div class="self-body">
-    <%= form_for current_user do |f| %>
-    <div class="self-section">
-      <div class="self-photo-input-section"><h3>プロフィール画像</h3>
-        <div class="self-photo-input-words"><%= f.file_field :image, class: "form-control floating-label", placeholder: "画像アップロード" %></div>
-      </div>
-      <div class="self-name-input-section">
-        <div class="self-name-title">
-          <div class="self-name-words">氏名</div>
+  <!--<div class="self-body">-->
+  <!--  <%= form_for current_user do |f| %>-->
+  <!--  <div class="self-section">-->
+  <!--    <div class="self-photo-input-section"><h3>プロフィール画像</h3>-->
+  <!--      <div class="self-photo-input-words"><%= f.file_field :image, class: "form-control floating-label", placeholder: "画像アップロード" %></div>-->
+  <!--    </div>-->
+  <!--    <div class="self-name-input-section">-->
+  <!--      <div class="self-name-title">-->
+  <!--        <div class="self-name-words">氏名</div>-->
+  <!--      </div>-->
+  <!--      <div class="self-name-input-name">-->
+  <!--        <div class="self-name-input-last-name-words">-->
+  <!--          <div class="self-name-last-sentence">性 Last Name</div>-->
+  <!--          <div class="w-form-name">-->
+  <!--            <%= f.text_field :family_name, placeholder: "姓", class: "form-control" %>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--        <div class="self-name-input-first-name-words">-->
+  <!--          <div class="self-name-first-sentence">名 First Name</div>-->
+  <!--          <div class="w-form-name">-->
+  <!--            <%= f.text_field :first_name, placeholder: "名", class: "form-control" %>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="self-nickname-section">-->
+  <!--      <div class="self-nickname-input">-->
+  <!--        <div class="text-block-34">ニックネーム:</div>-->
+  <!--        <div class="self-nickname-sentence"><%= f.text_field :nickname, placeholder: "ニックネーム(必須)", class: "form-control" %></div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="self-birrhdate-section">-->
+  <!--      <div class="self-birthdate-input">-->
+  <!--        <div class="text-block-35">生年月日:</div>-->
+  <!--        <div class="self-birthdate-sentence">%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %></div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="self-country-section">-->
+  <!--      <div class="self-country-input">-->
+  <!--        <div class="text-block-37">お住いの国:</div>-->
+  <!--        <div class="self-country-sentence"><%= f.text_field :country, placeholder: "お住いの国", class: "form-control" %></div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="self-city-section">-->
+  <!--      <div class="self-city-input">-->
+  <!--        <div class="text-block-38">お住まいの町:</div>-->
+  <!--        <div class="self-city-sentence"><%= f.text_field :city, placeholder: "お住いの市町村", class: "form-control" %></div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--    <div class="self-myself-section">-->
+  <!--      <div class="self-myself-title">-->
+  <!--        <div class="text-block-39"><%=f.label :selfanalysis,"自己分析"%></div>-->
+  <!--        <div class="self-myself-words">-->
+  <!--          <div><%= f.text_area :selfanalysis, placeholder:"自己分析を記入してください", class:"form-control", style:'height: 48vh; width: 100%;' %></div>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="self-intro-section">-->
+  <!--    <div class="self-intro-title">-->
+  <!--      <h1 class="heading-25"><%=f.label :selfintroduction,"自分"%></h1>-->
+  <!--    </div>-->
+  <!--    <div class="self-intro-words">-->
+  <!--      <div class="self-intro-words-sentence"><%= f.text_area :selfintroduction, placeholder:"自己紹介を記入してください", class:"form-control", style:'height: 63vh; width: 100%;' %></div>-->
+  <!--    </div>-->
+  <!--  </div>%= f.submit "送信", class: "submitter btn btn-primary withripple" %></div>-->
+  <!--  <% end %>-->
+  <!--</div>-->
+   <!-- ここまで新プロフィール編集2020 newのカスタムおわり! -->
+   
+  <!-- ここから新プロフィール編集20201109 newのカスタムはじまり -->
+<%= form_for current_user do |f| %>
+  <div class="section-profile-edit">
+    
+    <div class="profile-edit-area">
+      <div class="profile-edit-image">
+        <div class="pe-image-word">プロフィール画像</div>
+        <div class="pe-image-button">
+          <div class="pe-image-text"><%= f.file_field :image, class: "form-control floating-label", placeholder: "画像アップロード" %></div>
         </div>
-        <div class="self-name-input-name">
-          <div class="self-name-input-last-name-words">
-            <div class="self-name-last-sentence">性 Last Name</div>
-            <div class="w-form-name">
-              <%= f.text_field :family_name, placeholder: "姓", class: "form-control" %>
+        <!--<div class="pe-image-sentence">選択されていません</div>-->
+      </div>
+      <div class="pe-show-section">
+        <h3 class="pe-show-heading">氏名</h3>
+        <div class="pe-form-block w-form">
+          <form id="email-form" name="email-form" data-name="Email Form" class="pe-form">
+            <div class="pe-last-name">性 （Last Name）</div>
+            <p class="pe-last-name-box"><%= f.text_field :family_name, placeholder: "姓", class: "form-controler" %></p>
+            <div class="pe-first-name">名 （First Name）</div>
+            <p class="pe-first-name-box"><%= f.text_field :first_name, placeholder: "名", class: "form-controler" %></p>
+            <div class="pe-last-name">セイ （Katakana）</div>
+            <p class="pe-last-name-box"><%= f.text_field :family_name_kana, placeholder: "セイ（カタカナ）", class: "form-controler" %></p>
+            <div class="pe-first-name">ナマエ （Katakana）</div>
+            <p class="pe-first-name-box"><%= f.text_field :first_name_kana, placeholder: "ナマエ（カタカナ）", class: "form-controler" %></p>
+            <div class="pe-birth-date">
+              <div class="pe-birth-date-text">生年月日（Birthdate）:</div>
+              <p class="pe-birth-date-var"><%= f.date_select :birth_date, use_month_numbers: true,start_year: 1900, end_year: (Time.now.year - 5), default: Date.new(2020, 1, 1) %></p>
             </div>
-          </div>
-          <div class="self-name-input-first-name-words">
-            <div class="self-name-first-sentence">名 First Name</div>
-            <div class="w-form-name">
-              <%= f.text_field :first_name, placeholder: "名", class: "form-control" %>
+            <div class="pe-country">
+              <div class="pe-country-text">お住まいの国（Country）:</div>
+              <p class="pe-country-var"><%= f.text_field :country, placeholder: "お住いの国", class: "form-controling" %></p>
             </div>
-          </div>
-        </div>
-      </div>
-      <div class="self-nickname-section">
-        <div class="self-nickname-input">
-          <div class="text-block-34">ニックネーム:</div>
-          <div class="self-nickname-sentence"><%= f.text_field :nickname, placeholder: "ニックネーム(必須)", class: "form-control" %></div>
-        </div>
-      </div>
-      <div class="self-birrhdate-section">
-        <div class="self-birthdate-input">
-          <div class="text-block-35">生年月日:</div>
-          <div class="self-birthdate-sentence"><%= f.text_field :birthdate, placeholder: "例) 2001年1月1日の場合、20010101", class: "form-control" %></div>
-        </div>
-      </div>
-      <div class="self-country-section">
-        <div class="self-country-input">
-          <div class="text-block-37">お住いの国:</div>
-          <div class="self-country-sentence"><%= f.text_field :country, placeholder: "お住いの国", class: "form-control" %></div>
-        </div>
-      </div>
-      <div class="self-city-section">
-        <div class="self-city-input">
-          <div class="text-block-38">お住まいの町:</div>
-          <div class="self-city-sentence"><%= f.text_field :city, placeholder: "お住いの市町村", class: "form-control" %></div>
-        </div>
-      </div>
-      <div class="self-myself-section">
-        <div class="self-myself-title">
-          <div class="text-block-39"><%=f.label :selfanalysis,"自己分析"%></div>
-          <div class="self-myself-words">
-            <div><%= f.text_area :selfanalysis, placeholder:"自己分析を記入してください", class:"form-control", style:'height: 48vh; width: 100%;' %></div>
-          </div>
+            <div class="pe-city">
+              <div class="pe-city-text">お住まいの町（City）:</div>
+              <p class="pe-city-var"><%= f.text_field :city, placeholder: "お住いの市町村", class: "form-controling" %></p>
+            </div>
+            <div class="pe-yourself">自分について（About yourself）:</div>
+            <p class="pe-paragraph"><%= f.text_area :selfanalysis, placeholder:"自己分析を記入してください", class:"form-control", style:'height: 40vh; width: 100%;' %></p>
+          <!--</form>-->
+          <!--<div class="w-form-done">-->
+          <!--  <div>Thank you! Your submission has been received!</div>-->
+          <!--</div>-->
+          <!--<div class="w-form-fail">-->
+          <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
+          <!--</div>-->
         </div>
       </div>
     </div>
-    <div class="self-intro-section">
-      <div class="self-intro-title">
-        <h1 class="heading-25"><%=f.label :selfintroduction,"自分"%></h1>
+    <div class="pe-show">
+      <h3 class="pe-show-title">公開情報</h3>
+      <div class="pe-show-title-section">
+        <div class="pe-show-form-block w-form">
+          <!--<form id="email-form-3" name="email-form-3" data-name="Email Form 3" class="pe-form">-->
+            <div class="pe-nickname">ニックネーム（Nickname）:</div>
+            <p class="pe-nickname-sentence"><%= f.text_field :nickname, placeholder: "ニックネーム(必須)", class: "form-controler" %></p>
+            <div class="pe-self-show">自己紹介（Self Introduction）:</div>
+          </form>
+          <!--<div class="w-form-done">-->
+          <!--  <div>Thank you! Your submission has been received!</div>-->
+          <!--</div>-->
+          <!--<div class="w-form-fail">-->
+          <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
+          <!--</div>-->
+        </div>
       </div>
-      <div class="self-intro-words">
-        <div class="self-intro-words-sentence"><%= f.text_area :selfintroduction, placeholder:"自己紹介を記入してください", class:"form-control", style:'height: 63vh; width: 100%;' %></div>
+      <p class="pe-show-paragraph"><%= f.text_area :selfintroduction, placeholder:"自己紹介を記入してください", class:"form-control", style:'height: 100%; width: 100%;' %></p>
+    </div>
+    
+    <div class="pe-submit">
+      <%= button_tag type: "submit" do %>
+      <div class="pe-submit-button">
+        <div class="pe-submit-image"></div>
+        <div class="pe-submit-word">
+          <!--<div class="pe-submit-text">%= f.submit "送信" %></div>-->
+          <div class="pe-submit-text">編集</div>
+        </div>
       </div>
-    </div><%= f.submit "送信", class: "submitter btn btn-primary withripple" %></div>
-    <% end %>
+      <% end %>
+    </div>
+    
   </div>
-   <!-- ここまで新プロフィール編集2020 newのカスタムおわり! -->
+<% end %>
+   <!-- ここまで新プロフィール編集20201109 newのカスタムおわり! -->

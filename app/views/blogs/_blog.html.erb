@@ -25,18 +25,45 @@
 <!-- ここから上が新マイページ2020ver -->
 
 <!-- ここから下が新マイページ2020ver new -->
-      <% if user_signed_in? && current_user.id == blog.user_id %>
-      <div class="div-block-26">
-        <h2 class="heading-23"><%= simple_format(blog.title) %></h2>
-        <p class="paragraph-6"><%= blog.text %></p>
-        <div class="div-block-27">
+      <!--<% if user_signed_in? && current_user.id == blog.user_id %>-->
+      <!--<div class="div-block-26">-->
+      <!--  <h2 class="heading-23"><%= simple_format(blog.title) %></h2>-->
+      <!--  <p class="paragraph-6"><%= blog.text %></p>-->
+      <!--  <div class="div-block-27">-->
           <!--<a href="#" class="w-button"><%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %></a>-->
           <!--<a href="#" class="w-button"><%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete%></a>-->
           <!--<a href="#" class="w-button"><%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %></a>-->
-          <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>
-          <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>
-          <%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %>
-        </div>
-      </div>
-      <% end %>
+      <!--    <%= link_to '編集しちゃおう', "/blogs/#{blog.id}/edit", method: :get %>-->
+      <!--    <%= link_to '削除しちゃおう', "/blogs/#{blog.id}", method: :delete %>-->
+      <!--    <%= link_to '詳細!', "/blogs/#{blog.id}", method: :get %>-->
+      <!--  </div>-->
+      <!--</div>-->
+      <!--<% end %>-->
 <!-- ここから上が新マイページ2020ver new -->
+
+<!-- ここから下が新マイページ20201108ver new -->
+      <% if user_signed_in? && current_user.id == blog.user_id %>
+      <div class="div-for-blog">
+      <h2 class="title-blog"><%= simple_format(blog.title) %></h2>
+      <p class="paragraph-blog"><%= blog.text %></p>
+      <div class="details-sec">
+        <%= link_to("/blogs/#{blog.id}", method: :get) do %>
+        <div class="detail-butt">
+          <div class="detail-photo"></div>
+          <div class="detail-word">
+            <div class="tb-detail">詳細!</div>
+          </div>
+        </div>
+        <% end %>
+        <%= link_to("/blogs/#{blog.id}", method: :delete) do %>
+        <div class="delete-butt">
+          <div class="delete-photo"></div>
+          <div class="delete-word">
+            <div class="deleted-word">削除!</div>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+<!-- ここから上が新マイページ20201108ver new -->

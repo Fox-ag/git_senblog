@@ -8,33 +8,85 @@
   <!--  <input type="submit" value="SEND">-->
   <!--% end %>-->
   
-   <div class="div-block-90">
-      <%= form_for [@journal] do |f| %>
+<!--   <div class="div-block-90">-->
+<!--      <%= form_for [@journal] do |f| %>-->
       <!--%= form_tag('/blogs', method: :post) do %>-->
-      <div class="div-block-11">
-          <h2>日記を編集しちゃおう</h2>
-            <div>
-              <div class="form-block-2 w-form">
-                  <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
-                  <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
-                  <div class="div-block-12"><%= f.label :image %></div>
+<!--      <div class="div-block-11">-->
+<!--          <h2>日記を編集しちゃおう</h2>-->
+<!--            <div>-->
+<!--              <div class="form-block-2 w-form">-->
+<!--                  <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>-->
+<!--                  <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>-->
+<!--                  <div class="div-block-12"><%= f.label :image %></div>-->
                   
-                  <div class="div-block-120">
-                   <%= f.fields_for :journal_photos do |p| %>
-                    <div class="field">
-                      <%= p.label :photo %><br>
-                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
-                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>
-                    </div>
-                     <% end %>
-                   </div>
+<!--                  <div class="div-block-120">-->
+<!--                   <%= f.fields_for :journal_photos do |p| %>-->
+<!--                    <div class="field">-->
+<!--                      <%= p.label :photo %><br>-->
+<!--                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+<!--                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+<!--                    </div>-->
+<!--                     <% end %>-->
+<!--                   </div>-->
                   
                   
-                  <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>編集する
-                  <% end %>
-              </div>
-            </div>
+<!--                  <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>編集する-->
+<!--                  <% end %>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--      </div>-->
+<!--      <% end %>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+<!-- ここから下がマイページ20201108ver new -->
+<%= form_for @journal, html: {multipart: true} do |f| %>
+ <div class="section-write-journal">
+  
+    <div class="div-block-write-journal">
+       
+      <div class="form-block-write-journal w-form">
+        <form id="email-form" name="email-form" data-name="Email Form" class="form-write-journal">
+          <div class="write-journal-title">キーワードを含めて感想文のタイトルを記入してください。</div>
+          <p class="write-journal-title-word"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></p>
+          <div class="write-journal-text">250文字以上で感想文を記入してください。</div>
+          <p class="write-journal-paragraph"><%= f.text_area :text, placeholder:'text', style:'height: 52vh; width: 100%;', minlength: "250" %></p>
+          <!--<div class="div-pick-picture">-->
+          <!--    <div class="pick-picture-title">感想文の内容に関する写真を選択してください。（２枚まで）</div>-->
+          <!--    <div class="pick-photos">-->
+          <!--      <%= f.fields_for :journal_photos do |p| %>-->
+          <!--        <div class="pick-left">-->
+          <!--          <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+          <!--        </div>-->
+          <!--        <div class="pick-right">-->
+          <!--          <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+          <!--        </div>-->
+          <!--      <% end %>-->
+          <!--    </div>-->
+              
+          <!--</div>-->
+        </form>
+        <div class="w-form-done"></div>
+        <!--<div class="w-form-fail">-->
+        <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
+        <!--</div>-->
+      </div>
+    </div>
+    <div class="submit-write-journal">
+      <%= button_tag type: "submit", class: "btn btn--block" do %>
+      <div class="button-submit-journal">
+        <div class="write-left-journal-photo"></div>
+        <div class="write-right-journal-text">
+          <div class="write-journal-word">下書き編集
+                    
+          </div>
+        </div>
       </div>
       <% end %>
     </div>
-</div>
+    
+  </div>
+<% end %>
+<!-- ここから上がマイページ20201108ver new -->

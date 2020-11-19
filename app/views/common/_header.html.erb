@@ -72,30 +72,94 @@
   <!-- ここから上が新ヘッダー2019ver -->
   
 <!-- ここから下が新ヘッダー2020ver -->
+<!--<div>-->
+<!--  <% if user_signed_in? %>-->
+<!--<div class="header-class">-->
+<!--    <div class="header-class-title">-->
+<!--      <h1 class="header-title"><a href="/">Arkchive</a></h1>-->
+<!--    </div>-->
+    
+<!--    <div class="header-class-menu">-->
+<!--      <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-menu w-nav">-->
+<!--        <div class="navigation w-container">-->
+<!--          <nav role="navigation" class="navigation-menu w-nav-menu">-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to 'タイムライン', root_path %></a></p>-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "マイページ", mypage_user_path(current_user) %></a></p>-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "ブログ投稿", new_blog_path %></a></p>-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "日記を書く", new_journal_path %></a></p>-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール", user_path(current_user) %></a></p>-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール編集", edit_user_path(current_user) %></a></p>-->
+<!--            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a></p>-->
+<!--          </nav>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--  <% end %>  -->
+<!--  <%= bootstrap_flash %>-->
+<!--</div>-->
+<!-- ここから上が新ヘッダー2020ver -->
+
+
+<!-- ここから下が新ヘッダー20201107ver -->
 <div>
   <% if user_signed_in? %>
-<div class="header-class">
-    <div class="header-class-title">
-      <h1 class="header-title"><a href="/">Arkchive</a></h1>
+  <div class="section-for-header">
+    <div class="adjust-section-header">
+      <h1 class="heading-header"><a href="/">Arkchive</a></h1>
     </div>
-    
-    <div class="header-class-menu">
-      <div data-collapse="medium" data-animation="default" data-duration="400" class="navbar-menu w-nav">
-        <div class="navigation w-container">
-          <nav role="navigation" class="navigation-menu w-nav-menu">
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to 'タイムライン', root_path %></a></p>
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "マイページ", mypage_user_path(current_user) %></a></p>
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "ブログ投稿", new_blog_path %></a></p>
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "日記を書く", new_journal_path %></a></p>
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール", user_path(current_user) %></a></p>
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "プロフィール編集", edit_user_path(current_user) %></a></p>
-            <p><a href="#" class="nav-link-menu w-nav-link"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a></p>
-          </nav>
+    <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-for-header w-nav">
+      <div class="w-container">
+        <nav role="navigation" class="nav-menu-header w-nav-menu">
+          <%= link_to(root_path) do %>
+          <div class="div-timeline">
+            <div class="div-nav-image-1"></div>
+            <div class="tb-timeline">タイムライン</div>
+             <!--%= link_to('タイムライン', root_path, {class: "tl"}) %>-->
+          </div>
+          <% end %>
+          <%= link_to(mypage_user_path(current_user)) do %>
+          <div class="div-mypage">
+            <div class="div-nav-image-2"></div>
+            <div class="tb-mypage">マイページ</div>
+          </div>
+          <% end %>
+          <%= link_to(new_blog_path) do %>
+          <div class="div-write-blog">
+            <div class="div-nav-image-3"></div>
+            <div class="tb-write-blog">感想文投稿</div>
+          </div>
+          <% end %>
+          <%= link_to(new_journal_path) do %>
+          <div class="div-write-journal">
+            <div class="div-nav-image-4"></div>
+            <div class="tb-write-journal">下書きを書く</div>
+          </div>
+          <% end %>
+          <%= link_to(user_path(current_user)) do %>
+          <div class="div-go-profile">
+            <div class="div-nav-image-5"></div>
+            <div class="tb-profile">プロフィール</div>
+          </div>
+          <% end %>
+          <%= link_to(destroy_user_session_path, method: :delete) do %>
+          <div class="div-log-out">
+            <div class="div-nav-image-6"></div>
+            <div class="tb-logout">ログアウト</div>
+          </div>
+          <% end %>
+          
+        </nav>
+        <div class="w-nav-button">
+          <div class="w-icon-nav-menu"></div>
         </div>
       </div>
     </div>
-</div>
+  </div>
   <% end %>  
   <%= bootstrap_flash %>
 </div>
-<!-- ここから上が新ヘッダー2020ver -->
+
+
+
+<!-- ここから上が新ヘッダー20201107ver -->

@@ -37,7 +37,7 @@
 <!--      </div>-->
 <!--      <div class="div-block-4">-->
 <!--        <h3>生年月日：</h3>-->
-<!--        <h3 class="heading-17"><%= "#{@user.birthdate}" %></h3>-->
+<!--        <h3 class="heading-17"><%= "#{@user.birth_date}" %></h3>-->
 <!--      </div>-->
 <!--      <div class="div-block-5">-->
 <!--        <h3>国籍：</h3>-->
@@ -61,54 +61,120 @@
 <!-- ここまで旧プロフィール2019おわり! -->
 
 <!-- ここから新プロフィール2020はじまり! -->
-<div class="self-introduction-body">
-    <div class="private-section">
-      <div class="col-lg-12">
+<!--<div class="self-introduction-body">-->
+  
+<!--    <div class="private-section">-->
+<!--      <%= link_to "プロフィール編集", edit_user_path(current_user) %>-->
+<!--      <div class="col-lg-12">-->
+<!--          <% if @user.image.nil? %>-->
+<!--            <div>No image</div>-->
+<!--          <% else %>-->
+<!--          　<div class="image-profile" style="background-image: url(<%= rails_blob_path(@user.image) if @user.image.attached? %>) "></div>-->
+<!--          <% end %>-->
+<!--      </div>-->
+      <!--<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" width="223" alt="" class="image-8">-->
+<!--      <div class="name-position">-->
+<!--        <div class="text-block-14">性 Last Name</div>-->
+<!--        <div class="text-block-15">名 First Name</div>-->
+<!--      </div>-->
+<!--      <div class="name-section">-->
+<!--        <div class="text-block-16"><%= "#{@user.family_name}" %></div>-->
+<!--        <div class="text-block-17"><%= "#{@user.first_name}" %></div>-->
+<!--      </div>-->
+<!--      <div class="birthdate-area">-->
+<!--        <div class="birthdate-position">ニックネーム</div>-->
+<!--        <div class="birthdate-section"><%= "#{@user.nickname}" %></div>-->
+<!--      </div>-->
+<!--      <div class="birthdate-area">-->
+<!--        <div class="birthdate-position">生年月日:</div>-->
+<!--        <div class="birthdate-section"><%= "#{@user.birth_date}" %></div>-->
+<!--      </div>-->
+<!--      <div class="country-area">-->
+<!--        <div class="country-position">お住まいの国:</div>-->
+<!--        <div class="country-section"><%= "#{@user.country}" %></div>-->
+<!--      </div>-->
+<!--      <div class="city-area">-->
+<!--        <div class="city-position">お住まいの町:</div>-->
+<!--        <div class="city-section"><%= "#{@user.city}" %></div>-->
+<!--      </div>-->
+<!--      <div class="self-introduction-sentence">-->
+<!--        <h2 class="self-introduction-title">自己分析：</h2>-->
+<!--        <div class="self-introduction-section">-->
+<!--          <p class="self-introduction-position"><%= "#{@user.selfanalysis}" %><br><br><br></p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="public-section">-->
+<!--      <div class="public-title-section">-->
+<!--        <h1 class="public-title">自分：</h1>-->
+<!--      </div>-->
+<!--      <div class="public-sentence-section">-->
+<!--        <div class="public-sentence-position"><%= "#{@user.selfintroduction}" %></div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!-- ここまで新プロフィール2020おわり! -->
+
+<!-- ここから新プロフィール20201108はじまり! -->
+  <div class="section-profile-show">
+    <%= link_to(edit_user_path(current_user)) do %>
+    <div class="section-profile-button">
+      <div class="profile-button">
+        <div class="profile-image"></div>
+        <div class="profile-word">
+          <div class="profile-text">プロフィール編集</div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <div class="profile-area">
+      <h3 class="profile-heading">マイプロフィール</h3>
+      <div class="profile-picture">
           <% if @user.image.nil? %>
             <div>No image</div>
           <% else %>
           　<div class="image-profile" style="background-image: url(<%= rails_blob_path(@user.image) if @user.image.attached? %>) "></div>
           <% end %>
       </div>
-      <!--<img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" width="223" alt="" class="image-8">-->
-      <div class="name-position">
-        <div class="text-block-14">性 Last Name</div>
-        <div class="text-block-15">名 First Name</div>
+      <div class="profile-name">
+        <div class="profile-last-name">性 Last Name</div>
+        <div class="profile-first-name">名 First Name</div>
       </div>
-      <div class="name-section">
-        <div class="text-block-16"><%= "#{@user.family_name}" %></div>
-        <div class="text-block-17"><%= "#{@user.first_name}" %></div>
+      <div class="profile-name-var">
+        <div class="profile-last-name-var"><%= "#{@user.family_name}" %></div>
+        <div class="profile-first-name-var"><%= "#{@user.first_name}" %></div>
       </div>
-      <div class="birthdate-area">
-        <div class="birthdate-position">ニックネーム</div>
-        <div class="birthdate-section"><%= "#{@user.nickname}" %></div>
+      <div class="profile-name-var">
+        <div class="profile-last-name-var"><%= "#{@user.family_name_kana}" %></div>
+        <div class="profile-first-name-var"><%= "#{@user.first_name_kana}" %></div>
       </div>
-      <div class="birthdate-area">
-        <div class="birthdate-position">生年月日:</div>
-        <div class="birthdate-section"><%= "#{@user.birthdate}" %></div>
+      <div class="profile-birthdate">
+        <div class="profile-birthdate-text">生年月日:</div>
+        <div class="profile-birthdate-var"><%= "#{@user.birth_date}" %></div>
       </div>
-      <div class="country-area">
-        <div class="country-position">お住まいの国:</div>
-        <div class="country-section"><%= "#{@user.country}" %></div>
+      <div class="profile-country">
+        <div class="profile-country-text">お住まいの国:</div>
+        <div class="profile-country-var"><%= "#{@user.country}" %></div>
       </div>
-      <div class="city-area">
-        <div class="city-position">お住まいの町:</div>
-        <div class="city-section"><%= "#{@user.city}" %></div>
+      <div class="profile-city">
+        <div class="profile-city-text">お住まいの町:</div>
+        <div class="profile-city-var"><%= "#{@user.city}" %></div>
       </div>
-      <div class="self-introduction-sentence">
-        <h2 class="self-introduction-title">自己分析：</h2>
-        <div class="self-introduction-section">
-          <p class="self-introduction-position"><%= "#{@user.selfanalysis}" %><br><br><br>‍</p>
-        </div>
+      <div class="profile-explain">
+        <div class="profile-explain-title">自分について:</div>
+        <p class="profile-explain-sentence"><%= "#{@user.selfanalysis}" %></p>
       </div>
     </div>
-    <div class="public-section">
-      <div class="public-title-section">
-        <h1 class="public-title">自分：</h1>
+    <div class="show-profile-area">
+      <h3 class="show-profile-title">公開情報</h3>
+      <div class="show-profile-nickname">
+        <div class="show-profile-nickname-word">ニックネーム:</div>
+        <div class="show-profile-nickname-var"><%= "#{@user.nickname}" %></div>
       </div>
-      <div class="public-sentence-section">
-        <div class="public-sentence-position"><%= "#{@user.selfintroduction}" %></div>
+      <div class="show-profile-text">
+        <div class="show-profile-heading">自己紹介:</div>
       </div>
+      <p class="show-profile-paragraph"><%= "#{@user.selfintroduction}" %></p>
     </div>
   </div>
-<!-- ここまで新プロフィール2020おわり! -->
+<!-- ここまで新プロフィール20201108おわり! -->

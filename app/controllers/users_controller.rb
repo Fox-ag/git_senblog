@@ -18,7 +18,8 @@ class UsersController < ApplicationController
     end
     
     def edit
-        
+        # 付けてテスト中。もともと空欄
+        # @user = User.find(params[:id]) 
     end
     
     def update
@@ -27,6 +28,6 @@ class UsersController < ApplicationController
     
     private
     def update_params
-        params.require(:user).permit(:family_name, :first_name, :family_name_kana, :first_name_kana, :image, :nickname, :birthdate, :country, :city, :selfanalysis, :selfintroduction)
+        params.require(:user).permit(:family_name, :first_name, :family_name_kana, :first_name_kana, :image, :nickname, :country, :city, :selfanalysis, :selfintroduction, :birth_date)
     end
 end
