@@ -23,11 +23,23 @@
   <!--</div>-->
 <!-- ここから上が新マイページ2020ver new -->
 
-<!-- ここから下が新マイページ20201108 new -->
+<!-- ここから下が新マイページ20201108 PCnew -->
+<div class="pc_area">
   <div class="section-mypage">
    
       <%= render @feed_contents_resource %>
     
     <%= paginate(@feed_contents) %>
   </div>
-<!-- ここから上が新マイページ20201108 new -->
+</div>
+<!-- ここから上が新マイページ20201108 PCnew -->
+
+<!-- ここから下が新マイページ20210107 SmartPhonenew -->
+<div class="phone_area">
+  <div class="sp_mypage_mainbody">
+    <%= render @feed_contents_resource %>
+
+    <%= paginate(@feed_contents) %>
+  </div>
+</div>
+<!-- ここから上が新マイページ20210107 SmartPhonenew -->

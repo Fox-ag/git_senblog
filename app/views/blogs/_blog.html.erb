@@ -41,7 +41,8 @@
       <!--<% end %>-->
 <!-- ここから上が新マイページ2020ver new -->
 
-<!-- ここから下が新マイページ20201108ver new -->
+<!-- ここから下が新マイページ20201108 PCver new -->
+  <div class="pc_area">
       <% if user_signed_in? && current_user.id == blog.user_id %>
       <div class="div-for-blog">
       <h2 class="title-blog"><%= simple_format(blog.title) %></h2>
@@ -66,4 +67,17 @@
       </div>
     </div>
     <% end %>
-<!-- ここから上が新マイページ20201108ver new -->
+  </div>
+<!-- ここから上が新マイページ20201108 PCver new -->
+
+<!-- ここから下が新マイページ20210107 Smartphonever new -->
+<div class="phone_area">
+    <% if user_signed_in? && current_user.id == blog.user_id %>
+        <%= link_to("/blogs/#{blog.id}", method: :get) do %>
+          <div class="sp_mypage_blog">
+              <h4 class="sp_mypage_blog_title"><%= simple_format(blog.title) %></h4>
+          </div>
+        <% end %>
+    <% end %>
+</div>
+<!-- ここから上が新マイページ20210107 Smartphonever new -->

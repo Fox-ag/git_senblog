@@ -70,7 +70,8 @@
 <!--  </div>-->
 <!-- ここまで新日記詳細2020 new おわり! -->
 
-<!-- ここから新日記詳細20201109 new はじまり! -->
+<!-- ここから新日記詳細20201109 PCver new はじまり! -->
+<div class="pc_area">
   <div class="section-body-journal-submitted">
     <div class="div-journal-submitted">
       <div class="div-journal-submitted-title">
@@ -105,4 +106,34 @@
       </div>
     </div>
   </div>
-<!-- ここまで新日記詳細20201109 new おわり! -->
+</div>
+<!-- ここまで新日記詳細20201109 PCver new おわり! -->
+
+<!-- ここから新日記詳細20210109 Smartphonever new はじまり! -->
+<div class="phone_area">
+    <div class="sp_journaldetail_mainbody">
+        <div class="sp_journal_write">
+          <h4 class="sp_journal_heading"><%= simple_format(@journal.title) %></h4>
+          <div class="sp_jounral_sentence"><%= simple_format(@journal.text) %></div>
+          <div class="sp_journal_writer">
+            <div class="sp_journal_writer_name">投稿者:</div>
+            <div class="sp_journal_writer_var"><%= @journal.user.nickname %></div>
+          </div>
+          <div class="sp_journal_date">
+            <div class="sp_journal_date_name">作成日:</div>
+            <div class="sp_journal_date_var"><%= @journal.created_at %></div>
+          </div>
+          <div class="sp_journal_buttons">
+            <% if user_signed_in? && current_user.id == @journal.user_id %>
+            <div class="sp_journal_edit">
+              <%= link_to '編集しちゃおう', "/journals/#{@journal.id}/edit", method: :get %>
+            </div>
+            <div class="sp_journal_delete">
+              <%= link_to '削除しちゃおう', "/journals/#{@journal.id}", method: :delete %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+    </div>
+</div>
+<!-- ここから新日記詳細20210109 Smartphonever new おわり! -->

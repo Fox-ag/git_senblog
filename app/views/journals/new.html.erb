@@ -109,51 +109,82 @@
 <!-- ここから上がマイページ2020ver new -->
 
 
-<!-- ここから下がマイページ20201108ver new -->
-<%= form_for @journal, html: {multipart: true} do |f| %>
- <div class="section-write-journal">
-  
-    <div class="div-block-write-journal">
-       
-      <div class="form-block-write-journal w-form">
-        <form id="email-form" name="email-form" data-name="Email Form" class="form-write-journal">
-          <div class="write-journal-title">キーワードを含めて感想文のタイトルを記入してください。</div>
-          <p class="write-journal-title-word"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></p>
-          <div class="write-journal-text">250文字以上で感想文を記入してください。</div>
-          <p class="write-journal-paragraph"><%= f.text_area :text, placeholder:'text', style:'height: 52vh; width: 100%;', minlength: "250" %></p>
-          <!--<div class="div-pick-picture">-->
-          <!--    <div class="pick-picture-title">感想文の内容に関する写真を選択してください。（２枚まで）</div>-->
-          <!--    <div class="pick-photos">-->
-          <!--      <%= f.fields_for :journal_photos do |p| %>-->
-          <!--        <div class="pick-left">-->
-          <!--          <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
-          <!--        </div>-->
-          <!--        <div class="pick-right">-->
-          <!--          <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
-          <!--        </div>-->
-          <!--      <% end %>-->
-          <!--    </div>-->
-              
-          <!--</div>-->
-        </form>
-        <div class="w-form-done"></div>
-        <!--<div class="w-form-fail">-->
-        <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
-        <!--</div>-->
-      </div>
-    </div>
-    <div class="submit-write-journal">
-      <%= button_tag type: "submit", class: "btn btn--block" do %>
-      <div class="button-submit-journal">
-        <div class="write-left-journal-photo"></div>
-        <div class="write-right-journal-text">
-          <div class="write-journal-word">下書き保存</div>
+<!-- ここから下がマイページ20201108 PC ver new -->
+<div class="pc_area">
+    <%= form_for @journal, html: {multipart: true} do |f| %>
+     <div class="section-write-journal">
+      
+        <div class="div-block-write-journal">
+           
+          <div class="form-block-write-journal w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" class="form-write-journal">
+              <div class="write-journal-title">キーワードを含めて感想文のタイトルを記入してください。</div>
+              <p class="write-journal-title-word"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></p>
+              <div class="write-journal-text">250文字以上で感想文を記入してください。</div>
+              <p class="write-journal-paragraph"><%= f.text_area :text, placeholder:'text', style:'height: 52vh; width: 100%;', minlength: "250" %></p>
+              <!--<div class="div-pick-picture">-->
+              <!--    <div class="pick-picture-title">感想文の内容に関する写真を選択してください。（２枚まで）</div>-->
+              <!--    <div class="pick-photos">-->
+              <!--      <%= f.fields_for :journal_photos do |p| %>-->
+              <!--        <div class="pick-left">-->
+              <!--          <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+              <!--        </div>-->
+              <!--        <div class="pick-right">-->
+              <!--          <%= p.file_field :photo, multiple: true, name: "journal_photos[photo][]", class: "upload-image" %>-->
+              <!--        </div>-->
+              <!--      <% end %>-->
+              <!--    </div>-->
+                  
+              <!--</div>-->
+            </form>
+            <div class="w-form-done"></div>
+            <!--<div class="w-form-fail">-->
+            <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
+            <!--</div>-->
+          </div>
         </div>
+        <div class="submit-write-journal">
+          <%= button_tag type: "submit", class: "btn btn--block" do %>
+          <div class="button-submit-journal">
+            <div class="write-left-journal-photo"></div>
+            <div class="write-right-journal-text">
+              <div class="write-journal-word">下書き保存</div>
+            </div>
+          </div>
+          <% end %>
+        
+        </div>
+        
       </div>
-      <% end %>
-    
+    <% end %>
+</div>
+<!-- ここから上がマイページ20201108 PC ver new -->
+
+<!-- ここから下がマイページ20210107 Smartphone ver new -->
+<div class="phone_area">
+  <%= form_for @journal, html: {multipart: true} do |f| %>
+    <div class="sp_writejournal_mainbody">
+        <div class="sp_journal_write_area">
+          <div class="sp_journal_write_form_block w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" class="sp_journal_write_form">
+              <div class="sp_journal_title_word">キーワードを含めて感想文のタイトルを記入してください。</div>
+              <p class="sp_journal_title_sentence"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></p>
+              <div class="sp_journal_text_word">250文字以上で感想文を記入してください。</div>
+              <p class="sp_journal_text_sentence"><%= f.text_area :text, placeholder:'text', style:'height: 52vh; width: 100%;', minlength: "250" %></p>
+            </form>
+          </div>
+        </div>
+        <div class="sp_submit_journal">
+          <%= button_tag type: "submit", class: "btn btn--block" do %>
+          <div class="sp_submit_journal_box">
+            <div class="sp_submit_journal_image"></div>
+            <div class="sp_submit_journal_text">
+              <div class="sp_submit_journal_word">投稿する</div>
+            </div>
+          </div>
+          <% end %>
+        </div>
     </div>
-    
-  </div>
-<% end %>
-<!-- ここから上がマイページ20201108ver new -->
+  <% end %>
+</div>
+<!-- ここから上がマイページ20210107 Smartphone ver new -->

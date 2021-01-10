@@ -101,65 +101,113 @@
 <!-- ここから上が新ヘッダー2020ver -->
 
 
-<!-- ここから下が新ヘッダー20201107ver -->
-<div>
-  <% if user_signed_in? %>
-  <div class="section-for-header">
-    <div class="adjust-section-header">
-      <h1 class="heading-header"><a href="/">Arkchive</a></h1>
-    </div>
-    <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-for-header w-nav">
-      <div class="w-container">
-        <nav role="navigation" class="nav-menu-header w-nav-menu">
-          <%= link_to(root_path) do %>
-          <div class="div-timeline">
-            <div class="div-nav-image-1"></div>
-            <div class="tb-timeline">タイムライン</div>
-             <!--%= link_to('タイムライン', root_path, {class: "tl"}) %>-->
+<!-- ここから下が新ヘッダー20201107 PCver -->
+<div class="pc_area">
+  <div>
+    <% if user_signed_in? %>
+    <div class="section-for-header">
+      <div class="adjust-section-header">
+        <h1 class="heading-header"><a href="/">Arkchive</a></h1>
+      </div>
+      <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-for-header w-nav">
+        <div class="w-container">
+          <nav role="navigation" class="nav-menu-header w-nav-menu">
+            <%= link_to(root_path) do %>
+            <div class="div-timeline">
+              <div class="div-nav-image-1"></div>
+              <div class="tb-timeline">タイムライン</div>
+               <!--%= link_to('タイムライン', root_path, {class: "tl"}) %>-->
+            </div>
+            <% end %>
+            <%= link_to(mypage_user_path(current_user)) do %>
+            <div class="div-mypage">
+              <div class="div-nav-image-2"></div>
+              <div class="tb-mypage">マイページ</div>
+            </div>
+            <% end %>
+            <%= link_to(new_blog_path) do %>
+            <div class="div-write-blog">
+              <div class="div-nav-image-3"></div>
+              <div class="tb-write-blog">感想文投稿</div>
+            </div>
+            <% end %>
+            <%= link_to(new_journal_path) do %>
+            <div class="div-write-journal">
+              <div class="div-nav-image-4"></div>
+              <div class="tb-write-journal">下書きを書く</div>
+            </div>
+            <% end %>
+            <%= link_to(user_path(current_user)) do %>
+            <div class="div-go-profile">
+              <div class="div-nav-image-5"></div>
+              <div class="tb-profile">プロフィール</div>
+            </div>
+            <% end %>
+            <%= link_to(destroy_user_session_path, method: :delete) do %>
+            <div class="div-log-out">
+              <div class="div-nav-image-6"></div>
+              <div class="tb-logout">ログアウト</div>
+            </div>
+            <% end %>
+            
+          </nav>
+          <div class="w-nav-button">
+            <div class="w-icon-nav-menu"></div>
           </div>
-          <% end %>
-          <%= link_to(mypage_user_path(current_user)) do %>
-          <div class="div-mypage">
-            <div class="div-nav-image-2"></div>
-            <div class="tb-mypage">マイページ</div>
-          </div>
-          <% end %>
-          <%= link_to(new_blog_path) do %>
-          <div class="div-write-blog">
-            <div class="div-nav-image-3"></div>
-            <div class="tb-write-blog">感想文投稿</div>
-          </div>
-          <% end %>
-          <%= link_to(new_journal_path) do %>
-          <div class="div-write-journal">
-            <div class="div-nav-image-4"></div>
-            <div class="tb-write-journal">下書きを書く</div>
-          </div>
-          <% end %>
-          <%= link_to(user_path(current_user)) do %>
-          <div class="div-go-profile">
-            <div class="div-nav-image-5"></div>
-            <div class="tb-profile">プロフィール</div>
-          </div>
-          <% end %>
-          <%= link_to(destroy_user_session_path, method: :delete) do %>
-          <div class="div-log-out">
-            <div class="div-nav-image-6"></div>
-            <div class="tb-logout">ログアウト</div>
-          </div>
-          <% end %>
-          
-        </nav>
-        <div class="w-nav-button">
-          <div class="w-icon-nav-menu"></div>
         </div>
       </div>
     </div>
+    <% end %>  
+    <%= bootstrap_flash %>
   </div>
-  <% end %>  
-  <%= bootstrap_flash %>
 </div>
+<!-- ここから上が新ヘッダー20201107 PCver -->
 
-
-
-<!-- ここから上が新ヘッダー20201107ver -->
+<!-- ここから下が新ヘッダー20210107 Smartphone ver -->
+<div class="phone_area">
+  <div class="sp_header">
+    <% if user_signed_in? %>
+        <div class="sp_tab_white">
+          <h2 class="sp_header_title"><a href="/">Arkchive</a></h2>
+          <div class="sp_droptab"></div>
+          <div class="sp_drop_tab_section">
+            <%= link_to(root_path) do %>
+              <div class="sp_drop_tab_timeline">
+                <div class="sp_droptab_timeline">タイムライン</div>
+              </div>
+            <% end %>
+            <%= link_to(mypage_user_path(current_user)) do %>
+              <div class="sp_drop_tab_mypage">
+                <div class="sp_droptab_mypage">マイページ</div>
+              </div>
+            <% end %>
+            <%= link_to(new_blog_path) do %>
+              <div class="sp_drop_tab_blog">
+                <div class="sp_droptab_blog">感想文投稿</div>
+              </div>
+            <% end %>
+            <%= link_to(new_journal_path) do %>
+              <div class="sp_drop_tab_journal">
+                <div class="sp_droptab_journal">下書きを書く</div>
+              </div>
+            <% end %>
+            <%= link_to(user_path(current_user)) do %>
+              <div class="sp_drop_tab_profile">
+                <div class="sp_droptab_profile">プロフィール</div>
+              </div>
+            <% end %>
+            <%= link_to(destroy_user_session_path, method: :delete) do %>
+              <div class="sp_drop_tab_logout">
+                <div class="sp_droptab_logout">ログアウト</div>
+              </div>
+            <% end %>
+              <div class="sp_drop_tab_close">
+                <div class="sp_drop_tab_close_arrow"></div>
+              </div>
+          </div>
+        </div>
+    <% end %>  
+    <%= bootstrap_flash %>
+  </div>
+</div>
+<!-- ここから上が新ヘッダー20210107 Smartphone ver -->

@@ -136,34 +136,35 @@
 <!-- ここから上が新タイムライン2020 new september ver -->
 
 
-<!-- ここから下が新タイムライン20201108 ver -->
-<div class="sec-for-timeline-body">
-    <div class="search-div">
-      <%= search_form_for(@q, url: '/blogs/search') do |f| %>
-      <div class="form-block-for-search w-form">
-        <div class="search-text-block">検索用語一つ</div>
-        <form id="email-form" name="email-form" data-name="Email Form" class="form-for-search">
-          <div class="search-block-div"></label for="search"><%= f.search_field :title_cont %></div>
-          <div class="div-cb-emo"><label for="emotion" class="w-checkbox"><%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %></label></div>
-          <div class="div-cb-content"><label for="theme" class="w-checkbox checkbox-field"><%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %></label></div>
-          
-          <%= button_tag type: "submit" do %>
-          <div class="div-search-button">
-            <!--<div class="searching-text-block">%= f.submit("Search") %></div>-->
-            <div class="searching-text-block">Search</div>
-          </div>
+<!-- ここから下が新タイムライン20201108 PCver -->
+<div class="pc_area">
+  <div class="sec-for-timeline-body">
+        <div class="search-div">
+          <%= search_form_for(@q, url: '/blogs/search') do |f| %>
+              <div class="form-block-for-search w-form">
+                <div class="search-text-block">検索用語一つ</div>
+                <form id="email-form" name="email-form" data-name="Email Form" class="form-for-search">
+                  <div class="search-block-div"></label for="search"><%= f.search_field :title_cont %></div>
+                  <div class="div-cb-emo"><label for="emotion" class="w-checkbox"><%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %></label></div>
+                  <div class="div-cb-content"><label for="theme" class="w-checkbox checkbox-field"><%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %></label></div>
+                  
+                  <%= button_tag type: "submit" do %>
+                  <div class="div-search-button">
+                    <!--<div class="searching-text-block">%= f.submit("Search") %></div>-->
+                    <div class="searching-text-block">Search</div>
+                  </div>
+                  <% end %>
+                  
+                </form>
+                <!--<div class="w-form-done">-->
+                <!--  <div>Thank you! Your submission has been received!</div>-->
+                <!--</div>-->
+                <!--<div class="w-form-fail">-->
+                <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
+                <!--</div>-->
+              </div>
           <% end %>
-          
-        </form>
-        <!--<div class="w-form-done">-->
-        <!--  <div>Thank you! Your submission has been received!</div>-->
-        <!--</div>-->
-        <!--<div class="w-form-fail">-->
-        <!--  <div>Oops! Something went wrong while submitting the form.</div>-->
-        <!--</div>-->
-      </div>
-      <% end %>
-    </div>
+        </div>
     
     <% @blogs.each do |blog| %>
     <div class="div-blog-block">
@@ -184,11 +185,82 @@
         </div>
       </div>
       <% end %>
-      
     </div>
     <% end %>
+    
     <%= paginate(@blogs) %>
   </div>
-  
-<!-- ここから上が新タイムライン20201108 ver -->
+</div>  
+<!-- ここから上が新タイムライン20201108 PCver -->
 
+<!-- ここから下が新タイムライン20210107 SmartPhone ver -->
+<div class="phone_area">
+      
+      <div id="searchbox-modal" class="sp_checkbox_body">
+        <div class="sp_checkbox_area">
+          <div class="sp_out_area">
+            <div class="sp_out_box"></div>
+          </div>
+          
+          <%= search_form_for(@q, url: '/blogs/search') do |f| %>
+          <div class="sp_checkbox_formblock w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" class="sp_checkbox_form">
+              <div class="sp_cb_search_word">
+                <div class="sp_cb_seach_title">検索用語一つ</div>
+              </div>
+              <div class="sp_cb_seach_box">
+                <div class="sp_cb_search_text_box"><%= f.search_field :title_cont, class: "searching-hardbox" %></div>
+              </div>
+              <div class="sp_cb_blog_contents">
+                <div class="sp_cb_contents_title">感想文の内容を選択して下さい。</div>
+                <div class="sp_cb_options">
+                  <div class="sp_cb_options_to_choose"><%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %></div>
+                </div>
+              </div>
+              <div class="sp_cb_blog_emotion">
+                <div class="sp_cb_emotion_title">感想文に関する感情を選択して下さい。</div>
+                <div class="sp_cb_emotion_options">
+                  <div class="sp_cb_emotions_to_choose"><%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %></div>
+                </div>
+              </div>
+              
+              <div class="sp_cb_searchbox">
+                <%= button_tag type: "submit" do %>
+                <div class="sp_cb_search">
+                  <div class="sp_cb_seach_image"></div>
+                  <div class="sp_cb_search_text">
+                    <div class="sp_cb_searching">Search</div>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+              
+            </form>
+          </div>
+          <% end %>
+        </div>
+      </div>
+  
+      <div class="sp_timeline_mainbody">
+        <div class="sp_main_search_area">
+          <div id="searchbox-show" class="sp_main_search_word">
+            <div class="sp_main_search_text">検索</div>
+          </div>
+        </div>
+        
+        <% @blogs.each do |blog| %>
+            <%= link_to("/blogs/#{blog.id}/detailpage", method: :get) do %>
+            <div class="sp_blog_box">
+              <h4 class="sp_blog_title"><%= simple_format(blog.title) %></h4>
+              <div class="sp_blog_readit">
+                <div class="sp_blog_read_word">読んだよ!件数:</div>
+                <div class="sp_blog_read_number"><%= blog.likes.count %></div>
+              </div>
+            </div>
+            <% end %>
+        <% end %>
+        <%= paginate(@blogs) %>
+      </div>
+  
+</div>
+<!-- ここから上が新タイムライン20210107 SmartPhone ver -->

@@ -71,7 +71,8 @@
 <!--  </div>-->
 <!-- ここまで新ブログ詳細2020 new おわり! -->
 
-<!-- ここから新ブログ詳細20201109 new はじまり! -->
+<!-- ここから新ブログ詳細20201109 PCver new はじまり! -->
+<div class="pc_area">
   <div class="section-blog-show">
     <div class="blog-show">
       <div class="div-blog-show-title">
@@ -106,4 +107,37 @@
       </div>
     </div>
   </div>
-<!-- ここまで新ブログ詳細20201109 new おわり! -->
+</div>
+<!-- ここまで新ブログ詳細20201109 PCver new おわり! -->
+
+<!-- ここからタイムラインブログ詳細20210109 Smartphone ver はじまり! -->
+<div class="phone_area">
+  <div class="sp_blogdetail_mainbody">
+    <% if user_signed_in? && current_user.id == @blog.user_id %>
+    <% end %>
+    <div class="sp_blogdetail_blog">
+        <h4 class="sp_blogdetail_blog_heading"><%= simple_format(@blog.title) %></h4>
+        <div class="sp_blogdetail_blog_sentence"><%= @blog.text %></div>
+        <div class="sp_blogdetail_images">
+          <div class="sp_blogdetail_image_top"></div>
+          <div class="sp_blogdetail_image_bottom"></div>
+        </div>
+        <div class="sp_blogshow_writer">
+          <div class="sp_blogshow_writer_word">投稿者:</div>
+          <div class="sp_blogshow_writer_var"><%= simple_format(@blog.user.nickname) %></div>
+        </div>
+        <div class="sp_blogshow_date">
+          <div class="sp_blogshow_date_word">作成日:</div>
+          <div class="sp_blogshow_date_word_var"><%= @blog.created_at %></div>
+        </div>
+        <div class="sp_journal_buttons">
+              <% if user_signed_in? && current_user.id == @blog.user_id %>
+            <div class="sp_journal_delete">
+              <%= link_to '削除しちゃおう', "/blogs/#{@blog.id}", method: :delete %>
+            </div>
+              <% end %>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- ここまでタイムラインブログ詳細20210109 Smartphone ver おわり! -->

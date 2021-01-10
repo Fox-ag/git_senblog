@@ -41,30 +41,44 @@
 <!-- ここから上が新マイページ2020ver new -->
 
 
-<!-- ここから下が新マイページ20201108ver new -->
+<!-- ここから下が新マイページ20201108 PCver new -->
+  <div class="pc_area">
       <% if user_signed_in? && current_user.id == journal.user_id %>
-      <div class="div-for-journal">
-      <h2 class="title-journal"><%= simple_format(journal.title) %></h2>
-      <p class="paragraph-journal"><%= journal.text %></p>
-      <div class="detail-section">
+        <div class="div-for-journal">
+          <h2 class="title-journal"><%= simple_format(journal.title) %></h2>
+          <p class="paragraph-journal"><%= journal.text %></p>
+          <div class="detail-section">
+                <%= link_to("/journals/#{journal.id}", method: :get) do %>
+                <div class="details-button">
+                  <div class="details-photo"></div>
+                  <div class="details-word">
+                    <div class="detailing-word">詳細</div>
+                  </div>
+                </div>
+                <% end %> 
+            
+                <%= link_to("/journals/#{journal.id}", method: :delete) do %>
+                <div class="delete-button">
+                  <div class="deletes-photo"></div>
+                  <div class="deletes-word">
+                    <div class="deleting-word">削除</div>
+                  </div>
+                </div>
+                <% end %> 
+          </div>
+        </div>
+      <% end %>
+  </div>
+<!-- ここから上が新マイページ20201108 PCver new -->
+
+<!-- ここから下が新マイページ20210107 Smartphonever new -->
+<div class="phone_area">
+    <% if user_signed_in? && current_user.id == journal.user_id %>
         <%= link_to("/journals/#{journal.id}", method: :get) do %>
-        <div class="details-button">
-          <div class="details-photo"></div>
-          <div class="details-word">
-            <div class="detailing-word">詳細</div>
+          <div class="sp_mypage_journal">
+            <h4 class="sp_mypage_journal_title"><%= simple_format(journal.title) %></h4>
           </div>
-        </div>
         <% end %> 
-        
-        <%= link_to("/journals/#{journal.id}", method: :delete) do %>
-        <div class="delete-button">
-          <div class="deletes-photo"></div>
-          <div class="deletes-word">
-            <div class="deleting-word">削除</div>
-          </div>
-        </div>
-        <% end %> 
-      </div>
-    </div>
     <% end %>
-<!-- ここから上が新マイページ20201108ver new -->
+</div>
+<!-- ここから上が新マイページ20210107 Smartphonever new -->

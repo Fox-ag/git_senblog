@@ -115,7 +115,8 @@
 <!--  </div>-->
 <!-- ここまで新プロフィール2020おわり! -->
 
-<!-- ここから新プロフィール20201108はじまり! -->
+<!-- ここから新プロフィール20201108 PCver はじまり! -->
+<div class="pc_area">
   <div class="section-profile-show">
     <%= link_to(edit_user_path(current_user)) do %>
     <div class="section-profile-button">
@@ -177,4 +178,99 @@
       <p class="show-profile-paragraph"><%= "#{@user.selfintroduction}" %></p>
     </div>
   </div>
-<!-- ここまで新プロフィール20201108おわり! -->
+</div>
+<!-- ここまで新プロフィール20201108 PCver おわり! -->
+
+<!-- ここから新プロフィール20210107 Smartphonever はじまり! -->
+<div class="phone_area">
+  <div class="sp_introduction_mainbody">
+      <%= link_to(edit_user_path(current_user)) do %>
+        <div class="sp_introduction_edit">
+          <div class="sp_intro_button">
+            <div class="sp_intro_image"></div>
+            <div class="sp_intro_word">
+              <div class="sp_intro_text">プロフィール編集</div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <div class="sp_myprofile_section">
+      <div class="sp_myprofile_title">
+        <h3 class="sp_myprofile_title_text">マイプロフィール</h3>
+      </div>
+      <div class="sp_myprofile_image">
+          <% if @user.image.nil? %>
+            <div>No image</div>
+          <% else %>
+          　<div class="sp_myprofile_image_area" style="background-image: url(<%= rails_blob_path(@user.image) if @user.image.attached? %>) "></div>
+          <% end %>
+      </div>
+      <div class="sp_myproile_name">
+        <div class="sp_myprofile_lastname">
+          <div class="sp_myprofile_lastname_word">性 Last Name</div>
+          <div class="sp_myprofile_lastname_var">
+            <div class="sp_myprofile_lastname_var_word"><%= "#{@user.family_name}" %></div>
+          </div>
+          <div class="sp_myprofile_lastname_kana_var">
+            <div class="sp_myprofile_lastname_kana_var_word"><%= "#{@user.family_name_kana}" %></div>
+          </div>
+        </div>
+        <div class="sp_myprofile_firstname">
+          <div class="sp_myprofile_firstname_word">名 First Name</div>
+          <div class="sp_myprofile_firstname_var">
+            <div class="sp_myprofile_firstname_var_word"><%= "#{@user.first_name}" %></div>
+          </div>
+          <div class="sp_myprofile_firstname_kana_var">
+            <div class="sp_myprofile_firstname_kana_var_word"><%= "#{@user.first_name_kana}" %></div>
+          </div>
+        </div>
+      </div>
+      <div class="sp_profile_edit">
+        <div class="sp_profile_edit_name">
+          <div class="sp_birthdate_name">
+            <div class="sp_birthdate_word">生年月日:</div>
+          </div>
+          <div class="sp_country_name">
+            <div class="sp_country_word">お住まいの国: </div>
+          </div>
+          <div class="sp_city_name">
+            <div class="sp_city_word">お住まいの町: </div>
+          </div>
+        </div>
+        <div class="sp_profile_edit_var">
+          <div class="sp_birthdate_var">
+            <div class="sp_birthdate_text"><%= "#{@user.birth_date}" %></div>
+          </div>
+          <div class="sp_country_var">
+            <div class="sp_country_text"><%= "#{@user.country}" %></div>
+          </div>
+          <div class="sp_city_var">
+            <div class="sp_city_text"><%= "#{@user.city}" %></div>
+          </div>
+        </div>
+      </div>
+      <div class="sp_selfintro_section">
+        <div class="sp_selfintro_title">自分について:</div>
+        <div class="sp_selfintro_sentence"><%= "#{@user.selfanalysis}" %></div>
+      </div>
+    </div>
+    <div class="sp_myintro_section">
+      <div class="self_myintro_title">
+        <h3 class="self_myintro_heading">Heading</h3>
+      </div>
+      <div class="self_myintro_nickname">
+        <div class="self_myintro_nickname_word">
+          <div class="self_myintro_nickname_text">ニックネーム:</div>
+        </div>
+        <div class="self_myintro_nickname_var">
+          <div class="self_myintro_nikcname_real"><%= "#{@user.nickname}" %></div>
+        </div>
+      </div>
+      <div class="self_myintro_sentence_area">
+        <div class="self_myintro_headings">自己紹介:</div>
+        <div class="self_myintro_word_var"><%= "#{@user.selfintroduction}" %></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ここまで新プロフィール20210107 Smartphonever おわり! -->

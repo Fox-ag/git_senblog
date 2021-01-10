@@ -79,28 +79,42 @@
 <!--</div>-->
 <!-- ここから上が新サーチライン2020ver -->
 
-<!-- ここから下が新サーチライン20201110ver -->
-<div class="section-search">
-    <div class="search-title">
-      <h1 class="search-title-heading">検索結果一覧</h1>
-    </div>
-      <% @bloges.each do |bloge| %>
-        <div class="seach-result">
-        <h2 class="sr-heading"><%= bloge.title %></h2>
-        <p class="sr-sentence"><%= bloge.text %></p>
-        <div class="sr-readit">
-          <div class="sr-readit-text">読んだよ！件数:</div>
-          <div class="sr-readit-var"><%= bloge.likes.count %></div>
+<!-- ここから下が新サーチライン20201110 PCver -->
+<div class="pc_area">
+    <div class="section-search">
+        <div class="search-title">
+          <h1 class="search-title-heading">検索結果一覧</h1>
         </div>
-      
-          <div class="sr-button">
-            <div class="sr-button-image"></div>
-            <div class="sr-button-word">
-              <div class="sr-button-text"><%= link_to '詳細!', "/blogs/#{bloge.id}/detailpage", method: :get %></div>
+          <% @bloges.each do |bloge| %>
+            <div class="seach-result">
+            <h2 class="sr-heading"><%= bloge.title %></h2>
+            <p class="sr-sentence"><%= bloge.text %></p>
+            <div class="sr-readit">
+              <div class="sr-readit-text">読んだよ！件数:</div>
+              <div class="sr-readit-var"><%= bloge.likes.count %></div>
             </div>
-          </div>
-       </div>
-       <% end %>
+          
+              <div class="sr-button">
+                <div class="sr-button-image"></div>
+                <div class="sr-button-word">
+                  <div class="sr-button-text"><%= link_to '詳細!', "/blogs/#{bloge.id}/detailpage", method: :get %></div>
+                </div>
+              </div>
+           </div>
+           <% end %>
+    </div>
+</div>    
+<!-- ここから上が新サーチライン20201110 PCver -->
+
+<!-- ここから下が新サーチライン20210108 Smartphone ver -->
+<div class="phone_area">
+    <div class="sp_search_mainbody">
+        <div class="sp_search_title">
+          <h2 class="sp_search_title_word">検索結果</h2>
+        </div>
+        <% @bloges.each do |bloge| %>
+        <div class="sp_search_results"></div>
+        <% end %>
+    </div>
 </div>
-    
-<!-- ここから上が新サーチライン20201110ver -->
+<!-- ここから上が新サーチライン20210108 Smartphone ver -->
