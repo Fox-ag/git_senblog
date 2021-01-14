@@ -16,51 +16,59 @@
   </head>
 
   <body class="body-6">
-     
-    <!--古いヘッダーは輸出済み　ここから下-->
-    <!--<header class="header">-->
-    <!--  <div class="header_main"><h1 class="grid-6"><a href="/">Senblog</a></h1></div>-->
-    <!--  <div class="header__bar">-->
-        <%= render partial: 'common/header' %>
-    <!--  </div>-->
-    <!--    <%= bootstrap_flash %>-->
-    <!--</header>-->
-    <!--古いヘッダーは輸出済み　ここから上-->
-
-    <%= yield %>
-
-    <!-- ここから旧フッターはじまり -->
-    <!--<footer class = "footer">-->
-    <!--  <p>Copyright © 2012-2019 TECHTREE All Rights Reserved.</p>-->
-    <!--</footer>-->
-    <!-- ここまで旧フッターおわり -->
-    
-    
-    <!-- ここから新フッターのカスタムはじまり -->
-    <div class="pc_area">
-        <div class="footer-class">
-          <div class="div-block-48"></div>
-          <div class="section-39">
-            <div>Copyright(C) 株式会社メメリサーチ all rights reserved.</div>
-          </div>
-        </div>
+    <!--ロード画面の記述-->
+    <div id="loader-bg">
+      <div id="loading">
+        <img src="assets/loading.gif">
+      </div>
     </div>
+    <!--ロード画面の記述ここまで-->
     
-    <div class="phone_area">
-        <div class="sp_footer">
-          <div class="sp_footer_word">Copyright(C) 株式会社メメリサーチ all rights reserved.</div>
+    <div id="contents">
+        <!--古いヘッダーは輸出済み　ここから下-->
+        <!--<header class="header">-->
+        <!--  <div class="header_main"><h1 class="grid-6"><a href="/">Senblog</a></h1></div>-->
+        <!--  <div class="header__bar">-->
+            <%= render partial: 'common/header' %>
+        <!--  </div>-->
+        <!--    <%= bootstrap_flash %>-->
+        <!--</header>-->
+        <!--古いヘッダーは輸出済み　ここから上-->
+    
+        <%= yield %>
+    
+        <!-- ここから旧フッターはじまり -->
+        <!--<footer class = "footer">-->
+        <!--  <p>Copyright © 2012-2019 TECHTREE All Rights Reserved.</p>-->
+        <!--</footer>-->
+        <!-- ここまで旧フッターおわり -->
+        
+        
+        <!-- ここから新フッターのカスタムはじまり -->
+        <div class="pc_area">
+            <div class="footer-class">
+              <div class="div-block-48"></div>
+              <div class="section-39">
+                <div>Copyright(C) 株式会社メメリサーチ all rights reserved.</div>
+              </div>
+            </div>
         </div>
-    </div>
-    <!-- ここまで新フッターのカスタムおわり -->
-    
-    
-  <!--</body>-->
-  
-  <!-- ここからヘッダーのカスタムはじまり -->
-  <!--<body>-->
-  
-  
-  
+        
+        <div class="phone_area">
+            <div class="sp_footer">
+              <div class="sp_footer_word">Copyright(C) 株式会社メメリサーチ all rights reserved.</div>
+            </div>
+        </div>
+        <!-- ここまで新フッターのカスタムおわり -->
+        
+        
+      <!--</body>-->
+      
+      <!-- ここからヘッダーのカスタムはじまり -->
+      <!--<body>-->
+      
+      
+  </div>
 　</body>
 　<!-- ここまでヘッダーのカスタムおわり -->
   
