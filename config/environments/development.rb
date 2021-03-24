@@ -55,6 +55,7 @@ Rails.application.configure do
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
+
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
@@ -70,7 +71,8 @@ Rails.application.configure do
     :domain => 'smtp.gmail.com',
     # :domain => 'heroku.com',
     :user_name => "eijieiji.iwatsuka@gmail.com", #先ほど作成した送信用gmailアドレス
-    :password => "aztngotzhwxdeshf", #2段階認証したアカウントで発行したアプリパスワード
+    # :password => "aztngotzhwxdeshf", #前のワスワード
+    :password => "jhrrwnnznwbibvja", #2段階認証したアカウントで発行したアプリパスワード
     :authentication => 'login'
 }
 end
