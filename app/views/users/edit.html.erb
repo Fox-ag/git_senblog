@@ -288,6 +288,26 @@
                   <div class="pe-city-text">お住まいの町（City）:</div>
                   <p class="pe-city-var"><%= f.text_field :city, placeholder: "お住いの市町村", class: "form-controling" %></p>
                 </div>
+                   <p>extraversion</p>
+                   <label><%= f.radio_button :extraversion, "1" %>どちらかといえばおしゃべり好きで他人との付き合いに刺激を求める</label>
+                   <label><%= f.radio_button :extraversion, "0" %>どちらでもない</label>
+                   <label><%= f.radio_button :extraversion, "2" %>どちらかといえばよそよそしくて自己完結</label>
+                   <p>agreeableness</p>
+                   <label><%= f.radio_button :agreeableness, "1" %>どちらかといえば協力的で争いや対立を避ける</label>
+                   <label><%= f.radio_button :agreeableness, "0" %>どちらでもない</label>
+                   <label><%= f.radio_button :agreeableness, "2" %>どちらかといえば競争力があり挑戦的で議論好き</label>
+                   <p>openness</p>
+                   <label><%= f.radio_button :openness, "1" %>どちらかといえば想像力豊かで革新的</label>
+                   <label><%= f.radio_button :openness, "0" %>どちらでもない</label>
+                   <label><%= f.radio_button :openness, "2" %>とちらかといえば保守的・冷静・慎重</label>
+                   <p>conscientiousness</p>
+                   <label><%= f.radio_button :conscientiousness, "1" %>どちらかといえば責任感が強い・セルフコントロールできる・達成力も高い</label>
+                   <label><%= f.radio_button :conscientiousness, "0" %>どちらでもない</label>
+                   <label><%= f.radio_button :conscientiousness, "2" %>どちらかといえば感情的で直感的に行動</label>
+                   <p>neuroticism</p>
+                   <label><%= f.radio_button :neuroticism, "1" %>どちらかといえば周囲の人への感度が高く、空気を読み、繊細な気配りができる</label>
+                   <label><%= f.radio_button :neuroticism, "0" %>どちらでもない</label>
+                   <label><%= f.radio_button :neuroticism, "2" %>どちらかといえば感情が安定していて悩むことやストレスを感じることが比較的少ない</label>
                 <div class="pe-yourself">自分について（About yourself）:</div>
                 <p class="pe-paragraph"><%= f.text_area :selfanalysis, placeholder:"自己分析を記入してください", class:"form-control", style:'height: 40vh; width: 100%;' %></p>
               <!--</form>-->

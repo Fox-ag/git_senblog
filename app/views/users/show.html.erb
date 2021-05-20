@@ -161,6 +161,50 @@
         <div class="profile-city-text">お住まいの町:</div>
         <div class="profile-city-var"><%= "#{@user.city}" %></div>
       </div>
+      
+      <p>extraversion</p>
+        <% if @user.extraversion==1 then %>
+        おしゃべり好きで他人との付き合いに刺激を求める
+        <% elsif @user.extraversion==2 then %>
+        よそよそしくて自己完結
+        <% else %>
+        どちらでもない
+        <% end %>
+      <p>agreeableness</p>
+        <% if @user.agreeableness==1 then %>
+        協力的で争いや対立を避ける
+        <% elsif @user.agreeableness==2 then %>
+        競争力があり挑戦的で議論好き
+        <% else %>
+        どちらでもない
+        <% end %>
+      <p>openness</p>
+        <% if @user.openness==1 then %>
+        想像力豊かで革新的
+        <% elsif @user.openness==2 then %>
+        保守的・冷静・慎重
+        <% else %>
+        どちらでもない
+        <% end %>
+      <p>conscientiousness</p>
+        <% if @user.conscientiousness==1 then %>
+        責任感が強い・セルフコントロールできる・達成力も高い
+        <% elsif @user.conscientiousness==2 then %>
+        感情的で直感的に行動
+        <% else %>
+        どちらでもない
+        <% end %>
+      <p>neuroticism</p>
+        <% if @user.neuroticism==1 then %>
+        周囲の人への感度が高く、空気を読み、繊細な気配りができる
+        <% elsif @user.neuroticism==2 then %>
+        感情が安定していて悩むことやストレスを感じることが比較的少ない
+        <% else %>
+        どちらでもない
+        <% end %>
+          <!--<label>%= @user.radio_button_tag :extraversion, "1" %>コミュニケーション力に優れる</label>-->
+          <!--<label>%= @user.radio_button_tag :extraversion, "0" %>どちらでもない</label>-->
+          <!--<label>%= @user.radio_button_tag :extraversion, "2" %>冷静</label>-->
       <div class="profile-explain">
         <div class="profile-explain-title">自分について:</div>
         <p class="profile-explain-sentence"><%= "#{@user.selfanalysis}" %></p>

@@ -54,6 +54,7 @@ class BlogsController < ApplicationController
     
     def edit
         @blog = Blog.find(params[:id])
+        
     end
     
     def update
@@ -63,13 +64,14 @@ class BlogsController < ApplicationController
         # end
         
         @blog = Blog.find(params[:id])
+       
         respond_to do |format|
                 if params[:blog_photos]==nil && @blog.update(blog_params)
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
                 elsif @blog.update(blog_params)
                   params[:blog_photos]['photo'].each do |a|
-                   @blog_photo = @blog.blog_photos.create!(:photo => a)
+                  @blog_photo = @blog.blog_photos.update(:photo => a)
                   end
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
@@ -88,9 +90,9 @@ class BlogsController < ApplicationController
     def search
         # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
         
-        @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%")
+        @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%") #←これいる？
         @q = Blog.search(search_params)
-        params.require(:q).permit(:title_cont)
+        params.require(:q).permit(:title_cont)   #:qオブジェクトを指定し、さらに:qオブジェクトの中に定義された:title_contキーを指定している
         @bloges = @q.result.includes(:emotions,:themes)
     end
     

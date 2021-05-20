@@ -144,10 +144,30 @@
               <div class="form-block-for-search w-form">
                 <div class="search-text-block">検索用語一つ</div>
                 <form id="email-form" name="email-form" data-name="Email Form" class="form-for-search">
-                  <div class="search-block-div"></label for="search"><%= f.search_field :title_cont %></div>
+                  <div class="search-block-div"></label for="search"><%= f.search_field :text_or_title_cont %></div>
                   <div class="div-cb-emo"><label for="emotion" class="w-checkbox"><%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %></label></div>
                   <div class="div-cb-content"><label for="theme" class="w-checkbox checkbox-field"><%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %></label></div>
-                  
+                 
+                   <!--<label><%= f.radio_button :user_extraversion_eq, 1 %>おしゃべり好きで他人との付き合いに刺激を求める</label>-->
+                   <!--<label><%= f.radio_button :user_extraversion_eq, 0 %>どちらでもない</label>-->
+                   <!--<label><%= f.radio_button :user_extraversion_eq, 2 %>よそよそしくて自己完結</label>-->
+                   
+                   <!--<label><%= f.radio_button :user_agreeableness_eq, 1 %>協力的で争いや対立を避けるる</label>-->
+                   <!--<label><%= f.radio_button :user_agreeableness_eq, 0 %>どちらでもない</label>-->
+                   <!--<label><%= f.radio_button :user_agreeableness_eq, 2 %>競争力があり挑戦的で議論好き</label>-->
+                   
+                   <!--<label><%= f.radio_button :user_openness_eq, 1 %>想像力豊かで革新的</label>-->
+                   <!--<label><%= f.radio_button :user_openness_eq, 0 %>どちらでもない</label>-->
+                   <!--<label><%= f.radio_button :user_openness_eq, 2 %>保守的・冷静・慎重</label>-->
+                   
+                   <!--<label><%= f.radio_button :user_conscientiousness, 1 %>責任感が強い・セルフコントロールできる・達成力も高い</label>-->
+                   <!--<label><%= f.radio_button :user_conscientiousness, 0 %>どちらでもない</label>-->
+                   <!--<label><%= f.radio_button :user_conscientiousness, 2 %>感情的で直感的に行動</label>-->
+                   
+                   <!--<label><%= f.radio_button :user_neuroticism_eq, 1 %>周囲の人への感度が高く、空気を読み、繊細な気配りができる</label>-->
+                   <!--<label><%= f.radio_button :user_neuroticism_eq, 0 %>どちらでもない</label>-->
+                   <!--<label><%= f.radio_button :user_neuroticism_eq, 2 %>感情が安定していて悩むことやストレスを感じることが比較的少ない</label>-->
+                   
                   <%= button_tag type: "submit" do %>
                   <div class="div-search-button">
                     <!--<div class="searching-text-block">%= f.submit("Search") %></div>-->

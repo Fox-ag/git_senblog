@@ -10,39 +10,142 @@
   
   
   
-    <div class="div-block-90">
-      <%= form_for [@blog] do |f| %>
+    <!--<div class="div-block-90">-->
+    <!--  %= form_for [@blog] do |f| %>-->
       <!--%= form_tag('/blogs', method: :post) do %>-->
-      <div class="div-block-11">
-          <h2>ブログを編集する</h2>
-            <div>
-              <div class="form-block-2 w-form">
-                  <div class="div-block-13"><%= f.text_field :title, placeholder: 'title' %></div>
-                  <div class="div-block-13"><%= f.text_area :text, placeholder:'text' %></div>
-                  <div class="div-block-12"><%= f.label :image %></div>
+    <!--  <div class="div-block-11">-->
+    <!--      <h2>ブログを編集する</h2>-->
+    <!--        <div>-->
+    <!--          <div class="form-block-2 w-form">-->
+    <!--              <div class="div-block-13">%= f.text_field :title, placeholder: 'title' %></div>-->
+    <!--              <div class="div-block-13">%= f.text_area :text, placeholder:'text' %></div>-->
+    <!--              <div class="div-block-12">%= f.label :image %></div>-->
                   
-                  <div class="div-block-120">
-                   <%= f.fields_for :blog_photos do |p| %>
-                    <div class="field">
-                      <%= p.label :photo %><br>
-                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
-                      <%= p.file_field :photo, placeholder:'photo', multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
-                    </div>
-                     <% end %>
-                   </div>
-                   <div class="check_box" >          
-                      <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
-                          <%= b.label {b.check_box + b.text} %>
-                      <% end %>
-                   </div>
+    <!--              <div class="div-block-120">-->
+    <!--               %= f.fields_for :blog_photos do |p| %>-->
+    <!--                <div class="field">-->
+    <!--                  %= p.label :photo %><br>-->
+    <!--                  %= p.file_field :photo, placeholder:'photo', multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>-->
+    <!--                  %= p.file_field :photo, placeholder:'photo', multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>-->
+    <!--                </div>-->
+    <!--                 % end %>-->
+    <!--               </div>-->
+    <!--               <div class="check_box" >          -->
+    <!--                  %= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>-->
+    <!--                      %= b.label {b.check_box + b.text} %>-->
+    <!--                  % end %>-->
+    <!--               </div>-->
                   
-                  <div class="div-block-10"><%= button_tag type: "submit", class: "btn btn--block" do %>編集する
-                  <% end %>
-              </div>
-            </div>
-      </div>
-      <% end %>
-    </div>
+    <!--              <div class="div-block-10">%= button_tag type: "submit", class: "btn btn--block" do %>編集する-->
+    <!--              % end %>-->
+    <!--          </div>-->
+    <!--        </div>-->
+    <!--  </div>-->
+    <!--  % end %>-->
+    <!--</div>-->
   
   
 </div>
+
+<!-- ここから新ブログ編集20210518 PC ver new はじまり! -->
+<div class="pc_area">
+    <%= form_for @blog, html: {multipart: true} do |f| %>
+      <div class="section-write-blog">
+        <div class="main-section-write-blog">
+          <div class="form-blocjk-for-wb w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" class="form-wb">
+              <div class="wb-title">未来の人へ向けてキーワードを含めて感想文のタイトルを記入してください。</div>
+              <p class="wb-text"><%= f.text_field :title, placeholder: 'title', style:'width: 100%;' %></p>
+              <div class="wb-sentence-title">未来の人へ向けて250文字以上で感想文を記入してください。</div>
+              <p class="wb-word-section"><%= f.text_area :text, placeholder:'text', style:'height: 70vh; width: 100%;', minlength: "250" %></p>
+              <div class="choose-photo">
+                <%= f.fields_for @blog.blog_photos do |p| %>
+                <div class="choose-photo-title">感想文の内容に関する写真を選択してください。（２枚まで）</div>
+                <div class="div-choose-area">
+                  
+                  <div class="choose-left-photo">
+                    <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                  </div>
+                  <div class="choose-right-photo">
+                    <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                  </div>
+                </div>
+                <% end %>
+              </div>
+            </form>
+            
+          </div>
+          <div class="select-content">
+            <div class="select-content-title">感想文の内容に近いものを下記の4つの選択肢より選択してください。（複数選択可）</div>
+            <div class="selection-content">
+            <%= f.collection_check_boxes(:theme_ids, Theme.all, :id, :topic) do |c| %>
+                           <%= c.label {c.check_box + c.text} %>          
+            <% end %>  
+            </div>
+            <div class="select-content-photo">
+              <div class="div-block-160">
+                <div class="div-text-01">
+                  <div class="div-text-block-01">例）社会、経済、政治、法律、ビジネス、情報、教育、等</div>
+                </div>
+                <div class="div-photo-01"></div>
+                <div class="div-photo-02"></div>
+                <div class="div-photo-03"></div>
+              </div>
+              <div class="select-content-02">
+                <div class="div-text-02">
+                  <div class="div-text-block-02">例）テクノロジー、化学、農業、建築、デザイン、医療、食、等</div>
+                </div>
+                <div class="div-photo-001"></div>
+                <div class="div-photo-002"></div>
+                <div class="div-photo-003"></div>
+              </div>
+              <div class="select-content-03">
+                <div class="div-text-03">
+                  <div class="div-text-block-03">例）環境、地理、自然、災害、宇宙、動物、等</div>
+                </div>
+                <div class="div-0001"></div>
+                <div class="div-0002"></div>
+                <div class="div-0003"></div>
+              </div>
+              <div class="select-content-04">
+                <div class="div-text-04">
+                  <div class="div-text-block-04">例）娯楽、ホビー、病気、思想、哲学、宗教、教育、学問、成長、美容、等</div>
+                </div>
+                <div class="div-photo-00001"></div>
+                <div class="div-photo-00002"></div>
+                <div class="div-photo-00003"></div>
+              </div>
+            </div>
+          </div>
+          <div class="select-emotion">
+            <div class="select-emotion-title">感想文に関する感情に近いものをプルチックの感情の輪を参考に選択してください。(複数選択可)<br></div>
+            <div class="select-checks">
+              <div class="form-block-checks w-form">
+               <%= f.collection_check_boxes(:emotion_ids, Emotion.all, :id, :feeling) do |b| %>
+                              <%= b.label {b.check_box + b.text} %>
+                <% end %>
+               
+              </div>
+            </div>
+            <div class="div-color-image">
+              <div class="div-color-photo-image"></div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="submit-write-blog">
+          <%= button_tag type: "submit", class: "btn btn--block" do %>
+          <div class="submit-button-write-blog">
+            <div class="submit-image-write-blog"></div>
+            <div class="submit-word-write-blog">
+              <div class="submit-write-blog-text">編集する
+                
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+    <% end %>
+</div>
+</div>
+<!-- ここまで新ブログ編集20210518 PC ver new おわり! -->
