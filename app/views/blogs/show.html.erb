@@ -82,7 +82,9 @@
       <div class="blog-show-photo">
         <% @blog_photos.each do |p| %>
         <div class="blog-show-photo-left"><%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>
-        <!--<div class="blog-show-photo-right">%= image_tag p.photo_url, style: "max-width: 200px; max-height: 200px" %></div>-->
+        <% end %>
+        <% @blog_images.each do |q| %>
+        <div class="blog-show-photo-right"><%= image_tag q.image_url, style: "max-width: 200px; max-height: 200px" %></div>
         <% end %>
       </div>
       <div class="blog-show-detail">

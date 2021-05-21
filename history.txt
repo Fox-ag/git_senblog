@@ -1,0 +1,2619 @@
+pw
+pwd
+ls
+rvm install 2.5.1
+ruby -v
+rvm --default use 2.5.1
+sudo yum install mysql-devel
+sudo service mysqld start
+gem install bundler
+gem install rails --version="5.2.1"
+history
+rails -v
+cd Rails
+rails _5.2.1_ new pictweet -d mysql
+ls
+cd pictweet
+pwd
+bundle update
+rake db:create
+sudo yum install phpmyadmin
+sudo service httpd start
+cd shell
+ls
+cd ..
+ls
+cd shell
+sh move.sh
+cd ..
+ls
+cd pictweet/
+history
+rails _5.2.1_ new senblog -d mysql
+cd ..
+pwd
+cls
+ls 
+cd environment/
+ls
+cd Rails/
+ls
+rails _5.2.1_ new senblog -d mysql
+ls
+cd senblog/
+pwd
+bundle update
+git --version
+pwd
+rake db:create
+ls
+cd Rails/
+ls
+cd senblog
+ls
+history
+sudo service httpd start
+history
+sudo service mysqld start
+git init
+git add .
+git commit -m "first commit"
+git remote add origin git@github.com:Fox-ag/git_senblog.git
+ssh-keygen
+cat ~/.ssh/id_rsa.pub
+git push -u origin master
+rails g controller blogs
+pwd
+rails s
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+rails g model blog
+rake db:migrate
+history
+sudo service httpd start
+sudo service mysqld start
+rails s
+rake routes
+rails 
+rails s
+pwd install
+bundle install
+pwd
+bundle install
+rails g devise:install
+git add .
+git commit -a -m "user機能本格作成前まで"
+git push origin master
+bundle install
+pwd
+hisotry
+history
+rails g controller top
+bundle install
+rails g controller top
+rails g devise:views
+rails g devise user
+rake db:migrate
+history
+ls
+cd Rails/
+ls
+cd senblog/
+cd Rails/senblog/
+history
+sudo service httpd start
+sudo service mysqld start
+rails 
+rails s
+ls
+cd Rails/
+ls
+cd senblog/
+ls
+cd Rails/senblog/
+pwd
+history
+sudo service httpd start
+sudo service mysqld start
+history
+rake routes
+git add .
+git commit -a -m "user機能signup表示できた"
+git push -u origin master
+rails s
+git add .
+git commit -a -m "user機能でメール確認機能がきた"
+git push -u origin master
+cd Rails/senblog/
+cd Rails/senblog/
+history
+sudo service httpd start
+sudo service mysqld start
+ls
+ls
+hisotry
+history
+rails s
+cd Rails/senblog/
+ls
+pwd
+cd Rails/senblog/
+ls
+history
+sudo service httpd start
+sudo service mysqld start
+ls
+rails g controller users
+rails s
+rails g migration AddColumnToUsers
+rake db:migrate
+rake db:rollback
+rake db:migrate
+history
+git add .
+git commit -a -m "userカラムの追加も実施、一応表示もできた。"
+git push -u origin master
+history
+ls
+cd Rails/
+ls
+cd senblog
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+history
+ls
+cd Rails/
+ls
+cd senblog/
+sudo service httpd restart
+sudo servie mysqld restart
+sudo service mysqld restart
+prefix
+rake routes
+ls
+cd Rails/
+ls
+cd senblog/
+rake routes
+history
+git add .
+git commit -a -m "ブログトップページも表示できた。"
+git commit -a -m "ブログトップページも表示できた"
+git push -u origin master
+rake routes
+git add .
+git commit -a -m "ユーザーページを編集できるようにしようまで完了。ただし、完璧な編集機能ではない"
+git push -u origin master
+rails s
+ls
+cd Rails/
+ls
+cd senblog/
+history
+sudo service mysqld restart
+sudo service httpd restart
+rails s
+ls
+cd Rails
+ls
+cd senblog/
+ls
+rails s
+history
+sudo service httpd restart
+sudo servie mysqld restart
+sudo service mysqld restart
+ls
+cd Rails/
+ls
+cd senblog/
+rails s
+pwd
+rake routes
+ls
+cd Rails senblog
+ls
+pwd
+cd Rails/senblog
+cd senblog/
+pwd
+ls
+cd Rails/
+cd senblog
+ls
+pwd
+history
+sudo service httpd restart
+sudo service mysqld restart
+history
+git commit -a -m "これまでblog controllerのindexでblog内容を表示。しかし、今はtop controllerでblog内容を表示。top controllerを操作したことで実現。"
+git push -u origin master
+rake routes
+rails g migration AddUserIdToBlogs user_id:integer
+rake db:migrate
+history
+git add .
+git commit -a -m "自分が記載したブログを表示するマイページを作成。resourceにmemberを作成してusers controllerやviewを編集して完成"
+history
+git push -u origin master
+rails g model journal
+rake db:migrate
+history
+git add .
+git commit -a -m "blog controllerは公開ブログを表示するわけだが、それとは別に日記として他人には見せない日記journalmoderu 
+を作成"
+git push -u origin master
+rake routes
+git add .
+git commit -a -m "blogを投稿するの表示ボタンをapplication html erbから _header html erbへ移動"
+git push -u origin master
+rails g controller journals
+rails s
+rake routes
+rails g controller journals
+history
+git add .
+git commit -a -m "日記つまりjounralの新規投稿ができるように編集した。注意点として、最後になぞのrails g controller journalsをやってしまった。たぶ大丈夫だとは思う"
+git push -u origin master
+ls
+cd Rails/
+ls
+cd senblog/
+ls
+history
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails
+ls
+cd senblog/
+rake routes
+history
+git add .
+git commit -a -m "ブログを投稿する　および　日記を書き込むの機能に関してuser_idが保存されるように編集。また、routesにおいてresourcesに全て変更"
+git push -u origin master
+rake routes
+rails s
+history
+git add .
+git commit -a -m "blogとjournalの削除機能を追加"
+git push -u origin master
+ls
+cd Rails/
+ls
+cd senblog/
+ls
+cd Rails/senblog/
+ls
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/senblog/
+ls
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+git add .
+git commit -a -m "htmlとcssの初期をわずかにつけた"
+git push -u origin master
+rails g model feed_content
+ls
+cd Rails/senblog/
+history
+git add .
+git commit -a -m "マイページ用タイムライン用のポリモーフィック用rails g model feed_contentを作成"
+git push -u origin master
+hisotry
+history
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/senblog/
+ls
+history
+rails d model feed_content
+rails g migration AddTitleToBlogs title:string
+rake db:migrate
+rails g migration AddTitleToJournals title:string
+rake db:migrate
+rails g migration RemoveImageFromBlogs text:image
+rake db:migrate
+rails g migration RemoveImageFromBlogs image:text
+rake db:migrate
+rails g migration RemoveImageFromBlogs image:text
+rake db:version
+rake db:rollback
+rails g migration RemoveImageFromBlogs image:text
+rake db:version
+rake db:rollback
+rake db:version
+history
+rake db:rollback
+rake db:version
+rake db:migrate
+rails s
+rake db:version
+rake db:rollback
+rake db:version
+rake db:rollback STEP=2
+rake db:version
+rake db:rollback STEP=20190823005653
+rake db:version
+git checkout .
+cd Rails/senblog2
+git pull origin master
+ec2-user:~/environment/Rails/senblog2 $ 
+git pull origin master
+history
+history
+rails g migration RemoveImageFromBlogs image:text
+rake db:migrate
+rake db:version
+rake db:migrate:status
+rake db:version
+ls dn/migrate
+ls db/migrate
+rake db:abort_if_pending_migrations
+ls db/migrate
+rake db:rollback
+--trace
+rake db:rollback --trace
+rake dn:mgirate
+rake db:mgirate
+rake db:rollback
+rails db:migrate:reset
+rake db:version
+rake db:rollback
+rails db:migrate
+rake db:migrate
+rake db:rollback
+history
+rake db:migrate:status
+rake db:migrate
+rake db:rollback
+git init
+git clone git@github.com:Fox-ag/git_senblog.git
+rake db:migrate
+ls
+cd git_senblog/
+ls
+rake db:migrate
+ls
+cd Rails/
+ls
+cd senblog2
+ls
+cd git_senblog
+ls
+hitory
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Rails/senblog2/
+ls
+cd git_senblog/
+rake db:version
+rake db:migrate
+rake db:version
+rails db:migrate:reset
+history
+rails s
+rake db:version
+history
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails g migration AddTitleToBlogs title:string
+ls
+cd Rails/
+ls
+cd git_senblog/
+rails g migration AddTitleToBlogs title:string
+rake db:migrate
+rails g migration AddTitleToJournals title:string
+rake db:migrate
+rails g migration RemoveImageFromBlogs image:text
+rake db:migrate
+rails g migration RemoveImageFromJournals image:text
+rake db:migrate
+history
+git add .
+git commit -a -m "blogモデルとjournalモデルよりimageカラムを消し、titleカラムを追加した"
+git push -u origin master
+rails s
+history
+git add .
+git commit -a -m "blogとjournalの投稿機能の最低限の調整も完了"
+git push -u origin master
+sudo yum install ImageMagick
+bundle install
+rails active_storage:install
+rails db:migrate
+ls
+history
+git add .
+git commit -a -m "画像をプロフィールページに組み込むことに成功"
+git push -u origin master
+ls
+cd Rails/git_senblog/
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+ls
+history
+sudo service httpd restart
+sudo service mysqld restart
+history
+git add .
+git commit -a -m "blogとjournalの編集機能を搭載！"
+git push -u origin master
+rails s
+cd Rails/git_senblog/
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+history
+git add .
+git commit -a -m "マイページにおけるブログと日記の詳細ページ、およびタイムラインにおける詳細ページを作成完了！"
+git push -u origin master
+cd Rails/git_senblog/
+cd Rails/g
+cd Rails/git_senblog/
+hisotry
+history
+sudo service httpd restart
+sudo service mysqld restart
+rake db:migration:status
+rake db:migration :status
+rake db:version
+rails g migration AddContentIdToFeed_contents content_id:integer
+rake db:migrate
+rails g migration AddContentTypeToFeed_contents content_type:string
+rake db:migrate
+rails s
+cd Rails/git_senblog/
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+history
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+history
+git add .
+git commit -a -m "カラムcontent_idとcontent_typeをポリモーフィック用テーブルfeed_contentに追加"
+git push -u origin master
+rails 
+rails c
+rake db:migrate
+rails c
+history
+ rails g migration AddUserIdToFeed_contents user_id:integer
+rake db:migrate
+rails c
+rake db:migrate
+rails c
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+rake db:migrate:reset
+history
+git add .
+git commit -a -m "一応のポリモーフィック関連機能をマイページのblogとjournalのために追加成功"
+git push -u origin master
+rails g model like
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rake db:migrate
+rake routes
+cd Rails/git_senblog/
+rake routes
+rails g controller likes
+rake db:migrate
+rails s
+cd Rails/git_senblog/
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd ..
+ls
+cd senblog2
+ls
+pwd
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+rake db:migrate:reset
+cd ..
+ls
+cd senblog2
+cd git_senblog/
+sudo service httpd restart
+history
+sudo service mysqld restart
+cd ..
+ls
+cd git_senblog/
+rails s
+cd ..
+ls
+cd git_senblog/
+bundle install
+rails g uploader Image
+rails g migration AddImageToBlogs image:string
+rake db:migrate
+history
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rake routes
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudoe service mysqld restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+history
+git add .
+git commit -a -m "carrierwaveを使用した画像投稿機能を作成。注意点はimageカラムを追加して機能を搭載したこと"
+git push -u origin master
+rails g model like blog:references user:references
+rails db:migrate
+rails g controller likes
+rails s
+ls
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd ..
+ls
+cd senblog3
+git clone git@github.com:Fox-ag/git_senblog.git
+cd ..
+ls
+cd git_senblog/
+cd ..
+ls
+cd git_senblog/
+rake db:reset
+sudo service httpd restart
+sudo service mysqld restart
+rails db:migrate:reset
+rails g model like blog:references user:references
+rails db:migrate
+rails g controller likes
+git add .
+git commit -a -m "いいね機能も搭載完了！"
+git push -u origin master
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/g
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+pwd
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo 
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+history
+cd ..
+ls
+cd clone_git_senblog/
+git clone https://github.com/Fox-ag/git_senblog.git
+pwd
+sudo service mysqld restart
+sudo service httpd restart
+cd git_senblog/
+sudo service mysqld restart
+sudo service httpd restart
+rake db:reset
+rake db:migrate:reset
+cd ..
+ls
+pwd
+git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+git config --global user.name "Fox-ag"
+git config --global user.email "lexussc430qualia@gmail.com"
+git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+git init
+git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+cd ..
+ls
+cd clone_git_senblog/
+git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+git clone git@github.com:Fox-ag/git_senblog.git
+git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+git log
+ls
+cd 
+ls
+cd environment/
+ls
+cd Rails/
+ls
+cd git_senblog/
+git log
+cd ..
+l
+ls
+cd senblog3
+git log
+cd ..
+ls
+cd git_senblog/
+git log
+cd ..
+ls clone_git/
+git clone git@github.com:Fox-ag/git_senblog.git
+ls
+cd clone_git/
+cd git_senblog/
+git log
+git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+cd ..
+ls
+pwd
+ls
+cd ..
+ls
+cd Clone_gits/
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+git log
+git branch create_branch1
+git checkout create_branch1
+git log
+git reset --hard1c9da40168f5a1672df0b59f40965839e0a545c1
+git reset --hard 1c9da40168f5a1672df0b59f40965839e0a545c1
+git log
+git add .
+git commit -a -m "git reset hardを使用して一応のポリモーフィックまで戻した"
+git push origin HEAD
+pwd
+sudo service mysqld restart
+sudo service httpd restart
+rails s
+rake db:migrate:reset
+pwd
+sudo service mysqld start
+sudo service httpd start
+ls
+cd Rails
+ls
+cd Clone_gits/
+ls
+cd git_senblog/
+history
+rails g model like
+rake db:migrate
+rails g controller likes
+rails s
+ls
+cd Rails
+ls
+cd Clone_gits/
+cd git_senblog/
+history
+sudo service mysqld restart
+sudo service httpd restart
+la
+ls
+cd Rails/
+ls
+cd Clone_gits/
+ls
+cd git_senblog/
+ls
+rake routes
+rails s
+git add .
+git commit -a -m "like機能をつけました。画像投稿機能はつけていません。"
+git push origin HEAD
+rails s
+ls
+cd Rails
+ls
+cd Clone_gits/
+cd git_senblog/
+ls
+pwd
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+cd Rails/
+ls
+cd Clone_gits/
+ls
+cd git_senblog/
+pwd
+sudo service httpd start
+sudo service mysqld start
+ls
+cd Rails
+ls
+cd Clone_gits/
+ls
+cd git_senblog/
+rake routes
+rails s
+ls
+cd Rails/
+ls
+cd Clone_gits/
+ls
+cd git_senblog/
+ls
+cd Rails
+ls
+cd Clone_gits/
+cd git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+git add .
+git commit -a -m "プロフィール編集がこれまでは名前だけであったものの、ユーザーネームとかも編集できるようにした。また、プロフィール登録できていなくてもプロフィールタブを押せるようにした"
+git push origin HEAD
+bundle install
+rails g uploader thumbnail
+rails g migration AddBlogRefToThumbnail blog:references
+rake db:migrate
+ls
+cd Rails
+ls
+cd Clone_gits/
+cd git_senblog/
+ls
+cd Rails
+cd Clone_gits/
+cd git_senblog/
+ls
+history
+sudo service httpd start
+sudo service mysqld start
+rails g model thumbnail
+rake db:migrate
+rails s
+ls
+cd Rails/
+ls
+cd Clone_gits/
+ls
+cd git_senblog/
+ls
+cd ..
+ls
+cd ..
+ls
+Clones_gits/
+cd Clones_gits/
+git clone git@github.com:Fox-ag/git_senblog.git
+cd ..
+ls
+cd Clone_gits
+ls
+cd Rails
+ls
+cd Clone_gits
+ls
+cd git_senblog/
+ls
+rake db:reset
+cd ..
+ls
+cd Clone_gits3
+ls
+cd git_senblog/
+cd ..
+ls
+cd ..
+ls
+cd Clone_gits
+ls
+cd git_senblog/
+ls
+git branch
+git checkout create_branch1
+cd ..
+ls
+git clone git@github.com:Fox-ag/git_senblog.git
+ls
+cd git_senblog
+ls
+cd ..
+ls
+cd Clone_gits
+cd git_senblog/
+rake db:reset
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Rails
+ls
+cd Clone_gits
+ls
+cd git_senblog
+ls
+rake db:reset
+rails s
+ls
+cd Rails
+ls
+cd Clone_gits
+ls
+cd git_senblog/
+sudo service httpd restart 
+sudo service mysqld restart
+rails s
+ls
+cd Rails/
+ls
+cd Clone_gits
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd Clone_gits
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo serivce mysqld restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+cd git_senblogs2/
+cd ..
+ls
+cd Co
+cd Clone_gits
+cd git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+git add .
+git commit -a -m "htmlとcssをプロフィール、プロフィール編集、ヘッダーフッターに加えた"
+git push origin HEAD
+git checkout master
+git branch
+git reset --hard create_branch1
+git log
+uit
+git add .
+git commit -a -m "gitにてブランチcreate_branch1をmasterブランチの上に上書き完了"
+git push -u origin master
+git add .
+git commit -a -m "gitにてブランチcreate_branch1をmasterブランチの上に上書き完了"
+git push -u origin master
+sudo service httpd start
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "master上書き後"
+git push -u origin master
+ls
+git push -f remote master
+git push -f origin master
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd 
+ls
+cd environment/
+ls
+cd Rails/
+ls
+cd Clone_gits
+cd git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+git add .
+git commit -a -m "HTMLとCSSを改善中。残す所、timeline,home,mypage"
+git push -u origin master
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+cd Clone_gits
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "一端htmlとcssはok"
+git push -u origin master
+ls
+cd Rails
+ls
+cd Clone_gits
+ls
+cd git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld restart
+rails 
+ls
+cd Rails
+ls
+cd Clone_gits
+cd git_senblog/
+ls
+rails s
+bundle install
+gem install rmagick -v '4.0.0' --source 'https://rubygems.org/'
+sudo yum install ImageMagick
+bundle install
+gem install rmagick -v '4.0.0' --source 'https://rubygems.org/'
+brew -v
+bundle install
+ls
+bundle install
+sudo apt-get update
+sudo apt-get install imagemagick libmagick++-dev
+sudo yum install imagemagick libmagick++-dev
+bundle install
+gem install rmagick -v '4.0.0' --source 'https://rubygems.org/'
+sudo yum update
+sudo yum install imagemagick libmagick++-dev
+bundle install
+sudo yum install imagemagick
+sudo yum install ImageMagick
+bundle install
+sudo yum install imagemagick libmagickcore-dev libmagickwand-dev
+sudo yum install ImageMagick libmagickcore-dev libmagickwand-dev
+bundle update
+sudo install pkg-config
+install --help
+bundle install
+sudo service httpd start
+sudo service mysqld start
+rails s
+history
+bundle install
+history
+sudo yum install pkg-config
+sudo yum provides pkg-config
+sudo yum install pkgconfig-0.27.1-2.7.amzn1.x86_64
+bundle install
+sudo yum install pkgconfig
+cd ~
+ls
+cd environment
+ls
+cd ..
+ls
+cd ec2-user
+ls
+ls -a
+cd .rvm
+cd gems/ruby-2.6.0/extensions/x86_64-linux/2.6.0/rmagick-3.1.0/mkmf.log
+cd gems/ruby-2.6.0/extensions/x86_64-linux/2.6.0/rmagick-3.1.0
+ls
+cd gems
+ls
+cd ruby-2.6.3
+cd extensions/
+ls
+cd x86_64-linux/2.6.3/rmagick-3.1.0/mkmf.log
+cd x86_64-linux/2.6.3/rmagick-3.1.0
+cd x86_64-linux/2.6.3
+cd x86_64-linux
+ls
+cd 2.6.0
+ls
+ls -a
+cd ..
+cd gem
+cd gems
+ls
+cd ruby-2.5.1
+cd ls
+ls
+cd extensions
+ls
+cd x86_64-linux
+ls
+cd 2.5.0
+ls
+cd rmagick-4.0.0
+ls
+cat mkmf.log
+hisotry
+history
+bundle update
+cd ..
+cd..
+cd ..
+ls
+cd environment
+ls
+cd Rails
+ls
+cd Clone_gits
+ls
+cd git_senblog/
+ls
+bundle install
+history
+rails g uploader Image
+rails g migration add_image_to_blog image:string
+rake db:migrate
+ls
+cd Rails
+git clone git@github.com:Fox-ag/git_senblog.git
+ls
+cd git_senblog/
+rake db:reset
+rails db:reset
+rake db:migrate:reset
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Rails/
+ls
+cd git_senblog/
+rake db:reset
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+bundle install
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+ls
+cd Rails/
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+history
+rails g uploader Image
+rails g migration add_images_to_blogs images:json
+rails db:migrate
+ls
+rails db:migrate
+rails db:migrate
+rake db:migrate
+ls
+rake db:rollback
+rake db:migrate:status
+rails db:migrate
+rake db:migrate:status
+rm db/migrate/20191209083921_add_images_to_blogs.rb
+rails g migration add_images_to_blogs images:string
+rails db:migrate
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Raila
+cd Rails
+ls
+cd git_senblog/
+ls
+rails s
+ls
+cd Rails
+cd git_senblog/
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd ..
+ls
+cd ..
+ls
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+rake db:reset
+rails db:migrate:reset
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd git_senblog/
+ls
+bundle install
+rails generate uploader Image
+rails g scaffold blog_attachment blog_id:integer image:string
+rake db:migrate
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd ..
+ls
+git clone git@github.com:Fox-ag/git_senblog.git
+ls
+cd git_senblog/
+rake db:reset
+rails db:migrate:reset
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "一段落"
+git push -u origin master
+ls
+cd Rails/
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+rake routes
+ rails s
+git add .
+git commit -a -m "不完全なものの、一応検索はできるような気がする。いじったのはroutesとかコントローラとかviewファイルだけだからmigration関連は前回から変更なし"
+git push -u origin master
+rails generate migration AddColumnToBlog color:string
+rake db:migrate
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo serviec httpd restart
+sudo service httpd restart
+jsudo service mysqld restart
+sudo service mysqld restart
+rails s
+cd ..
+ks
+ls
+cd ..
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+rake db:reset
+rails db:migrate:reset
+sudo service httpd rails s
+jsudo service httpd restart
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "form_tagをブログ作成時に使用。そのためeditのviewも変更。モデル等に変更はなく
+"
+git push -u origin master
+rails s
+git add .
+git commit -a -m "mergeをblogコントローラに使用！"
+git push -u origin master
+history
+rails generate migration AddColumnToBlog color:string
+rake db:migrate
+sudo service httpd restart
+sudo service mysqld restart
+cd git_senblog/
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+rails s
+rails c
+rails s
+ls
+cd Rails/
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails c
+rails s
+ls
+cd Rails/git_senblog/
+sudo servic httpd restart
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd ..
+ls
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+ls
+rake db:reset
+rails db:migrate:reset
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+bundle install
+rails s
+rake routes
+rails s
+history
+rails g model emotion feeling:string
+rails g model blog_feeling
+rake db:migrate
+rake db:rollback
+rake db:migrate
+rake db:rollback
+rake db:migrate
+rake db:rollback
+rake db:migrate
+cd Rails/git_senblog/
+rake db:rollback
+sudo service httpd restart
+sudo service mysqld restart
+history
+rake db:rollback
+rake db:migrate
+bundle install
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+cd Rails/git_senblog/
+ls
+rails s
+sudo service httpd rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service mysqld restart
+rails s
+rake db:reset
+rails db:migrate:reset
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rail s
+rails s
+git add .
+git commit -a -m "checkbox機能を荒いながらも搭載！モデルも変更している。"
+git push -u origin master
+bundle install
+rails g migration add_image_to_blog image:string
+rake db:migrate
+rails g uploader Image
+rake db:migrate
+rails s
+cd ..
+git clone git@github.com:Fox-ag/git_senblog.git
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+bundle install
+rails g uploader Image
+history
+rails g migration add_images_to_blog images:string
+rails db:migrate
+rake db:reset
+rails db:migrate:reset
+rails s
+bundle install
+rails g uploader images
+rails s
+cd ..
+rails s
+cd git_senblog/
+rails s
+ls
+cd Rails
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+rake db:reset
+sudo service httpd restart
+sudo service mysqld restart
+rake db:reset
+rails db:migrate:reset
+cd Rails/git_senblog/
+bundle install
+hisotry
+history
+rails g uploader images
+rails g migration add_images_to_blog images:string
+rake db:migrate
+rails s
+history
+rails s
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd ..
+git clone git@github.com:Fox-ag/git_senblog.git
+cd Rails/g
+cd git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rake db:reset
+rails db:migrate:reset
+cd ..
+cd git_senblog/
+ls
+history
+bundle install
+history
+rails g uploader Images
+rails g migration add_images_to_blog images:json
+rails db:migrate
+cd ..
+cd ..
+cd git_senblog/
+cd git_senblog/
+cd ..
+cd ..
+git clone rails g migration add_images_to_blog images:string
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+cd giq
+cd git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rake db:reset
+rails db:migrate:reset
+rails s
+history
+history
+bundle install
+rails g uploader Photo
+rails g model ItemPhoto item_id:integer photo:string
+rails s
+rails db:migrate
+rails s
+cd ..
+cd ..
+git clone git@github.com:Fox-ag/git_senblog.git
+cd git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd git_senblog/
+rake db:reset
+rake db:migrate:reset
+rails s
+bundle install
+rails generate model BlogPhoto blog_id:integer photo:string
+rails generate uploader Photo
+rails db:migrate
+rails s
+git add .
+git commit -a -m "何とか画像を複数アップロード可能に！もちろん修正は必要！でも今のところちゃんと動くよ！"
+git push -u origin master
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysld start
+sudo service mysqld start
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+cd Rails/
+ls
+cd git_senblog/
+ls
+sudo service mysqld start
+sudo service httpd start
+rails s
+ls
+cd Rails/
+ls
+cd git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd ..
+ls
+pwd
+cd ..
+pwd
+$ curl -OL https://cli-assets.heroku.com/heroku-linux-x64.tar.gz
+tar zxf heroku-linux-x64.tar.gz && rm -f heroku-linux-x64.tar.gz
+sudo mv heroku /usr/local
+echo 'PATH=/usr/local/heroku/bin:$PATH' >> $HOME/.bash_profile
+curl -OL https://cli-assets.heroku.com/heroku-linux-x64.tar.gz
+tar zxf heroku-linux-x64.tar.gz && rm -f heroku-linux-x64.tar.gz
+sudo mv heroku /usr/local
+echo 'PATH=/usr/local/heroku/bin:$PATH' >> $HOME/.bash_profile
+source $HOME/.bash_profile > /dev/null
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+heroku login --interactive
+bundle install
+ruby -v
+git add .
+git commit -a -m "画像があるブログを削除できなかったが、修正。検索機能を改善。画像なしブログもcreateできるようにした"
+git push -u origin master
+history
+heroku create senblog
+ls
+heroku create permablog
+heroku
+heroku addons:add cleardb
+heroku config | grep CLEARDB_DATABASE_URL
+heroku config:set DATABASE_URL=mysql2://b50ace8eb30461:5555868c@us-cdbr-iron-east-04.cleardb.net/heroku_3514b7359034b3e?reconnect=true
+git add .
+git commit -m "update for upload to heroku"
+rake db:reset
+rake db:migrate:reset
+rails db:seed
+sudo service httpd start
+sudo service mysqld start
+rails s
+git add .
+git commit -m "upate for upload to heroku"
+git push heroku master
+heroku run rake db:migrate
+heroku run rake db:seed
+heroku apps:info
+heroku logs
+rake db:reset
+rake db:migrate:reset
+rails db:seed
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add -u
+git commit -m "seed.rbにユーザー情報を加えた"
+git push heroku master
+heroku run rake db:seed
+heroku apps:info
+heroku logs
+ls
+cd Rails/
+cd git_senblog/
+heroku config | grep DATABASE_URL
+heroku logs
+heroku log
+heroku logs
+heroku logs --tails
+heroku logs --tail
+heroku logs | grep error
+heroku logs
+heroku logs | grep error
+ls
+cd Rails/git_senblog/
+heroku logs | grep error
+heroku logs
+heroku restart
+heroku logs -t
+heroku run rails db:migrate
+ls
+cd Rails/git_senblog/
+git add -u
+git commit -m "changed development.rb for mail problem. Erased user seed information for seeds.rb."
+git push heroku master
+heroku run db:migrate
+heroku run rake db:migrate
+history
+heroku logs -t
+git add -u
+git commit -m "development.rb変更"
+git push heroku master
+git add -u
+git commit -m "development.rbとproduct.rbをherokuのために変更"
+git push heroku master
+git add -u
+git commit -m "development.rbのaction_mailerの設定をAWS開発用に戻した"
+git push heroku master
+cd Rails/git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+rails db:seed
+rails s
+git add .
+git commit -a -m "herokuでもAWSでも動くようにproduction.rbとdevelopment.rbを変更"
+git add .
+git commit -a -m "herokuでもAWSでも動くようにproduction.rbとdevelopment.rbを変更"
+git push -u origin master
+rake routes
+rails s
+rails g migration AddColumnToUsers
+--skip
+rails g migration AddColumnToUsers --skip
+rails g migration AddDetailsToUsers selfanalysis:text selfintroduction:text
+rake db:migrate
+rake routes
+cd Rails/git_senblog/
+ls
+sudo service httpd start
+sudo service mysqld start
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+history
+cd Rails/git_senblog/
+cd Rails/git_senblog/
+git add .
+git commit -a -m "プロフィールの一部を改善"
+git push -u origin master
+sudo service httpd start
+sudo service mysqld start
+rails s
+rails generate model JournalPhoto journal_id:integer photo:string
+rails db:migrate
+cd Rails/git_senblog/
+history
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+history
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+cd Rails/git_senblog/
+cd Rails//git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+history
+git add .
+git commit -a -m "日記機能にも画像をつけられるようにした。ブログ・日記の編集の際に機能がいまだ改善必須。"
+git push -u origin master
+rails g model theme type:string
+rails g model blog_type
+rake db:migrate
+rails s
+cd ..
+cd ..
+cd ..
+git clone https://github.com/Fox-ag/git_senblog.git
+cd git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rake db:reset
+rake db:migrate:reset
+rails db:seed
+cd git_senblog/
+history
+cd git_senblog/
+rails g model theme topic:string
+rails g model blog_topic
+rake db:migrate
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+history
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mqsqld restart
+rails s
+sudo service mysqld restart
+rails s
+/home/ec2-user/environment/Rails/git_senblog/tmp/pids/server.pid.
+rails s
+sudo service mysqld restart
+sudo service httpd restart
+rails s
+lsof -i:3000
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+cd Rails/git_senblog/
+history
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo serice httpd restart
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+d
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+rake routes
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git_senblog/
+sudo service httpd start
+sudo service mysqld start
+rails s
+cd Rails/git
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld retart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "htmlとcssを大分更新。さらにページネーション等も実装。ファンクションも軽く調査したところ、all okey"
+git push -u origin master
+cd Rails/git_senblog/
+history
+git add .
+git push -u origin master
+rails s
+heroku login --interactive
+git add -u
+history
+git commit -m "made no change"
+git push heroku master
+heroku rename Arkchive
+heroku create Arkchive
+ls
+heroku login
+cd ..
+ls
+cd git_senblog/
+heroku login --interactive
+ls
+heroku create arkchiveproto
+cd permablog
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "htmlとcssに関してサーチページにおいて改良。また、マイページも少し改良"
+git push -u origin master
+rails s
+rake db:reset
+rake db:migrate:reset
+rails db seed
+rails db:seed
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "seed.rbの改良も行った"
+git push -u origin master
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+heroku apps
+heroku login
+heroku login --interactive
+heroku apps
+git remote
+heroku addons:add cleardb
+heroku config | grep CLEARDB_DATABASE_URL
+heroku config:set DATABASE_URL=mysql2://bcd74a4e601c31:c0882b13@us-cdbr-iron-east-01.cleardb.net/heroku_c15f9eda357da26?reconnect=true
+git add .
+git commit -m "update for upload to heroku arkchiveproto"
+git push heroku master
+heroku apps:info
+heroku run rails db:seed
+rails db:migrate
+heroku run rails db:migrate
+history
+heroku run rails db:seed
+heroku apps:info
+heroku apps
+heroku apps:destory --app permablog
+heroku apps
+heroku apps:destroy --app arkchive
+heroku apps:destroy --app arkchiveproto
+heroku create arkchiveproto
+heroku addons:add cleardb
+heroku config | grep CLEARDB_DATABASE_URL
+heroku config:set DATABASE_URL=mysql2://bfb6db650e09de:c55f25f5@us-cdbr-iron-east-01.cleardb.net/heroku_feb229fc31c5fda?reconnect=true
+git push heroku master
+heroku run rails db:migrate
+heroku apps:info
+heroku run rails db:seed
+git add -u
+git commit -m "production.rbをarkchiveprotoのために変更"
+git push heroku master
+heroku config | grep DATABASE_URL
+udo service httpd restart
+sudo service httpd restart
+sudos service myslqd restart
+sudos service mysqld restart
+sudo service mysqld restart
+rails s
+git add .
+git push -u origin master
+cd Rails/git_senblog/
+heroku login --interactive
+git add -u
+git commit -m "production.rbを画像がherokuで表示されるように変更。どうなるか"
+git push heroku master
+history
+git push -u origin master
+cd Rails/git_senblog/
+sudo service mysqld restart
+sudo service httpd restart
+rails s
+git add .
+git commit -m "htmlとcssと若干微修正"
+git push -u origin master
+heroku login --interactive
+git push heroku master
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "ブログ記事が削除できないバグをblog.rbにてdependent: :destroyを追加したことで修正"
+git push -u origin master
+git add -u
+git commit -m "微修正バグforheroku"
+git push heroku master
+cd
+ls
+cd environment/
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+ls
+sudo 
+cd Rails
+ls
+cd git_senblog/
+ls
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "新規登録画面のhtmlとcssを変更"
+git push -u origin master
+git push heroku master
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+]rails s
+rails s
+history
+git add .
+git commit -a -m "ログイン画面のhtmlとcssを変更"
+git push -u origin master
+git push heroku master
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+rake routes
+rails s
+history
+git add .
+git commit -a -m "ヘッダーとフッターの色変え。そしてタイムライン背景画像変更。"
+git push -u origin master
+git push heroku master
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+git add .
+git commit -a -m "html cssを修正。ログイン画面にロゴ取り付け。スクロール修正。ヘッダー色修正"
+git push -u origin master
+git push heroku master
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "html css微修正追加"
+git push -u origin master
+git push heroku master
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld retart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo
+ls
+cd Rails/
+ls
+cd git_senblog/
+ls
+rake routes
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd
+ls
+cd environment/
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+ls
+cd Rails
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+la
+ls
+cd Rails/
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service htttpd restart
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "html cssを大幅改善！たぶん機能は大丈夫！"
+git push -u origin master
+git push heroku master
+cd Rails
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails generate migration RemoveBirthdateFromUsers birthdate:string
+rails generate migration AddBirth_dateTo Users birth_date:date
+rails db:migrate
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+bundle update
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a m "誕生日記入欄調整database変更。2000文字以内変更html。作成日時表示できるようにhtml。blog書いた人しか見れない問題解決。漢字の名前記載箇所追加。下書き編集機能追加。javaxcriptの軽い動き追加。ボタンは画像押せるように修正。index htmlのチェックボックスの幅間隔調整。
+"
+rails s
+git add .
+git commit -a m "誕生日記入欄調整database変更。2000文字以内変更html。作成日時表示できるようにhtml。blog書いた人しか見れない問 題解決。漢字の名前記載箇所追加。下書き編集機能追加。javaxcriptの軽い動き追加。ボタンは画像押せるように修正。index htmlの"
+git commit m "誕生日記入欄調整database変更。2000文字以内変更html。作成日時表示できるようにhtml。blog書いた人しか見れない問 題解決。漢字の名前記載箇所追加。下書き編集機能追加。javaxcriptの軽い動き追加。ボタンは画像押せるように修正。index htmlの"
+git add .
+git commit -a m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整。jquery no
+git add .
+git commit -a m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整。jqueryの導入。"
+git commit m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整。jqueryの導入。"
+git status
+git commit m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整"
+git reset @^
+git status
+git add .
+git commit -a -m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整"
+git push -u origin master
+git push -f origin master
+git push heroku master
+git add .
+git commit -a -m "サイドpush"
+git push -u origin master
+git push heroku master
+git push --help
+git pull origin master
+git push oirgin master
+git push origin master
+git push heroku master
+git push heroku --force
+heroku run rails db:migrate
+heroku config | grep DATABASE_URL
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "スマホ用html css javaの更新。データベースに変更はない"
+git push -u origin master
+history
+git push heroku master
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+git add .
+git commit -a -m "metaにviewport部の追加"
+git push -u origin master
+git push heroku master
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo servicec mysqld restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "loading gif added althouge error on develiping environment"
+git push -u origin master
+history
+git push heroku master
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+git add .
+git commit -a -m "loading gif changed to css background-image for better function"
+git push -u origin master
+history
+git push heroku master
+ls
+cd Rails
+ls
+cd git_senblog/
+history
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "ログイン機能のデバッグ完了。この後、HEROKUへのデプロイはまだ行ていません。"
+git push -u origin master
+ls
+cd Rails
+ls
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+ls
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails
+cd git_senblog/
+sudo service httpd restart
+sudo service mysqld rstart
+sudo service mysqld restart
+rails s
+cd Rails
+cd git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+cd Rails/git_senblog/
+ls
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo service http restart
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+rails s
+pwd
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+pwd
+rails g migration add_columns_to_users
+rails db:migrate
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+pwd
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -m "1画像編集機能の微調整。しかし解決できていない。2ビッグファイブ用にuserテーブルを改造。その後ビッグファイブを個人ステータスに追加。ビッグファイブ検索機能も追加。複数ワード検索機能も試みたが、これは断念"
+git push -u origin master
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+rails g migration AddStatusToBlogs status:integer
+rails db:migrate
+rails s
+bundle install
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+pwd
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+git add .
+git commit -m "status機能をつけてblogテーブルを変更。下書き機能の取り付けが完了"
+git push heroku master
+git push -u origin master
+history
+history 2000
+history > commands.txt
+history | head
+history
+history -w history.txt

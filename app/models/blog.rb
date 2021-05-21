@@ -6,6 +6,9 @@ class Blog < ApplicationRecord
     has_many :blog_photos, foreign_key: :blog_id, dependent: :destroy
     accepts_nested_attributes_for :blog_photos, allow_destroy: true, reject_if: proc { |attributes| attributes['photo'].blank? }
     
+    has_many :blog_images, foreign_key: :blog_id, dependent: :destroy
+    accepts_nested_attributes_for :blog_images, allow_destroy: true, reject_if: proc { |attributes| attributes['image'].blank? }
+    
     belongs_to :user
     has_one :feed_content, as: :content, dependent: :destroy
     

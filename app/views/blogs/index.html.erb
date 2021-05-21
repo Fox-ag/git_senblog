@@ -1,6 +1,6 @@
 <div class="contents row" >
   <% @blogs.each do |blog| %>
-    <div class="content_post" style="background-image: url(<%= blog.image %>);">
+    <div class="content_post">
       <%= simple_format(blog.text) %>
       <span class="name"><%= blog.user_name %></span>
     </div>

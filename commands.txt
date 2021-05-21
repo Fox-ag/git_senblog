@@ -1,0 +1,2616 @@
+    1  pw
+    2  pwd
+    3  ls
+    4  rvm install 2.5.1
+    5  ruby -v
+    6  rvm --default use 2.5.1
+    7  sudo yum install mysql-devel
+    8  sudo service mysqld start
+    9  gem install bundler
+   10  gem install rails --version="5.2.1"
+   11  history
+   12  rails -v
+   13  cd Rails
+   14  rails _5.2.1_ new pictweet -d mysql
+   15  ls
+   16  cd pictweet
+   17  pwd
+   18  bundle update
+   19  rake db:create
+   20  sudo yum install phpmyadmin
+   21  sudo service httpd start
+   22  cd shell
+   23  ls
+   24  cd ..
+   25  ls
+   26  cd shell
+   27  sh move.sh
+   28  cd ..
+   29  ls
+   30  cd pictweet/
+   31  history
+   32  rails _5.2.1_ new senblog -d mysql
+   33  cd ..
+   34  pwd
+   35  cls
+   36  ls 
+   37  cd environment/
+   38  ls
+   39  cd Rails/
+   40  ls
+   41  rails _5.2.1_ new senblog -d mysql
+   42  ls
+   43  cd senblog/
+   44  pwd
+   45  bundle update
+   46  git --version
+   47  pwd
+   48  rake db:create
+   49  ls
+   50  cd Rails/
+   51  ls
+   52  cd senblog
+   53  ls
+   54  history
+   55  sudo service httpd start
+   56  history
+   57  sudo service mysqld start
+   58  git init
+   59  git add .
+   60  git commit -m "first commit"
+   61  git remote add origin git@github.com:Fox-ag/git_senblog.git
+   62  ssh-keygen
+   63  cat ~/.ssh/id_rsa.pub
+   64  git push -u origin master
+   65  rails g controller blogs
+   66  pwd
+   67  rails s
+   68  ls
+   69  sudo service httpd start
+   70  sudo service mysqld start
+   71  rails s
+   72  rails g model blog
+   73  rake db:migrate
+   74  history
+   75  sudo service httpd start
+   76  sudo service mysqld start
+   77  rails s
+   78  rake routes
+   79  rails 
+   80  rails s
+   81  pwd install
+   82  bundle install
+   83  pwd
+   84  bundle install
+   85  rails g devise:install
+   86  git add .
+   87  git commit -a -m "user機能本格作成前まで"
+   88  git push origin master
+   89  bundle install
+   90  pwd
+   91  hisotry
+   92  history
+   93  rails g controller top
+   94  bundle install
+   95  rails g controller top
+   96  rails g devise:views
+   97  rails g devise user
+   98  rake db:migrate
+   99  history
+  100  ls
+  101  cd Rails/
+  102  ls
+  103  cd senblog/
+  104  cd Rails/senblog/
+  105  history
+  106  sudo service httpd start
+  107  sudo service mysqld start
+  108  rails 
+  109  rails s
+  110  ls
+  111  cd Rails/
+  112  ls
+  113  cd senblog/
+  114  ls
+  115  cd Rails/senblog/
+  116  pwd
+  117  history
+  118  sudo service httpd start
+  119  sudo service mysqld start
+  120  history
+  121  rake routes
+  122  git add .
+  123  git commit -a -m "user機能signup表示できた"
+  124  git push -u origin master
+  125  rails s
+  126  git add .
+  127  git commit -a -m "user機能でメール確認機能がきた"
+  128  git push -u origin master
+  129  cd Rails/senblog/
+  130  cd Rails/senblog/
+  131  history
+  132  sudo service httpd start
+  133  sudo service mysqld start
+  134  ls
+  135  ls
+  136  hisotry
+  137  history
+  138  rails s
+  139  cd Rails/senblog/
+  140  ls
+  141  pwd
+  142  cd Rails/senblog/
+  143  ls
+  144  history
+  145  sudo service httpd start
+  146  sudo service mysqld start
+  147  ls
+  148  rails g controller users
+  149  rails s
+  150  rails g migration AddColumnToUsers
+  151  rake db:migrate
+  152  rake db:rollback
+  153  rake db:migrate
+  154  history
+  155  git add .
+  156  git commit -a -m "userカラムの追加も実施、一応表示もできた。"
+  157  git push -u origin master
+  158  history
+  159  ls
+  160  cd Rails/
+  161  ls
+  162  cd senblog
+  163  ls
+  164  sudo service httpd start
+  165  sudo service mysqld start
+  166  rails s
+  167  history
+  168  ls
+  169  cd Rails/
+  170  ls
+  171  cd senblog/
+  172  sudo service httpd restart
+  173  sudo servie mysqld restart
+  174  sudo service mysqld restart
+  175  prefix
+  176  rake routes
+  177  ls
+  178  cd Rails/
+  179  ls
+  180  cd senblog/
+  181  rake routes
+  182  history
+  183  git add .
+  184  git commit -a -m "ブログトップページも表示できた。"
+  185  git commit -a -m "ブログトップページも表示できた"
+  186  git push -u origin master
+  187  rake routes
+  188  git add .
+  189  git commit -a -m "ユーザーページを編集できるようにしようまで完了。ただし、完璧な編集機能ではない"
+  190  git push -u origin master
+  191  rails s
+  192  ls
+  193  cd Rails/
+  194  ls
+  195  cd senblog/
+  196  history
+  197  sudo service mysqld restart
+  198  sudo service httpd restart
+  199  rails s
+  200  ls
+  201  cd Rails
+  202  ls
+  203  cd senblog/
+  204  ls
+  205  rails s
+  206  history
+  207  sudo service httpd restart
+  208  sudo servie mysqld restart
+  209  sudo service mysqld restart
+  210  ls
+  211  cd Rails/
+  212  ls
+  213  cd senblog/
+  214  rails s
+  215  pwd
+  216  rake routes
+  217  ls
+  218  cd Rails senblog
+  219  ls
+  220  pwd
+  221  cd Rails/senblog
+  222  cd senblog/
+  223  pwd
+  224  ls
+  225  cd Rails/
+  226  cd senblog
+  227  ls
+  228  pwd
+  229  history
+  230  sudo service httpd restart
+  231  sudo service mysqld restart
+  232  history
+  233  git commit -a -m "これまでblog controllerのindexでblog内容を表示。しかし、今はtop controllerでblog内容を表示。top controllerを操作したことで実現。"
+  234  git push -u origin master
+  235  rake routes
+  236  rails g migration AddUserIdToBlogs user_id:integer
+  237  rake db:migrate
+  238  history
+  239  git add .
+  240  git commit -a -m "自分が記載したブログを表示するマイページを作成。resourceにmemberを作成してusers controllerやviewを編集して完成"
+  241  history
+  242  git push -u origin master
+  243  rails g model journal
+  244  rake db:migrate
+  245  history
+  246  git add .
+  247  git commit -a -m "blog controllerは公開ブログを表示するわけだが、それとは別に日記として他人には見せない日記journalmoderu 
+  248  を作成"
+  249  git push -u origin master
+  250  rake routes
+  251  git add .
+  252  git commit -a -m "blogを投稿するの表示ボタンをapplication html erbから _header html erbへ移動"
+  253  git push -u origin master
+  254  rails g controller journals
+  255  rails s
+  256  rake routes
+  257  rails g controller journals
+  258  history
+  259  git add .
+  260  git commit -a -m "日記つまりjounralの新規投稿ができるように編集した。注意点として、最後になぞのrails g controller journalsをやってしまった。たぶ大丈夫だとは思う"
+  261  git push -u origin master
+  262  ls
+  263  cd Rails/
+  264  ls
+  265  cd senblog/
+  266  ls
+  267  history
+  268  sudo service httpd restart
+  269  sudo service mysqld restart
+  270  cd Rails
+  271  ls
+  272  cd senblog/
+  273  rake routes
+  274  history
+  275  git add .
+  276  git commit -a -m "ブログを投稿する　および　日記を書き込むの機能に関してuser_idが保存されるように編集。また、routesにおいてresourcesに全て変更"
+  277  git push -u origin master
+  278  rake routes
+  279  rails s
+  280  history
+  281  git add .
+  282  git commit -a -m "blogとjournalの削除機能を追加"
+  283  git push -u origin master
+  284  ls
+  285  cd Rails/
+  286  ls
+  287  cd senblog/
+  288  ls
+  289  cd Rails/senblog/
+  290  ls
+  291  history
+  292  sudo service httpd restart
+  293  sudo service mysqld restart
+  294  rails s
+  295  ls
+  296  cd Rails/senblog/
+  297  ls
+  298  history
+  299  sudo service httpd restart
+  300  sudo service mysqld restart
+  301  rails s
+  302  history
+  303  git add .
+  304  git commit -a -m "htmlとcssの初期をわずかにつけた"
+  305  git push -u origin master
+  306  rails g model feed_content
+  307  ls
+  308  cd Rails/senblog/
+  309  history
+  310  git add .
+  311  git commit -a -m "マイページ用タイムライン用のポリモーフィック用rails g model feed_contentを作成"
+  312  git push -u origin master
+  313  hisotry
+  314  history
+  315  sudo service httpd restart
+  316  sudo service mysqld restart
+  317  cd Rails/senblog/
+  318  ls
+  319  history
+  320  rails d model feed_content
+  321  rails g migration AddTitleToBlogs title:string
+  322  rake db:migrate
+  323  rails g migration AddTitleToJournals title:string
+  324  rake db:migrate
+  325  rails g migration RemoveImageFromBlogs text:image
+  326  rake db:migrate
+  327  rails g migration RemoveImageFromBlogs image:text
+  328  rake db:migrate
+  329  rails g migration RemoveImageFromBlogs image:text
+  330  rake db:version
+  331  rake db:rollback
+  332  rails g migration RemoveImageFromBlogs image:text
+  333  rake db:version
+  334  rake db:rollback
+  335  rake db:version
+  336  history
+  337  rake db:rollback
+  338  rake db:version
+  339  rake db:migrate
+  340  rails s
+  341  rake db:version
+  342  rake db:rollback
+  343  rake db:version
+  344  rake db:rollback STEP=2
+  345  rake db:version
+  346  rake db:rollback STEP=20190823005653
+  347  rake db:version
+  348  git checkout .
+  349  cd Rails/senblog2
+  350  git pull origin master
+  351  ec2-user:~/environment/Rails/senblog2 $ 
+  352  git pull origin master
+  353  history
+  354  history
+  355  rails g migration RemoveImageFromBlogs image:text
+  356  rake db:migrate
+  357  rake db:version
+  358  rake db:migrate:status
+  359  rake db:version
+  360  ls dn/migrate
+  361  ls db/migrate
+  362  rake db:abort_if_pending_migrations
+  363  ls db/migrate
+  364  rake db:rollback
+  365  --trace
+  366  rake db:rollback --trace
+  367  rake dn:mgirate
+  368  rake db:mgirate
+  369  rake db:rollback
+  370  rails db:migrate:reset
+  371  rake db:version
+  372  rake db:rollback
+  373  rails db:migrate
+  374  rake db:migrate
+  375  rake db:rollback
+  376  history
+  377  rake db:migrate:status
+  378  rake db:migrate
+  379  rake db:rollback
+  380  git init
+  381  git clone git@github.com:Fox-ag/git_senblog.git
+  382  rake db:migrate
+  383  ls
+  384  cd git_senblog/
+  385  ls
+  386  rake db:migrate
+  387  ls
+  388  cd Rails/
+  389  ls
+  390  cd senblog2
+  391  ls
+  392  cd git_senblog
+  393  ls
+  394  hitory
+  395  sudo service httpd restart
+  396  sudo service mysqld restart
+  397  ls
+  398  cd Rails/senblog2/
+  399  ls
+  400  cd git_senblog/
+  401  rake db:version
+  402  rake db:migrate
+  403  rake db:version
+  404  rails db:migrate:reset
+  405  history
+  406  rails s
+  407  rake db:version
+  408  history
+  409  ls
+  410  cd Rails/git_senblog/
+  411  sudo service httpd restart
+  412  sudo service mysqld restart
+  413  rails g migration AddTitleToBlogs title:string
+  414  ls
+  415  cd Rails/
+  416  ls
+  417  cd git_senblog/
+  418  rails g migration AddTitleToBlogs title:string
+  419  rake db:migrate
+  420  rails g migration AddTitleToJournals title:string
+  421  rake db:migrate
+  422  rails g migration RemoveImageFromBlogs image:text
+  423  rake db:migrate
+  424  rails g migration RemoveImageFromJournals image:text
+  425  rake db:migrate
+  426  history
+  427  git add .
+  428  git commit -a -m "blogモデルとjournalモデルよりimageカラムを消し、titleカラムを追加した"
+  429  git push -u origin master
+  430  rails s
+  431  history
+  432  git add .
+  433  git commit -a -m "blogとjournalの投稿機能の最低限の調整も完了"
+  434  git push -u origin master
+  435  sudo yum install ImageMagick
+  436  bundle install
+  437  rails active_storage:install
+  438  rails db:migrate
+  439  ls
+  440  history
+  441  git add .
+  442  git commit -a -m "画像をプロフィールページに組み込むことに成功"
+  443  git push -u origin master
+  444  ls
+  445  cd Rails/git_senblog/
+  446  history
+  447  sudo service httpd restart
+  448  sudo service mysqld restart
+  449  rails s
+  450  cd Rails/git_senblog/
+  451  ls
+  452  history
+  453  sudo service httpd restart
+  454  sudo service mysqld restart
+  455  history
+  456  git add .
+  457  git commit -a -m "blogとjournalの編集機能を搭載！"
+  458  git push -u origin master
+  459  rails s
+  460  cd Rails/git_senblog/
+  461  history
+  462  sudo service httpd restart
+  463  sudo service mysqld restart
+  464  rails s
+  465  rake routes
+  466  history
+  467  git add .
+  468  git commit -a -m "マイページにおけるブログと日記の詳細ページ、およびタイムラインにおける詳細ページを作成完了！"
+  469  git push -u origin master
+  470  cd Rails/git_senblog/
+  471  cd Rails/g
+  472  cd Rails/git_senblog/
+  473  hisotry
+  474  history
+  475  sudo service httpd restart
+  476  sudo service mysqld restart
+  477  rake db:migration:status
+  478  rake db:migration :status
+  479  rake db:version
+  480  rails g migration AddContentIdToFeed_contents content_id:integer
+  481  rake db:migrate
+  482  rails g migration AddContentTypeToFeed_contents content_type:string
+  483  rake db:migrate
+  484  rails s
+  485  cd Rails/git_senblog/
+  486  history
+  487  sudo service httpd restart
+  488  sudo service mysqld restart
+  489  rails s
+  490  cd Rails/git_senblog/
+  491  history
+  492  sudo service httpd restart
+  493  sudo service mysqld restart
+  494  cd Rails/git_senblog/
+  495  history
+  496  git add .
+  497  git commit -a -m "カラムcontent_idとcontent_typeをポリモーフィック用テーブルfeed_contentに追加"
+  498  git push -u origin master
+  499  rails 
+  500  rails c
+  501  rake db:migrate
+  502  rails c
+  503  history
+  504   rails g migration AddUserIdToFeed_contents user_id:integer
+  505  rake db:migrate
+  506  rails c
+  507  rake db:migrate
+  508  rails c
+  509  rails s
+  510  cd Rails/git_senblog/
+  511  sudo service httpd restart
+  512  sudo service mysqld restart
+  513  cd Rails/git_senblog/
+  514  rake db:migrate:reset
+  515  history
+  516  git add .
+  517  git commit -a -m "一応のポリモーフィック関連機能をマイページのblogとjournalのために追加成功"
+  518  git push -u origin master
+  519  rails g model like
+  520  rails s
+  521  sudo service httpd restart
+  522  sudo service mysqld restart
+  523  rake db:migrate
+  524  rake routes
+  525  cd Rails/git_senblog/
+  526  rake routes
+  527  rails g controller likes
+  528  rake db:migrate
+  529  rails s
+  530  cd Rails/git_senblog/
+  531  cd Rails/git_senblog/
+  532  sudo service httpd restart
+  533  sudo service mysqld restart
+  534  rails s
+  535  cd ..
+  536  ls
+  537  cd senblog2
+  538  ls
+  539  pwd
+  540  git clone git@github.com:Fox-ag/git_senblog.git
+  541  cd git_senblog/
+  542  rake db:migrate:reset
+  543  cd ..
+  544  ls
+  545  cd senblog2
+  546  cd git_senblog/
+  547  sudo service httpd restart
+  548  history
+  549  sudo service mysqld restart
+  550  cd ..
+  551  ls
+  552  cd git_senblog/
+  553  rails s
+  554  cd ..
+  555  ls
+  556  cd git_senblog/
+  557  bundle install
+  558  rails g uploader Image
+  559  rails g migration AddImageToBlogs image:string
+  560  rake db:migrate
+  561  history
+  562  rails s
+  563  ls
+  564  cd Rails
+  565  ls
+  566  cd git_senblog/
+  567  ls
+  568  cd Rails
+  569  ls
+  570  cd git_senblog/
+  571  ls
+  572  sudo service httpd restart
+  573  sudo service mysqld restart
+  574  rake routes
+  575  rails s
+  576  ls
+  577  cd Rails/git_senblog/
+  578  sudo service httpd restart
+  579  sudoe service mysqld restart
+  580  sudo service mysqld restart
+  581  cd Rails/git_senblog/
+  582  history
+  583  git add .
+  584  git commit -a -m "carrierwaveを使用した画像投稿機能を作成。注意点はimageカラムを追加して機能を搭載したこと"
+  585  git push -u origin master
+  586  rails g model like blog:references user:references
+  587  rails db:migrate
+  588  rails g controller likes
+  589  rails s
+  590  ls
+  591  rails s
+  592  sudo service httpd restart
+  593  sudo service mysqld restart
+  594  rails s
+  595  cd ..
+  596  ls
+  597  cd senblog3
+  598  git clone git@github.com:Fox-ag/git_senblog.git
+  599  cd ..
+  600  ls
+  601  cd git_senblog/
+  602  cd ..
+  603  ls
+  604  cd git_senblog/
+  605  rake db:reset
+  606  sudo service httpd restart
+  607  sudo service mysqld restart
+  608  rails db:migrate:reset
+  609  rails g model like blog:references user:references
+  610  rails db:migrate
+  611  rails g controller likes
+  612  git add .
+  613  git commit -a -m "いいね機能も搭載完了！"
+  614  git push -u origin master
+  615  rails s
+  616  cd Rails/git_senblog/
+  617  sudo service httpd restart
+  618  sudo service mysqld restart
+  619  rails s
+  620  cd Rails/g
+  621  sudo service httpd restart
+  622  sudo service mysqld restart
+  623  rails s
+  624  pwd
+  625  sudo service httpd restart
+  626  sudo service mysqld restart
+  627  rails s
+  628  cd Rails/git_senblog/
+  629  sudo service httpd restart
+  630  sudo service mysqld restart
+  631  rails s
+  632  ls
+  633  cd Rails/git_senblog/
+  634  sudo service httpd restart
+  635  sudo service mysqld restart
+  636  rails s
+  637  ls
+  638  cd Rails/
+  639  cd git_senblog/
+  640  sudo service httpd restart
+  641  sudo service mysqld restart
+  642  rails s
+  643  ls
+  644  cd Rails/
+  645  ls
+  646  cd git_senblog/
+  647  sudo service httpd restart
+  648  sudo 
+  649  sudo service mysqld restart
+  650  rails s
+  651  ls
+  652  cd Rails
+  653  ls
+  654  cd git_senblog/
+  655  sudo service httpd start
+  656  sudo service mysqld start
+  657  rails s
+  658  history
+  659  cd ..
+  660  ls
+  661  cd clone_git_senblog/
+  662  git clone https://github.com/Fox-ag/git_senblog.git
+  663  pwd
+  664  sudo service mysqld restart
+  665  sudo service httpd restart
+  666  cd git_senblog/
+  667  sudo service mysqld restart
+  668  sudo service httpd restart
+  669  rake db:reset
+  670  rake db:migrate:reset
+  671  cd ..
+  672  ls
+  673  pwd
+  674  git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+  675  git config --global user.name "Fox-ag"
+  676  git config --global user.email "lexussc430qualia@gmail.com"
+  677  git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+  678  git init
+  679  git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+  680  cd ..
+  681  ls
+  682  cd clone_git_senblog/
+  683  git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+  684  git clone git@github.com:Fox-ag/git_senblog.git
+  685  git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+  686  git log
+  687  ls
+  688  cd 
+  689  ls
+  690  cd environment/
+  691  ls
+  692  cd Rails/
+  693  ls
+  694  cd git_senblog/
+  695  git log
+  696  cd ..
+  697  l
+  698  ls
+  699  cd senblog3
+  700  git log
+  701  cd ..
+  702  ls
+  703  cd git_senblog/
+  704  git log
+  705  cd ..
+  706  ls clone_git/
+  707  git clone git@github.com:Fox-ag/git_senblog.git
+  708  ls
+  709  cd clone_git/
+  710  cd git_senblog/
+  711  git log
+  712  git cherry-pick 1c9da40168f5a1672df0b59f40965839e0a545c1
+  713  cd ..
+  714  ls
+  715  pwd
+  716  ls
+  717  cd ..
+  718  ls
+  719  cd Clone_gits/
+  720  git clone git@github.com:Fox-ag/git_senblog.git
+  721  cd git_senblog/
+  722  git log
+  723  git branch create_branch1
+  724  git checkout create_branch1
+  725  git log
+  726  git reset --hard1c9da40168f5a1672df0b59f40965839e0a545c1
+  727  git reset --hard 1c9da40168f5a1672df0b59f40965839e0a545c1
+  728  git log
+  729  git add .
+  730  git commit -a -m "git reset hardを使用して一応のポリモーフィックまで戻した"
+  731  git push origin HEAD
+  732  pwd
+  733  sudo service mysqld restart
+  734  sudo service httpd restart
+  735  rails s
+  736  rake db:migrate:reset
+  737  pwd
+  738  sudo service mysqld start
+  739  sudo service httpd start
+  740  ls
+  741  cd Rails
+  742  ls
+  743  cd Clone_gits/
+  744  ls
+  745  cd git_senblog/
+  746  history
+  747  rails g model like
+  748  rake db:migrate
+  749  rails g controller likes
+  750  rails s
+  751  ls
+  752  cd Rails
+  753  ls
+  754  cd Clone_gits/
+  755  cd git_senblog/
+  756  history
+  757  sudo service mysqld restart
+  758  sudo service httpd restart
+  759  la
+  760  ls
+  761  cd Rails/
+  762  ls
+  763  cd Clone_gits/
+  764  ls
+  765  cd git_senblog/
+  766  ls
+  767  rake routes
+  768  rails s
+  769  git add .
+  770  git commit -a -m "like機能をつけました。画像投稿機能はつけていません。"
+  771  git push origin HEAD
+  772  rails s
+  773  ls
+  774  cd Rails
+  775  ls
+  776  cd Clone_gits/
+  777  cd git_senblog/
+  778  ls
+  779  pwd
+  780  sudo service httpd start
+  781  sudo service mysqld start
+  782  rails s
+  783  ls
+  784  cd Rails/
+  785  ls
+  786  cd Clone_gits/
+  787  ls
+  788  cd git_senblog/
+  789  pwd
+  790  sudo service httpd start
+  791  sudo service mysqld start
+  792  ls
+  793  cd Rails
+  794  ls
+  795  cd Clone_gits/
+  796  ls
+  797  cd git_senblog/
+  798  rake routes
+  799  rails s
+  800  ls
+  801  cd Rails/
+  802  ls
+  803  cd Clone_gits/
+  804  ls
+  805  cd git_senblog/
+  806  ls
+  807  cd Rails
+  808  ls
+  809  cd Clone_gits/
+  810  cd git_senblog/
+  811  sudo service httpd start
+  812  sudo service mysqld start
+  813  rails s
+  814  git add .
+  815  git commit -a -m "プロフィール編集がこれまでは名前だけであったものの、ユーザーネームとかも編集できるようにした。また、プロフィール登録できていなくてもプロフィールタブを押せるようにした"
+  816  git push origin HEAD
+  817  bundle install
+  818  rails g uploader thumbnail
+  819  rails g migration AddBlogRefToThumbnail blog:references
+  820  rake db:migrate
+  821  ls
+  822  cd Rails
+  823  ls
+  824  cd Clone_gits/
+  825  cd git_senblog/
+  826  ls
+  827  cd Rails
+  828  cd Clone_gits/
+  829  cd git_senblog/
+  830  ls
+  831  history
+  832  sudo service httpd start
+  833  sudo service mysqld start
+  834  rails g model thumbnail
+  835  rake db:migrate
+  836  rails s
+  837  ls
+  838  cd Rails/
+  839  ls
+  840  cd Clone_gits/
+  841  ls
+  842  cd git_senblog/
+  843  ls
+  844  cd ..
+  845  ls
+  846  cd ..
+  847  ls
+  848  Clones_gits/
+  849  cd Clones_gits/
+  850  git clone git@github.com:Fox-ag/git_senblog.git
+  851  cd ..
+  852  ls
+  853  cd Clone_gits
+  854  ls
+  855  cd Rails
+  856  ls
+  857  cd Clone_gits
+  858  ls
+  859  cd git_senblog/
+  860  ls
+  861  rake db:reset
+  862  cd ..
+  863  ls
+  864  cd Clone_gits3
+  865  ls
+  866  cd git_senblog/
+  867  cd ..
+  868  ls
+  869  cd ..
+  870  ls
+  871  cd Clone_gits
+  872  ls
+  873  cd git_senblog/
+  874  ls
+  875  git branch
+  876  git checkout create_branch1
+  877  cd ..
+  878  ls
+  879  git clone git@github.com:Fox-ag/git_senblog.git
+  880  ls
+  881  cd git_senblog
+  882  ls
+  883  cd ..
+  884  ls
+  885  cd Clone_gits
+  886  cd git_senblog/
+  887  rake db:reset
+  888  sudo service httpd restart
+  889  sudo service mysqld restart
+  890  ls
+  891  cd Rails
+  892  ls
+  893  cd Clone_gits
+  894  ls
+  895  cd git_senblog
+  896  ls
+  897  rake db:reset
+  898  rails s
+  899  ls
+  900  cd Rails
+  901  ls
+  902  cd Clone_gits
+  903  ls
+  904  cd git_senblog/
+  905  sudo service httpd restart 
+  906  sudo service mysqld restart
+  907  rails s
+  908  ls
+  909  cd Rails/
+  910  ls
+  911  cd Clone_gits
+  912  cd git_senblog/
+  913  ls
+  914  sudo service httpd restart
+  915  sudo service mysqld restart
+  916  rails s
+  917  ls
+  918  cd Rails
+  919  ls
+  920  cd Clone_gits
+  921  ls
+  922  cd git_senblog/
+  923  ls
+  924  sudo service httpd restart
+  925  sudo serivce mysqld restart
+  926  sudo service mysqld restart
+  927  rails s
+  928  ls
+  929  cd Rails
+  930  cd git_senblogs2/
+  931  cd ..
+  932  ls
+  933  cd Co
+  934  cd Clone_gits
+  935  cd git_senblog/
+  936  ls
+  937  sudo service httpd start
+  938  sudo service mysqld start
+  939  rails s
+  940  git add .
+  941  git commit -a -m "htmlとcssをプロフィール、プロフィール編集、ヘッダーフッターに加えた"
+  942  git push origin HEAD
+  943  git checkout master
+  944  git branch
+  945  git reset --hard create_branch1
+  946  git log
+  947  uit
+  948  git add .
+  949  git commit -a -m "gitにてブランチcreate_branch1をmasterブランチの上に上書き完了"
+  950  git push -u origin master
+  951  git add .
+  952  git commit -a -m "gitにてブランチcreate_branch1をmasterブランチの上に上書き完了"
+  953  git push -u origin master
+  954  sudo service httpd start
+  955  sudo service httpd restart
+  956  sudo service mysqld restart
+  957  rails s
+  958  git add .
+  959  git commit -a -m "master上書き後"
+  960  git push -u origin master
+  961  ls
+  962  git push -f remote master
+  963  git push -f origin master
+  964  sudo service httpd start
+  965  sudo service mysqld start
+  966  rails s
+  967  cd 
+  968  ls
+  969  cd environment/
+  970  ls
+  971  cd Rails/
+  972  ls
+  973  cd Clone_gits
+  974  cd git_senblog/
+  975  ls
+  976  sudo service httpd start
+  977  sudo service mysqld start
+  978  rails s
+  979  ls
+  980  sudo service httpd start
+  981  sudo service mysqld start
+  982  rails s
+  983  ls
+  984  sudo service httpd start
+  985  sudo service mysqld start
+  986  rails s
+  987  git add .
+  988  git commit -a -m "HTMLとCSSを改善中。残す所、timeline,home,mypage"
+  989  git push -u origin master
+  990  sudo service httpd restart
+  991  sudo service mysqld restart
+  992  rails s
+  993  ls
+  994  cd Rails
+  995  cd Clone_gits
+  996  cd git_senblog/
+  997  sudo service httpd restart
+  998  sudo service mysqld restart
+  999  rails s
+ 1000  git add .
+ 1001  git commit -a -m "一端htmlとcssはok"
+ 1002  git push -u origin master
+ 1003  ls
+ 1004  cd Rails
+ 1005  ls
+ 1006  cd Clone_gits
+ 1007  ls
+ 1008  cd git_senblog/
+ 1009  ls
+ 1010  sudo service httpd start
+ 1011  sudo service mysqld restart
+ 1012  rails 
+ 1013  ls
+ 1014  cd Rails
+ 1015  ls
+ 1016  cd Clone_gits
+ 1017  cd git_senblog/
+ 1018  ls
+ 1019  rails s
+ 1020  bundle install
+ 1021  gem install rmagick -v '4.0.0' --source 'https://rubygems.org/'
+ 1022  sudo yum install ImageMagick
+ 1023  bundle install
+ 1024  gem install rmagick -v '4.0.0' --source 'https://rubygems.org/'
+ 1025  brew -v
+ 1026  bundle install
+ 1027  ls
+ 1028  bundle install
+ 1029  sudo apt-get update
+ 1030  sudo apt-get install imagemagick libmagick++-dev
+ 1031  sudo yum install imagemagick libmagick++-dev
+ 1032  bundle install
+ 1033  gem install rmagick -v '4.0.0' --source 'https://rubygems.org/'
+ 1034  sudo yum update
+ 1035  sudo yum install imagemagick libmagick++-dev
+ 1036  bundle install
+ 1037  sudo yum install imagemagick
+ 1038  sudo yum install ImageMagick
+ 1039  bundle install
+ 1040  sudo yum install imagemagick libmagickcore-dev libmagickwand-dev
+ 1041  sudo yum install ImageMagick libmagickcore-dev libmagickwand-dev
+ 1042  bundle update
+ 1043  sudo install pkg-config
+ 1044  install --help
+ 1045  bundle install
+ 1046  sudo service httpd start
+ 1047  sudo service mysqld start
+ 1048  rails s
+ 1049  history
+ 1050  bundle install
+ 1051  history
+ 1052  sudo yum install pkg-config
+ 1053  sudo yum provides pkg-config
+ 1054  sudo yum install pkgconfig-0.27.1-2.7.amzn1.x86_64
+ 1055  bundle install
+ 1056  sudo yum install pkgconfig
+ 1057  cd ~
+ 1058  ls
+ 1059  cd environment
+ 1060  ls
+ 1061  cd ..
+ 1062  ls
+ 1063  cd ec2-user
+ 1064  ls
+ 1065  ls -a
+ 1066  cd .rvm
+ 1067  cd gems/ruby-2.6.0/extensions/x86_64-linux/2.6.0/rmagick-3.1.0/mkmf.log
+ 1068  cd gems/ruby-2.6.0/extensions/x86_64-linux/2.6.0/rmagick-3.1.0
+ 1069  ls
+ 1070  cd gems
+ 1071  ls
+ 1072  cd ruby-2.6.3
+ 1073  cd extensions/
+ 1074  ls
+ 1075  cd x86_64-linux/2.6.3/rmagick-3.1.0/mkmf.log
+ 1076  cd x86_64-linux/2.6.3/rmagick-3.1.0
+ 1077  cd x86_64-linux/2.6.3
+ 1078  cd x86_64-linux
+ 1079  ls
+ 1080  cd 2.6.0
+ 1081  ls
+ 1082  ls -a
+ 1083  cd ..
+ 1084  cd gem
+ 1085  cd gems
+ 1086  ls
+ 1087  cd ruby-2.5.1
+ 1088  cd ls
+ 1089  ls
+ 1090  cd extensions
+ 1091  ls
+ 1092  cd x86_64-linux
+ 1093  ls
+ 1094  cd 2.5.0
+ 1095  ls
+ 1096  cd rmagick-4.0.0
+ 1097  ls
+ 1098  cat mkmf.log
+ 1099  hisotry
+ 1100  history
+ 1101  bundle update
+ 1102  cd ..
+ 1103  cd..
+ 1104  cd ..
+ 1105  ls
+ 1106  cd environment
+ 1107  ls
+ 1108  cd Rails
+ 1109  ls
+ 1110  cd Clone_gits
+ 1111  ls
+ 1112  cd git_senblog/
+ 1113  ls
+ 1114  bundle install
+ 1115  history
+ 1116  rails g uploader Image
+ 1117  rails g migration add_image_to_blog image:string
+ 1118  rake db:migrate
+ 1119  ls
+ 1120  cd Rails
+ 1121  git clone git@github.com:Fox-ag/git_senblog.git
+ 1122  ls
+ 1123  cd git_senblog/
+ 1124  rake db:reset
+ 1125  rails db:reset
+ 1126  rake db:migrate:reset
+ 1127  sudo service httpd restart
+ 1128  sudo service mysqld restart
+ 1129  ls
+ 1130  cd Rails/
+ 1131  ls
+ 1132  cd git_senblog/
+ 1133  rake db:reset
+ 1134  rails s
+ 1135  sudo service httpd restart
+ 1136  sudo service mysqld restart
+ 1137  bundle install
+ 1138  rails s
+ 1139  ls
+ 1140  cd Rails
+ 1141  ls
+ 1142  cd git_senblog/
+ 1143  ls
+ 1144  ls
+ 1145  cd Rails/
+ 1146  ls
+ 1147  cd git_senblog/
+ 1148  sudo service httpd restart
+ 1149  sudo service mysqld restart
+ 1150  rails s
+ 1151  history
+ 1152  history
+ 1153  rails g uploader Image
+ 1154  rails g migration add_images_to_blogs images:json
+ 1155  rails db:migrate
+ 1156  ls
+ 1157  rails db:migrate
+ 1158  rails db:migrate
+ 1159  rake db:migrate
+ 1160  ls
+ 1161  rake db:rollback
+ 1162  rake db:migrate:status
+ 1163  rails db:migrate
+ 1164  rake db:migrate:status
+ 1165  rm db/migrate/20191209083921_add_images_to_blogs.rb
+ 1166  rails g migration add_images_to_blogs images:string
+ 1167  rails db:migrate
+ 1168  sudo service httpd start
+ 1169  sudo service mysqld start
+ 1170  rails s
+ 1171  ls
+ 1172  cd Rails
+ 1173  ls
+ 1174  cd git_senblog/
+ 1175  ls
+ 1176  sudo service httpd restart
+ 1177  sudo service mysqld restart
+ 1178  ls
+ 1179  cd Raila
+ 1180  cd Rails
+ 1181  ls
+ 1182  cd git_senblog/
+ 1183  ls
+ 1184  rails s
+ 1185  ls
+ 1186  cd Rails
+ 1187  cd git_senblog/
+ 1188  ls
+ 1189  cd Rails/git_senblog/
+ 1190  sudo service httpd restart
+ 1191  sudo service mysqld restart
+ 1192  rails s
+ 1193  cd ..
+ 1194  ls
+ 1195  cd ..
+ 1196  ls
+ 1197  git clone git@github.com:Fox-ag/git_senblog.git
+ 1198  cd git_senblog/
+ 1199  rake db:reset
+ 1200  rails db:migrate:reset
+ 1201  sudo service httpd restart
+ 1202  sudo service mysqld restart
+ 1203  rails s
+ 1204  cd git_senblog/
+ 1205  ls
+ 1206  bundle install
+ 1207  rails generate uploader Image
+ 1208  rails g scaffold blog_attachment blog_id:integer image:string
+ 1209  rake db:migrate
+ 1210  sudo service httpd start
+ 1211  sudo service mysqld start
+ 1212  rails s
+ 1213  cd ..
+ 1214  ls
+ 1215  git clone git@github.com:Fox-ag/git_senblog.git
+ 1216  ls
+ 1217  cd git_senblog/
+ 1218  rake db:reset
+ 1219  rails db:migrate:reset
+ 1220  sudo service httpd restart
+ 1221  sudo service mysqld restart
+ 1222  rails s
+ 1223  git add .
+ 1224  git commit -a -m "一段落"
+ 1225  git push -u origin master
+ 1226  ls
+ 1227  cd Rails/
+ 1228  cd git_senblog/
+ 1229  ls
+ 1230  sudo service httpd restart
+ 1231  sudo service mysqld restart
+ 1232  ls
+ 1233  cd Rails
+ 1234  ls
+ 1235  cd git_senblog/
+ 1236  ls
+ 1237  rake routes
+ 1238   rails s
+ 1239  git add .
+ 1240  git commit -a -m "不完全なものの、一応検索はできるような気がする。いじったのはroutesとかコントローラとかviewファイルだけだからmigration関連は前回から変更なし"
+ 1241  git push -u origin master
+ 1242  rails generate migration AddColumnToBlog color:string
+ 1243  rake db:migrate
+ 1244  sudo service httpd restart
+ 1245  sudo service mysqld restart
+ 1246  rails s
+ 1247  ls
+ 1248  cd Rails/git_senblog/
+ 1249  sudo serviec httpd restart
+ 1250  sudo service httpd restart
+ 1251  jsudo service mysqld restart
+ 1252  sudo service mysqld restart
+ 1253  rails s
+ 1254  cd ..
+ 1255  ks
+ 1256  ls
+ 1257  cd ..
+ 1258  git clone git@github.com:Fox-ag/git_senblog.git
+ 1259  cd git_senblog/
+ 1260  rake db:reset
+ 1261  rails db:migrate:reset
+ 1262  sudo service httpd rails s
+ 1263  jsudo service httpd restart
+ 1264  sudo service httpd restart
+ 1265  sudo service mysqld restart
+ 1266  rails s
+ 1267  git add .
+ 1268  git commit -a -m "form_tagをブログ作成時に使用。そのためeditのviewも変更。モデル等に変更はなく
+ 1269  "
+ 1270  git push -u origin master
+ 1271  rails s
+ 1272  git add .
+ 1273  git commit -a -m "mergeをblogコントローラに使用！"
+ 1274  git push -u origin master
+ 1275  history
+ 1276  rails generate migration AddColumnToBlog color:string
+ 1277  rake db:migrate
+ 1278  sudo service httpd restart
+ 1279  sudo service mysqld restart
+ 1280  cd git_senblog/
+ 1281  rails s
+ 1282  sudo service httpd restart
+ 1283  sudo service mysqld restart
+ 1284  rails s
+ 1285  ls
+ 1286  cd Rails/
+ 1287  cd git_senblog/
+ 1288  ls
+ 1289  sudo service httpd restart
+ 1290  sudo service mysqld restart
+ 1291  rails s
+ 1292  history
+ 1293  rails s
+ 1294  rails c
+ 1295  rails s
+ 1296  ls
+ 1297  cd Rails/
+ 1298  ls
+ 1299  cd git_senblog/
+ 1300  sudo service httpd restart
+ 1301  sudo service mysqld restart
+ 1302  rails s
+ 1303  rails c
+ 1304  rails s
+ 1305  ls
+ 1306  cd Rails/git_senblog/
+ 1307  sudo servic httpd restart
+ 1308  sudo service httpd restart
+ 1309  sudo service mysqld restart
+ 1310  rails s
+ 1311  cd ..
+ 1312  ls
+ 1313  git clone git@github.com:Fox-ag/git_senblog.git
+ 1314  cd git_senblog/
+ 1315  ls
+ 1316  rake db:reset
+ 1317  rails db:migrate:reset
+ 1318  sudo service httpd restart
+ 1319  sudo service mysqld restart
+ 1320  rails s
+ 1321  bundle install
+ 1322  rails s
+ 1323  rake routes
+ 1324  rails s
+ 1325  history
+ 1326  rails g model emotion feeling:string
+ 1327  rails g model blog_feeling
+ 1328  rake db:migrate
+ 1329  rake db:rollback
+ 1330  rake db:migrate
+ 1331  rake db:rollback
+ 1332  rake db:migrate
+ 1333  rake db:rollback
+ 1334  rake db:migrate
+ 1335  cd Rails/git_senblog/
+ 1336  rake db:rollback
+ 1337  sudo service httpd restart
+ 1338  sudo service mysqld restart
+ 1339  history
+ 1340  rake db:rollback
+ 1341  rake db:migrate
+ 1342  bundle install
+ 1343  sudo service httpd restart
+ 1344  sudo service mysqld restart
+ 1345  rails s
+ 1346  sudo service httpd start
+ 1347  sudo service mysqld start
+ 1348  rails s
+ 1349  ls
+ 1350  cd Rails/git_senblog/
+ 1351  ls
+ 1352  rails s
+ 1353  sudo service httpd rails s
+ 1354  sudo service httpd restart
+ 1355  sudo service mysqld restart
+ 1356  rails s
+ 1357  cd Rails/git_senblog/
+ 1358  sudo service httpd restart
+ 1359  sudo service mysqld restart
+ 1360  rails s
+ 1361  sudo service mysqld restart
+ 1362  rails s
+ 1363  rake db:reset
+ 1364  rails db:migrate:reset
+ 1365  sudo service httpd restart
+ 1366  sudo service mysqld restart
+ 1367  rails s
+ 1368  sudo service httpd restart
+ 1369  sudo service mysqld restart
+ 1370  rails s
+ 1371  rail s
+ 1372  rails s
+ 1373  git add .
+ 1374  git commit -a -m "checkbox機能を荒いながらも搭載！モデルも変更している。"
+ 1375  git push -u origin master
+ 1376  bundle install
+ 1377  rails g migration add_image_to_blog image:string
+ 1378  rake db:migrate
+ 1379  rails g uploader Image
+ 1380  rake db:migrate
+ 1381  rails s
+ 1382  cd ..
+ 1383  git clone git@github.com:Fox-ag/git_senblog.git
+ 1384  ls
+ 1385  cd git_senblog/
+ 1386  sudo service httpd restart
+ 1387  sudo service mysqld restart
+ 1388  rails s
+ 1389  cd Rails/git_senblog/
+ 1390  bundle install
+ 1391  rails g uploader Image
+ 1392  history
+ 1393  rails g migration add_images_to_blog images:string
+ 1394  rails db:migrate
+ 1395  rake db:reset
+ 1396  rails db:migrate:reset
+ 1397  rails s
+ 1398  bundle install
+ 1399  rails g uploader images
+ 1400  rails s
+ 1401  cd ..
+ 1402  rails s
+ 1403  cd git_senblog/
+ 1404  rails s
+ 1405  ls
+ 1406  cd Rails
+ 1407  git clone git@github.com:Fox-ag/git_senblog.git
+ 1408  cd git_senblog/
+ 1409  rake db:reset
+ 1410  sudo service httpd restart
+ 1411  sudo service mysqld restart
+ 1412  rake db:reset
+ 1413  rails db:migrate:reset
+ 1414  cd Rails/git_senblog/
+ 1415  bundle install
+ 1416  hisotry
+ 1417  history
+ 1418  rails g uploader images
+ 1419  rails g migration add_images_to_blog images:string
+ 1420  rake db:migrate
+ 1421  rails s
+ 1422  history
+ 1423  rails s
+ 1424  sudo service httpd start
+ 1425  sudo service mysqld start
+ 1426  rails s
+ 1427  cd ..
+ 1428  git clone git@github.com:Fox-ag/git_senblog.git
+ 1429  cd Rails/g
+ 1430  cd git_senblog/
+ 1431  ls
+ 1432  sudo service httpd start
+ 1433  sudo service mysqld start
+ 1434  rake db:reset
+ 1435  rails db:migrate:reset
+ 1436  cd ..
+ 1437  cd git_senblog/
+ 1438  ls
+ 1439  history
+ 1440  bundle install
+ 1441  history
+ 1442  rails g uploader Images
+ 1443  rails g migration add_images_to_blog images:json
+ 1444  rails db:migrate
+ 1445  cd ..
+ 1446  cd ..
+ 1447  cd git_senblog/
+ 1448  cd git_senblog/
+ 1449  cd ..
+ 1450  cd ..
+ 1451  git clone rails g migration add_images_to_blog images:string
+ 1452  git clone git@github.com:Fox-ag/git_senblog.git
+ 1453  cd git_senblog/
+ 1454  cd giq
+ 1455  cd git_senblog/
+ 1456  sudo service httpd start
+ 1457  sudo service mysqld start
+ 1458  rake db:reset
+ 1459  rails db:migrate:reset
+ 1460  rails s
+ 1461  history
+ 1462  history
+ 1463  bundle install
+ 1464  rails g uploader Photo
+ 1465  rails g model ItemPhoto item_id:integer photo:string
+ 1466  rails s
+ 1467  rails db:migrate
+ 1468  rails s
+ 1469  cd ..
+ 1470  cd ..
+ 1471  git clone git@github.com:Fox-ag/git_senblog.git
+ 1472  cd git_senblog/
+ 1473  sudo service httpd start
+ 1474  sudo service mysqld start
+ 1475  rails s
+ 1476  cd git_senblog/
+ 1477  rake db:reset
+ 1478  rake db:migrate:reset
+ 1479  rails s
+ 1480  bundle install
+ 1481  rails generate model BlogPhoto blog_id:integer photo:string
+ 1482  rails generate uploader Photo
+ 1483  rails db:migrate
+ 1484  rails s
+ 1485  git add .
+ 1486  git commit -a -m "何とか画像を複数アップロード可能に！もちろん修正は必要！でも今のところちゃんと動くよ！"
+ 1487  git push -u origin master
+ 1488  sudo service httpd restart
+ 1489  sudo service mysqld restart
+ 1490  rails s
+ 1491  cd Rails/git_senblog/
+ 1492  sudo service httpd start
+ 1493  sudo service mysld start
+ 1494  sudo service mysqld start
+ 1495  rails s
+ 1496  ls
+ 1497  cd Rails
+ 1498  ls
+ 1499  cd git_senblog/
+ 1500  ls
+ 1501  sudo service httpd start
+ 1502  sudo service mysqld start
+ 1503  rails s
+ 1504  ls
+ 1505  cd Rails/
+ 1506  ls
+ 1507  cd git_senblog/
+ 1508  ls
+ 1509  sudo service mysqld start
+ 1510  sudo service httpd start
+ 1511  rails s
+ 1512  ls
+ 1513  cd Rails/
+ 1514  ls
+ 1515  cd git_senblog/
+ 1516  ls
+ 1517  sudo service httpd start
+ 1518  sudo service mysqld start
+ 1519  rails s
+ 1520  cd ..
+ 1521  ls
+ 1522  pwd
+ 1523  cd ..
+ 1524  pwd
+ 1525  $ curl -OL https://cli-assets.heroku.com/heroku-linux-x64.tar.gz
+ 1526  tar zxf heroku-linux-x64.tar.gz && rm -f heroku-linux-x64.tar.gz
+ 1527  sudo mv heroku /usr/local
+ 1528  echo 'PATH=/usr/local/heroku/bin:$PATH' >> $HOME/.bash_profile
+ 1529  curl -OL https://cli-assets.heroku.com/heroku-linux-x64.tar.gz
+ 1530  tar zxf heroku-linux-x64.tar.gz && rm -f heroku-linux-x64.tar.gz
+ 1531  sudo mv heroku /usr/local
+ 1532  echo 'PATH=/usr/local/heroku/bin:$PATH' >> $HOME/.bash_profile
+ 1533  source $HOME/.bash_profile > /dev/null
+ 1534  ls
+ 1535  cd Rails
+ 1536  ls
+ 1537  cd git_senblog/
+ 1538  ls
+ 1539  heroku login --interactive
+ 1540  bundle install
+ 1541  ruby -v
+ 1542  git add .
+ 1543  git commit -a -m "画像があるブログを削除できなかったが、修正。検索機能を改善。画像なしブログもcreateできるようにした"
+ 1544  git push -u origin master
+ 1545  history
+ 1546  heroku create senblog
+ 1547  ls
+ 1548  heroku create permablog
+ 1549  heroku
+ 1550  heroku addons:add cleardb
+ 1551  heroku config | grep CLEARDB_DATABASE_URL
+ 1552  heroku config:set DATABASE_URL=mysql2://b50ace8eb30461:5555868c@us-cdbr-iron-east-04.cleardb.net/heroku_3514b7359034b3e?reconnect=true
+ 1553  git add .
+ 1554  git commit -m "update for upload to heroku"
+ 1555  rake db:reset
+ 1556  rake db:migrate:reset
+ 1557  rails db:seed
+ 1558  sudo service httpd start
+ 1559  sudo service mysqld start
+ 1560  rails s
+ 1561  git add .
+ 1562  git commit -m "upate for upload to heroku"
+ 1563  git push heroku master
+ 1564  heroku run rake db:migrate
+ 1565  heroku run rake db:seed
+ 1566  heroku apps:info
+ 1567  heroku logs
+ 1568  rake db:reset
+ 1569  rake db:migrate:reset
+ 1570  rails db:seed
+ 1571  sudo service httpd restart
+ 1572  sudo service mysqld restart
+ 1573  rails s
+ 1574  git add -u
+ 1575  git commit -m "seed.rbにユーザー情報を加えた"
+ 1576  git push heroku master
+ 1577  heroku run rake db:seed
+ 1578  heroku apps:info
+ 1579  heroku logs
+ 1580  ls
+ 1581  cd Rails/
+ 1582  cd git_senblog/
+ 1583  heroku config | grep DATABASE_URL
+ 1584  heroku logs
+ 1585  heroku log
+ 1586  heroku logs
+ 1587  heroku logs --tails
+ 1588  heroku logs --tail
+ 1589  heroku logs | grep error
+ 1590  heroku logs
+ 1591  heroku logs | grep error
+ 1592  ls
+ 1593  cd Rails/git_senblog/
+ 1594  heroku logs | grep error
+ 1595  heroku logs
+ 1596  heroku restart
+ 1597  heroku logs -t
+ 1598  heroku run rails db:migrate
+ 1599  ls
+ 1600  cd Rails/git_senblog/
+ 1601  git add -u
+ 1602  git commit -m "changed development.rb for mail problem. Erased user seed information for seeds.rb."
+ 1603  git push heroku master
+ 1604  heroku run db:migrate
+ 1605  heroku run rake db:migrate
+ 1606  history
+ 1607  heroku logs -t
+ 1608  git add -u
+ 1609  git commit -m "development.rb変更"
+ 1610  git push heroku master
+ 1611  git add -u
+ 1612  git commit -m "development.rbとproduct.rbをherokuのために変更"
+ 1613  git push heroku master
+ 1614  git add -u
+ 1615  git commit -m "development.rbのaction_mailerの設定をAWS開発用に戻した"
+ 1616  git push heroku master
+ 1617  cd Rails/git_senblog/
+ 1618  ls
+ 1619  sudo service httpd start
+ 1620  sudo service mysqld start
+ 1621  rails s
+ 1622  rails db:seed
+ 1623  rails s
+ 1624  git add .
+ 1625  git commit -a -m "herokuでもAWSでも動くようにproduction.rbとdevelopment.rbを変更"
+ 1626  git add .
+ 1627  git commit -a -m "herokuでもAWSでも動くようにproduction.rbとdevelopment.rbを変更"
+ 1628  git push -u origin master
+ 1629  rake routes
+ 1630  rails s
+ 1631  rails g migration AddColumnToUsers
+ 1632  --skip
+ 1633  rails g migration AddColumnToUsers --skip
+ 1634  rails g migration AddDetailsToUsers selfanalysis:text selfintroduction:text
+ 1635  rake db:migrate
+ 1636  rake routes
+ 1637  cd Rails/git_senblog/
+ 1638  ls
+ 1639  sudo service httpd start
+ 1640  sudo service mysqld start
+ 1641  rails s
+ 1642  ls
+ 1643  cd Rails/git_senblog/
+ 1644  sudo service httpd start
+ 1645  sudo service mysqld start
+ 1646  rails s
+ 1647  cd Rails/git_senblog/
+ 1648  history
+ 1649  cd Rails/git_senblog/
+ 1650  cd Rails/git_senblog/
+ 1651  git add .
+ 1652  git commit -a -m "プロフィールの一部を改善"
+ 1653  git push -u origin master
+ 1654  sudo service httpd start
+ 1655  sudo service mysqld start
+ 1656  rails s
+ 1657  rails generate model JournalPhoto journal_id:integer photo:string
+ 1658  rails db:migrate
+ 1659  cd Rails/git_senblog/
+ 1660  history
+ 1661  cd Rails/git_senblog/
+ 1662  sudo service httpd start
+ 1663  sudo service mysqld start
+ 1664  rails s
+ 1665  cd Rails/git_senblog/
+ 1666  history
+ 1667  cd Rails/git_senblog/
+ 1668  sudo service httpd restart
+ 1669  sudo service mysqld restart
+ 1670  rails s
+ 1671  cd Rails/git_senblog/
+ 1672  cd Rails/git_senblog/
+ 1673  cd Rails//git_senblog/
+ 1674  sudo service httpd restart
+ 1675  sudo service mysqld restart
+ 1676  history
+ 1677  git add .
+ 1678  git commit -a -m "日記機能にも画像をつけられるようにした。ブログ・日記の編集の際に機能がいまだ改善必須。"
+ 1679  git push -u origin master
+ 1680  rails g model theme type:string
+ 1681  rails g model blog_type
+ 1682  rake db:migrate
+ 1683  rails s
+ 1684  cd ..
+ 1685  cd ..
+ 1686  cd ..
+ 1687  git clone https://github.com/Fox-ag/git_senblog.git
+ 1688  cd git_senblog/
+ 1689  sudo service httpd start
+ 1690  sudo service mysqld start
+ 1691  rake db:reset
+ 1692  rake db:migrate:reset
+ 1693  rails db:seed
+ 1694  cd git_senblog/
+ 1695  history
+ 1696  cd git_senblog/
+ 1697  rails g model theme topic:string
+ 1698  rails g model blog_topic
+ 1699  rake db:migrate
+ 1700  rails s
+ 1701  sudo service httpd restart
+ 1702  sudo service mysqld restart
+ 1703  rails s
+ 1704  cd Rails/git_senblog/
+ 1705  history
+ 1706  cd Rails/git_senblog/
+ 1707  sudo service httpd restart
+ 1708  sudo service mysqld restart
+ 1709  rails s
+ 1710  sudo service httpd start
+ 1711  sudo service mysqld start
+ 1712  rails s
+ 1713  cd Rails/git_senblog/
+ 1714  sudo service httpd start
+ 1715  sudo service mysqld start
+ 1716  rails s
+ 1717  cd Rails/git_senblog/
+ 1718  sudo service httpd start
+ 1719  sudo service mysqld start
+ 1720  rails s
+ 1721  cd Rails/git_senblog/
+ 1722  sudo service httpd start
+ 1723  sudo service mysqld start
+ 1724  rails s
+ 1725  cd Rails/git_senblog/
+ 1726  sudo service httpd start
+ 1727  sudo service mysqld start
+ 1728  rails s
+ 1729  cd Rails/git_senblog/
+ 1730  sudo service httpd start
+ 1731  sudo service mysqld start
+ 1732  rails s
+ 1733  cd Rails/git_senblog/
+ 1734  sudo service httpd start
+ 1735  sudo service mysqld start
+ 1736  rails s
+ 1737  cd Rails/git_senblog/
+ 1738  sudo service httpd start
+ 1739  sudo service mysqld start
+ 1740  rails s
+ 1741  cd Rails/git_senblog/
+ 1742  sudo service httpd start
+ 1743  sudo service mysqld start
+ 1744  rails s
+ 1745  cd Rails/git_senblog/
+ 1746  sudo service httpd restart
+ 1747  sudo service mqsqld restart
+ 1748  rails s
+ 1749  sudo service mysqld restart
+ 1750  rails s
+ 1751  /home/ec2-user/environment/Rails/git_senblog/tmp/pids/server.pid.
+ 1752  rails s
+ 1753  sudo service mysqld restart
+ 1754  sudo service httpd restart
+ 1755  rails s
+ 1756  lsof -i:3000
+ 1757  sudo service httpd restart
+ 1758  sudo service mysqld restart
+ 1759  rails s
+ 1760  cd Rails/git_senblog/
+ 1761  sudo service httpd start
+ 1762  sudo service mysqld start
+ 1763  cd Rails/git_senblog/
+ 1764  history
+ 1765  rails s
+ 1766  cd Rails/git_senblog/
+ 1767  sudo service httpd start
+ 1768  sudo service mysqld start
+ 1769  rails s
+ 1770  cd Rails/git_senblog/
+ 1771  sudo service httpd start
+ 1772  sudo service mysqld start
+ 1773  rails s
+ 1774  cd Rails/git_senblog/
+ 1775  sudo serice httpd restart
+ 1776  sudo service httpd restart
+ 1777  sudo service mysqld restart
+ 1778  rails s
+ 1779  cd Rails/git_senblog/
+ 1780  sudo service httpd restart
+ 1781  sudo service mysqld restart
+ 1782  rails s
+ 1783  cd Rails/git_senblog/
+ 1784  sudo service httpd restart
+ 1785  sudo service mysqld restart
+ 1786  rails s
+ 1787  cd Rails/git_senblog/
+ 1788  sudo service httpd restart
+ 1789  sudo service mysqld restart
+ 1790  rails s
+ 1791  cd Rails/git_senblog/
+ 1792  sudo service httpd restart
+ 1793  sudo service mysqld restart
+ 1794  rails s
+ 1795  d
+ 1796  cd Rails/git_senblog/
+ 1797  sudo service httpd start
+ 1798  sudo service mysqld start
+ 1799  rails s
+ 1800  cd Rails/git_senblog/
+ 1801  sudo service httpd restart
+ 1802  sudo service mysqld restart
+ 1803  rails s
+ 1804  cd Rails/git_senblog/
+ 1805  sudo service httpd start
+ 1806  sudo service mysqld start
+ 1807  rails s
+ 1808  cd Rails/git_senblog/
+ 1809  sudo service httpd restart
+ 1810  sudo service mysqld restart
+ 1811  cd Rails/git_senblog/
+ 1812  rake routes
+ 1813  rails s
+ 1814  sudo service httpd restart
+ 1815  sudo service mysqld restart
+ 1816  rails s
+ 1817  sudo service httpd restart
+ 1818  sudo service mysqld restart
+ 1819  rails s
+ 1820  cd Rails/git_senblog/
+ 1821  sudo service httpd start
+ 1822  sudo service mysqld start
+ 1823  rails s
+ 1824  cd Rails/git_senblog/
+ 1825  sudo service httpd start
+ 1826  sudo service mysqld start
+ 1827  rails s
+ 1828  cd Rails/git
+ 1829  cd Rails/git_senblog/
+ 1830  sudo service httpd restart
+ 1831  sudo service mysqld restart
+ 1832  rails s
+ 1833  cd Rails/git_senblog/
+ 1834  sudo service httpd restart
+ 1835  sudo service mysqld restart
+ 1836  rails s
+ 1837  cd Rails/git_senblog/
+ 1838  sudo service httpd restart
+ 1839  sudo service mysqld restart
+ 1840  rails s
+ 1841  cd Rails/git_senblog/
+ 1842  sudo service httpd restart
+ 1843  sudo service mysqld retart
+ 1844  sudo service mysqld restart
+ 1845  rails s
+ 1846  cd Rails/git_senblog/
+ 1847  sudo service httpd restart
+ 1848  sudo service mysqld restart
+ 1849  rails s
+ 1850  cd Rails/git_senblog/
+ 1851  sudo service httpd restart
+ 1852  sudo service mysqld restart
+ 1853  rails s
+ 1854  cd Rails/git_senblog/
+ 1855  sudo service httpd restart
+ 1856  sudo service mysqld restart
+ 1857  rails s
+ 1858  cd Rails/git_senblog/
+ 1859  sudo service httpd restart
+ 1860  sudo service mysqld restart
+ 1861  rails s
+ 1862  cd Rails/git_senblog/
+ 1863  sudo service httpd restart
+ 1864  sudo service mysqld restart
+ 1865  rails s
+ 1866  cd Rails/git_senblog/
+ 1867  sudo service httpd restart
+ 1868  sudo service mysqld restart
+ 1869  rails s
+ 1870  cd Rails/git_senblog/
+ 1871  sudo service httpd restart
+ 1872  sudo service mysqld restart
+ 1873  rails s
+ 1874  cd Rails/git_senblog/
+ 1875  sudo service httpd restart
+ 1876  sudo service mysqld restart
+ 1877  rails s
+ 1878  cd Rails/git_senblog/
+ 1879  sudo service httpd restart
+ 1880  sudo service mysqld restart
+ 1881  rails s
+ 1882  cd Rails/git_senblog/
+ 1883  sudo service httpd restart
+ 1884  sudo service mysqld restart
+ 1885  rails s
+ 1886  cd Rails/git_senblog/
+ 1887  sudo service httpd restart
+ 1888  sudo service mysqld restart
+ 1889  rails s
+ 1890  git add .
+ 1891  git commit -a -m "htmlとcssを大分更新。さらにページネーション等も実装。ファンクションも軽く調査したところ、all okey"
+ 1892  git push -u origin master
+ 1893  cd Rails/git_senblog/
+ 1894  history
+ 1895  git add .
+ 1896  git push -u origin master
+ 1897  rails s
+ 1898  heroku login --interactive
+ 1899  git add -u
+ 1900  history
+ 1901  git commit -m "made no change"
+ 1902  git push heroku master
+ 1903  heroku rename Arkchive
+ 1904  heroku create Arkchive
+ 1905  ls
+ 1906  heroku login
+ 1907  cd ..
+ 1908  ls
+ 1909  cd git_senblog/
+ 1910  heroku login --interactive
+ 1911  ls
+ 1912  heroku create arkchiveproto
+ 1913  cd permablog
+ 1914  sudo service httpd restart
+ 1915  sudo service mysqld restart
+ 1916  rails s
+ 1917  cd Rails/git_senblog/
+ 1918  sudo service httpd restart
+ 1919  sudo service mysqld restart
+ 1920  rails s
+ 1921  cd Rails/git_senblog/
+ 1922  sudo service httpd restart
+ 1923  sudo service mysqld restart
+ 1924  rails s
+ 1925  cd Rails/git_senblog/
+ 1926  sudo service httpd restart
+ 1927  sudo service mysqld restart
+ 1928  rails s
+ 1929  cd Rails/git_senblog/
+ 1930  sudo service httpd restart
+ 1931  sudo service mysqld restart
+ 1932  rails s
+ 1933  git add .
+ 1934  git commit -a -m "htmlとcssに関してサーチページにおいて改良。また、マイページも少し改良"
+ 1935  git push -u origin master
+ 1936  rails s
+ 1937  rake db:reset
+ 1938  rake db:migrate:reset
+ 1939  rails db seed
+ 1940  rails db:seed
+ 1941  sudo service httpd restart
+ 1942  sudo service mysqld restart
+ 1943  rails s
+ 1944  git add .
+ 1945  git commit -a -m "seed.rbの改良も行った"
+ 1946  git push -u origin master
+ 1947  cd Rails/git_senblog/
+ 1948  sudo service httpd restart
+ 1949  sudo service mysqld restart
+ 1950  rails s
+ 1951  cd Rails/git_senblog/
+ 1952  heroku apps
+ 1953  heroku login
+ 1954  heroku login --interactive
+ 1955  heroku apps
+ 1956  git remote
+ 1957  heroku addons:add cleardb
+ 1958  heroku config | grep CLEARDB_DATABASE_URL
+ 1959  heroku config:set DATABASE_URL=mysql2://bcd74a4e601c31:c0882b13@us-cdbr-iron-east-01.cleardb.net/heroku_c15f9eda357da26?reconnect=true
+ 1960  git add .
+ 1961  git commit -m "update for upload to heroku arkchiveproto"
+ 1962  git push heroku master
+ 1963  heroku apps:info
+ 1964  heroku run rails db:seed
+ 1965  rails db:migrate
+ 1966  heroku run rails db:migrate
+ 1967  history
+ 1968  heroku run rails db:seed
+ 1969  heroku apps:info
+ 1970  heroku apps
+ 1971  heroku apps:destory --app permablog
+ 1972  heroku apps
+ 1973  heroku apps:destroy --app arkchive
+ 1974  heroku apps:destroy --app arkchiveproto
+ 1975  heroku create arkchiveproto
+ 1976  heroku addons:add cleardb
+ 1977  heroku config | grep CLEARDB_DATABASE_URL
+ 1978  heroku config:set DATABASE_URL=mysql2://bfb6db650e09de:c55f25f5@us-cdbr-iron-east-01.cleardb.net/heroku_feb229fc31c5fda?reconnect=true
+ 1979  git push heroku master
+ 1980  heroku run rails db:migrate
+ 1981  heroku apps:info
+ 1982  heroku run rails db:seed
+ 1983  git add -u
+ 1984  git commit -m "production.rbをarkchiveprotoのために変更"
+ 1985  git push heroku master
+ 1986  heroku config | grep DATABASE_URL
+ 1987  udo service httpd restart
+ 1988  sudo service httpd restart
+ 1989  sudos service myslqd restart
+ 1990  sudos service mysqld restart
+ 1991  sudo service mysqld restart
+ 1992  rails s
+ 1993  git add .
+ 1994  git push -u origin master
+ 1995  cd Rails/git_senblog/
+ 1996  heroku login --interactive
+ 1997  git add -u
+ 1998  git commit -m "production.rbを画像がherokuで表示されるように変更。どうなるか"
+ 1999  git push heroku master
+ 2000  history
+ 2001  git push -u origin master
+ 2002  cd Rails/git_senblog/
+ 2003  sudo service mysqld restart
+ 2004  sudo service httpd restart
+ 2005  rails s
+ 2006  git add .
+ 2007  git commit -m "htmlとcssと若干微修正"
+ 2008  git push -u origin master
+ 2009  heroku login --interactive
+ 2010  git push heroku master
+ 2011  ls
+ 2012  cd Rails
+ 2013  ls
+ 2014  cd git_senblog/
+ 2015  sudo service httpd restart
+ 2016  sudo service mysqld restart
+ 2017  rails s
+ 2018  ls
+ 2019  cd Rails
+ 2020  sudo service httpd restart
+ 2021  sudo service mysqld restart
+ 2022  rails s
+ 2023  ls
+ 2024  cd git_senblog/
+ 2025  sudo service httpd restart
+ 2026  sudo service mysqld restart
+ 2027  rails s
+ 2028  git add .
+ 2029  git commit -a -m "ブログ記事が削除できないバグをblog.rbにてdependent: :destroyを追加したことで修正"
+ 2030  git push -u origin master
+ 2031  git add -u
+ 2032  git commit -m "微修正バグforheroku"
+ 2033  git push heroku master
+ 2034  cd
+ 2035  ls
+ 2036  cd environment/
+ 2037  ls
+ 2038  cd Rails
+ 2039  ls
+ 2040  cd git_senblog/
+ 2041  sudo service httpd restart
+ 2042  sudo service mysqld restart
+ 2043  rails s
+ 2044  rake routes
+ 2045  ls
+ 2046  sudo 
+ 2047  cd Rails
+ 2048  ls
+ 2049  cd git_senblog/
+ 2050  ls
+ 2051  history
+ 2052  sudo service httpd restart
+ 2053  sudo service mysqld restart
+ 2054  rails s
+ 2055  git add .
+ 2056  git commit -a -m "新規登録画面のhtmlとcssを変更"
+ 2057  git push -u origin master
+ 2058  git push heroku master
+ 2059  ls
+ 2060  cd Rails
+ 2061  ls
+ 2062  cd git_senblog/
+ 2063  sudo service httpd restart
+ 2064  sudo service mysqld restart
+ 2065  ]rails s
+ 2066  rails s
+ 2067  history
+ 2068  git add .
+ 2069  git commit -a -m "ログイン画面のhtmlとcssを変更"
+ 2070  git push -u origin master
+ 2071  git push heroku master
+ 2072  sudo service httpd restart
+ 2073  sudo service mysqld restart
+ 2074  ls
+ 2075  cd Rails
+ 2076  ls
+ 2077  cd git_senblog/
+ 2078  ls
+ 2079  rake routes
+ 2080  rails s
+ 2081  history
+ 2082  git add .
+ 2083  git commit -a -m "ヘッダーとフッターの色変え。そしてタイムライン背景画像変更。"
+ 2084  git push -u origin master
+ 2085  git push heroku master
+ 2086  ls
+ 2087  cd Rails
+ 2088  ls
+ 2089  cd git_senblog/
+ 2090  ls
+ 2091  sudo service httpd restart
+ 2092  sudo service mysqld restart
+ 2093  rails s
+ 2094  ls
+ 2095  cd Rails
+ 2096  ls
+ 2097  cd git_senblog/
+ 2098  ls
+ 2099  git add .
+ 2100  git commit -a -m "html cssを修正。ログイン画面にロゴ取り付け。スクロール修正。ヘッダー色修正"
+ 2101  git push -u origin master
+ 2102  git push heroku master
+ 2103  ls
+ 2104  sudo service httpd restart
+ 2105  sudo service mysqld restart
+ 2106  rails s
+ 2107  ls
+ 2108  cd Rails
+ 2109  ls
+ 2110  cd git_senblog/
+ 2111  sudo service httpd restart
+ 2112  sudo service mysqld restart
+ 2113  rails s
+ 2114  git add .
+ 2115  git commit -a -m "html css微修正追加"
+ 2116  git push -u origin master
+ 2117  git push heroku master
+ 2118  ls
+ 2119  cd Rails
+ 2120  ls
+ 2121  cd git_senblog/
+ 2122  ls
+ 2123  sudo service httpd restart
+ 2124  sudo service mysqld retart
+ 2125  sudo service mysqld restart
+ 2126  rails s
+ 2127  ls
+ 2128  cd Rails/
+ 2129  ls
+ 2130  cd git_senblog/
+ 2131  ls
+ 2132  sudo service httpd restart
+ 2133  sudo service mysqld restart
+ 2134  rails s
+ 2135  sudo service httpd restart
+ 2136  sudo service mysqld restart
+ 2137  rails s
+ 2138  ls
+ 2139  cd Rails
+ 2140  ls
+ 2141  cd git_senblog/
+ 2142  sudo service httpd restart
+ 2143  sudo service mysqld restart
+ 2144  rails s
+ 2145  ls
+ 2146  cd Rails
+ 2147  ls
+ 2148  cd git_senblog/
+ 2149  ls
+ 2150  sudo service httpd restart
+ 2151  sudo service mysqld restart
+ 2152  rails s
+ 2153  ls
+ 2154  cd Rails
+ 2155  ls
+ 2156  cd git_senblog/
+ 2157  sudo service httpd restart
+ 2158  sudo service mysqld restart
+ 2159  rails s
+ 2160  sudo
+ 2161  ls
+ 2162  cd Rails/
+ 2163  ls
+ 2164  cd git_senblog/
+ 2165  ls
+ 2166  rake routes
+ 2167  ls
+ 2168  cd Rails
+ 2169  ls
+ 2170  cd git_senblog/
+ 2171  ls
+ 2172  sudo service httpd restart
+ 2173  sudo service mysqld restart
+ 2174  rails s
+ 2175  ls
+ 2176  cd Rails
+ 2177  ls
+ 2178  cd git_senblog/
+ 2179  ls
+ 2180  sudo service httpd restart
+ 2181  sudo service mysqld restart
+ 2182  rails s
+ 2183  cd
+ 2184  ls
+ 2185  cd environment/
+ 2186  ls
+ 2187  cd Rails
+ 2188  ls
+ 2189  cd git_senblog/
+ 2190  ls
+ 2191  sudo service httpd restart
+ 2192  sudo service mysqld restart
+ 2193  rails s
+ 2194  cd Rails/
+ 2195  ls
+ 2196  cd git_senblog/
+ 2197  ls
+ 2198  sudo service httpd restart
+ 2199  sudo service mysqld restart
+ 2200  rails s
+ 2201  ls
+ 2202  cd Rails
+ 2203  ls
+ 2204  cd git_senblog/
+ 2205  ls
+ 2206  sudo service httpd restart
+ 2207  sudo service mysqld restart
+ 2208  rails s
+ 2209  rake routes
+ 2210  sudo service httpd restart
+ 2211  sudo service mysqld restart
+ 2212  rails s
+ 2213  ls
+ 2214  cd Rails
+ 2215  ls
+ 2216  cd git_senblog/
+ 2217  ls
+ 2218  sudo service httpd restart
+ 2219  sudo service mysqld restart
+ 2220  ls
+ 2221  cd Rails
+ 2222  cd git_senblog/
+ 2223  ls
+ 2224  sudo service httpd restart
+ 2225  sudo service mysqld restart
+ 2226  rails s
+ 2227  ls
+ 2228  cd Rails
+ 2229  ls
+ 2230  cd git_senblog/
+ 2231  ls
+ 2232  sudo service httpd restart
+ 2233  sudo service mysqld restart
+ 2234  rails s
+ 2235  sudo service httpd restart
+ 2236  sudo service mysqld restart
+ 2237  rails s
+ 2238  sudo service httpd restart
+ 2239  sudo service mysqld restart
+ 2240  rails s
+ 2241  la
+ 2242  ls
+ 2243  cd Rails/
+ 2244  cd git_senblog/
+ 2245  sudo service httpd restart
+ 2246  sudo service mysqld restart
+ 2247  rails s
+ 2248  sudo service httpd restart
+ 2249  sudo service mysqld restart
+ 2250  rails s
+ 2251  sudo service htttpd restart
+ 2252  sudo service httpd restart
+ 2253  sudo service mysqld restart
+ 2254  rails s
+ 2255  sudo service httpd restart
+ 2256  sudo service mysqld restart
+ 2257  rails s
+ 2258  git add .
+ 2259  git commit -a -m "html cssを大幅改善！たぶん機能は大丈夫！"
+ 2260  git push -u origin master
+ 2261  git push heroku master
+ 2262  cd Rails
+ 2263  cd git_senblog/
+ 2264  ls
+ 2265  sudo service httpd restart
+ 2266  sudo service mysqld restart
+ 2267  cd Rails/git_senblog/
+ 2268  sudo service httpd restart
+ 2269  sudo service mysqld restart
+ 2270  rails s
+ 2271  sudo service httpd restart
+ 2272  sudo service mysqld restart
+ 2273  rails s
+ 2274  rails generate migration RemoveBirthdateFromUsers birthdate:string
+ 2275  rails generate migration AddBirth_dateTo Users birth_date:date
+ 2276  rails db:migrate
+ 2277  sudo service httpd restart
+ 2278  sudo service mysqld restart
+ 2279  rails s
+ 2280  sudo service httpd restart
+ 2281  sudo service mysqld restart
+ 2282  rails s
+ 2283  sudo service httpd restart
+ 2284  sudo service mysqld restart
+ 2285  rails s
+ 2286  sudo service httpd restart
+ 2287  sudo service mysqld restart
+ 2288  rails s
+ 2289  cd Rails/git_senblog/
+ 2290  sudo service httpd restart
+ 2291  sudo service mysqld restart
+ 2292  rails s
+ 2293  cd Rails/git_senblog/
+ 2294  sudo service httpd restart
+ 2295  sudo service mysqld restart
+ 2296  rails s
+ 2297  cd Rails/git_senblog/
+ 2298  sudo service httpd restart
+ 2299  sudo service mysqld restart
+ 2300  rails s
+ 2301  cd Rails/git_senblog/
+ 2302  sudo service httpd restart
+ 2303  sudo service mysqld restart
+ 2304  rails s
+ 2305  bundle update
+ 2306  sudo service httpd restart
+ 2307  sudo service mysqld restart
+ 2308  rails s
+ 2309  cd Rails/git_senblog/
+ 2310  sudo service httpd restart
+ 2311  sudo service mysqld restart
+ 2312  rails s
+ 2313  git add .
+ 2314  git commit -a m "誕生日記入欄調整database変更。2000文字以内変更html。作成日時表示できるようにhtml。blog書いた人しか見れない問題解決。漢字の名前記載箇所追加。下書き編集機能追加。javaxcriptの軽い動き追加。ボタンは画像押せるように修正。index htmlのチェックボックスの幅間隔調整。
+ 2315  "
+ 2316  rails s
+ 2317  git add .
+ 2318  git commit -a m "誕生日記入欄調整database変更。2000文字以内変更html。作成日時表示できるようにhtml。blog書いた人しか見れない問 題解決。漢字の名前記載箇所追加。下書き編集機能追加。javaxcriptの軽い動き追加。ボタンは画像押せるように修正。index htmlの"
+ 2319  git commit m "誕生日記入欄調整database変更。2000文字以内変更html。作成日時表示できるようにhtml。blog書いた人しか見れない問 題解決。漢字の名前記載箇所追加。下書き編集機能追加。javaxcriptの軽い動き追加。ボタンは画像押せるように修正。index htmlの"
+ 2320  git add .
+ 2321  git commit -a m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整。jquery no
+ 2322  git add .
+ 2323  git commit -a m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整。jqueryの導入。"
+ 2324  git commit m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整。jqueryの導入。"
+ 2325  git status
+ 2326  git commit m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整"
+ 2327  git reset @^
+ 2328  git status
+ 2329  git add .
+ 2330  git commit -a -m "誕生日記入欄とデータベースの変更。そのほか各種表示の調整"
+ 2331  git push -u origin master
+ 2332  git push -f origin master
+ 2333  git push heroku master
+ 2334  git add .
+ 2335  git commit -a -m "サイドpush"
+ 2336  git push -u origin master
+ 2337  git push heroku master
+ 2338  git push --help
+ 2339  git pull origin master
+ 2340  git push oirgin master
+ 2341  git push origin master
+ 2342  git push heroku master
+ 2343  git push heroku --force
+ 2344  heroku run rails db:migrate
+ 2345  heroku config | grep DATABASE_URL
+ 2346  cd Rails/git_senblog/
+ 2347  sudo service httpd restart
+ 2348  sudo service mysqld restart
+ 2349  rails s
+ 2350  cd Rails/git_senblog/
+ 2351  sudo service httpd restart
+ 2352  sudo service mysqld restart
+ 2353  rails s
+ 2354  ls
+ 2355  cd Rails
+ 2356  ls
+ 2357  cd git_senblog/
+ 2358  ls
+ 2359  sudo service httpd restart
+ 2360  sudo service mysqld restart
+ 2361  rails s
+ 2362  sudo service httpd restart
+ 2363  sudo service mysqld restart
+ 2364  rails s
+ 2365  cd Rails/git_senblog/
+ 2366  sudo service httpd restart
+ 2367  sudo service mysqld restart
+ 2368  rails s
+ 2369  sudo service httpd restart
+ 2370  sudo service mysqld restart
+ 2371  rails s
+ 2372  cd Rails/git_senblog/
+ 2373  sudo service httpd restart
+ 2374  sudo service mysqld restart
+ 2375  rails s
+ 2376  cd Rails/git_senblog/
+ 2377  sudo service httpd restart
+ 2378  sudo service mysqld restart
+ 2379  rails s
+ 2380  sudo service httpd restart
+ 2381  sudo service mysqld restart
+ 2382  rails s
+ 2383  cd Rails/git_senblog/
+ 2384  sudo service httpd restart
+ 2385  sudo service mysqld restart
+ 2386  cd Rails/git_senblog/
+ 2387  sudo service httpd restart
+ 2388  sudo service mysqld restart
+ 2389  rails s
+ 2390  cd Rails/git_senblog/
+ 2391  sudo service httpd restart
+ 2392  sudo service mysqld restart
+ 2393  rails s
+ 2394  ls
+ 2395  cd Rails/git_senblog/
+ 2396  sudo service httpd restart
+ 2397  sudo service mysqld restart
+ 2398  rails s
+ 2399  cd Rails/git_senblog/
+ 2400  sudo service httpd restart
+ 2401  sudo service mysqld restart
+ 2402  rails s
+ 2403  sudo service httpd restart
+ 2404  sudo service mysqld restart
+ 2405  rails s
+ 2406  cd Rails/git_senblog/
+ 2407  sudo service httpd restart
+ 2408  sudo service mysqld restart
+ 2409  rails s
+ 2410  cd Rails/git_senblog/
+ 2411  sudo service httpd restart
+ 2412  sudo service mysqld restart
+ 2413  rails s
+ 2414  sudo service httpd restart
+ 2415  sudo service mysqld restart
+ 2416  rails s
+ 2417  cd Rails/git_senblog/
+ 2418  sudo service httpd restart
+ 2419  sudo service mysqld restart
+ 2420  rails s
+ 2421  cd Rails/git_senblog/
+ 2422  sudo service httpd restart
+ 2423  sudo service mysqld restart
+ 2424  rails s
+ 2425  sudo service httpd restart
+ 2426  sudo service mysqld restart
+ 2427  rails s
+ 2428  sudo service httpd restart
+ 2429  sudo service mysqld restart
+ 2430  rails s
+ 2431  git add .
+ 2432  git commit -a -m "スマホ用html css javaの更新。データベースに変更はない"
+ 2433  git push -u origin master
+ 2434  history
+ 2435  git push heroku master
+ 2436  ls
+ 2437  sudo service httpd restart
+ 2438  sudo service mysqld restart
+ 2439  rails s
+ 2440  history
+ 2441  git add .
+ 2442  git commit -a -m "metaにviewport部の追加"
+ 2443  git push -u origin master
+ 2444  git push heroku master
+ 2445  cd Rails/git_senblog/
+ 2446  sudo service httpd restart
+ 2447  sudo servicec mysqld restart
+ 2448  sudo service mysqld restart
+ 2449  rails s
+ 2450  sudo service httpd restart
+ 2451  sudo service mysqld restart
+ 2452  rails s
+ 2453  history
+ 2454  rails s
+ 2455  sudo service httpd restart
+ 2456  sudo service mysqld restart
+ 2457  rails s
+ 2458  git add .
+ 2459  git commit -a -m "loading gif added althouge error on develiping environment"
+ 2460  git push -u origin master
+ 2461  history
+ 2462  git push heroku master
+ 2463  rails s
+ 2464  ls
+ 2465  cd Rails/git_senblog/
+ 2466  sudo service httpd restart
+ 2467  sudo service mysqld restart
+ 2468  rails s
+ 2469  history
+ 2470  git add .
+ 2471  git commit -a -m "loading gif changed to css background-image for better function"
+ 2472  git push -u origin master
+ 2473  history
+ 2474  git push heroku master
+ 2475  ls
+ 2476  cd Rails
+ 2477  ls
+ 2478  cd git_senblog/
+ 2479  history
+ 2480  sudo service httpd restart
+ 2481  sudo service mysqld restart
+ 2482  rails s
+ 2483  cd Rails/git_senblog/
+ 2484  sudo service httpd restart
+ 2485  sudo service mysqld restart
+ 2486  rails s
+ 2487  cd Rails/git_senblog/
+ 2488  sudo service httpd restart
+ 2489  sudo service mysqld restart
+ 2490  rails s
+ 2491  sudo service httpd restart
+ 2492  sudo service mysqld restart
+ 2493  rails s
+ 2494  cd Rails/git_senblog/
+ 2495  sudo service httpd restart
+ 2496  sudo service mysqld restart
+ 2497  rails s
+ 2498  sudo service httpd restart
+ 2499  sudo service mysqld restart
+ 2500  rails s
+ 2501  git add .
+ 2502  git commit -a -m "ログイン機能のデバッグ完了。この後、HEROKUへのデプロイはまだ行ていません。"
+ 2503  git push -u origin master
+ 2504  ls
+ 2505  cd Rails
+ 2506  ls
+ 2507  cd git_senblog/
+ 2508  sudo service httpd restart
+ 2509  sudo service mysqld restart
+ 2510  rails s
+ 2511  ls
+ 2512  cd Rails
+ 2513  ls
+ 2514  cd git_senblog/
+ 2515  ls
+ 2516  sudo service httpd restart
+ 2517  sudo service mysqld restart
+ 2518  rails s
+ 2519  ls
+ 2520  cd Rails
+ 2521  cd git_senblog/
+ 2522  sudo service httpd restart
+ 2523  sudo service mysqld rstart
+ 2524  sudo service mysqld restart
+ 2525  rails s
+ 2526  cd Rails
+ 2527  cd git_senblog/
+ 2528  ls
+ 2529  sudo service httpd restart
+ 2530  sudo service mysqld restart
+ 2531  rails s
+ 2532  sudo service httpd restart
+ 2533  cd Rails/git_senblog/
+ 2534  ls
+ 2535  sudo service httpd restart
+ 2536  sudo service mysqld restart
+ 2537  rails s
+ 2538  ls
+ 2539  cd Rails/git_senblog/
+ 2540  sudo service httpd restart
+ 2541  sudo service mysqld restart
+ 2542  rails s
+ 2543  ls
+ 2544  cd Rails/git_senblog/
+ 2545  sudo service httpd restart
+ 2546  sudo service mysqld restart
+ 2547  rails s
+ 2548  ls
+ 2549  cd Rails/git_senblog/
+ 2550  sudo service http restart
+ 2551  sudo service httpd restart
+ 2552  sudo service mysqld restart
+ 2553  rails s
+ 2554  cd Rails/git_senblog/
+ 2555  sudo service httpd restart
+ 2556  sudo service mysqld restart
+ 2557  rails s
+ 2558  sudo service httpd restart
+ 2559  sudo service mysqld restart
+ 2560  rails s
+ 2561  rake routes
+ 2562  rails s
+ 2563  pwd
+ 2564  cd Rails/git_senblog/
+ 2565  sudo service httpd restart
+ 2566  sudo service mysqld restart
+ 2567  rails s
+ 2568  cd Rails/git_senblog/
+ 2569  sudo service httpd restart
+ 2570  sudo service mysqld restart
+ 2571  rails s
+ 2572  history
+ 2573  pwd
+ 2574  rails g migration add_columns_to_users
+ 2575  rails db:migrate
+ 2576  sudo service httpd restart
+ 2577  sudo service mysqld restart
+ 2578  rails s
+ 2579  pwd
+ 2580  cd Rails/git_senblog/
+ 2581  sudo service httpd restart
+ 2582  sudo service mysqld restart
+ 2583  rails s
+ 2584  cd Rails/git_senblog/
+ 2585  sudo service httpd restart
+ 2586  sudo service mysqld restart
+ 2587  rails s
+ 2588  git add .
+ 2589  git commit -m "1画像編集機能の微調整。しかし解決できていない。2ビッグファイブ用にuserテーブルを改造。その後ビッグファイブを個人ステータスに追加。ビッグファイブ検索機能も追加。複数ワード検索機能も試みたが、これは断念"
+ 2590  git push -u origin master
+ 2591  sudo service httpd restart
+ 2592  sudo service mysqld restart
+ 2593  rails s
+ 2594  history
+ 2595  rails g migration AddStatusToBlogs status:integer
+ 2596  rails db:migrate
+ 2597  rails s
+ 2598  bundle install
+ 2599  rails s
+ 2600  cd Rails/git_senblog/
+ 2601  sudo service httpd restart
+ 2602  sudo service mysqld restart
+ 2603  rails s
+ 2604  pwd
+ 2605  cd Rails/git_senblog/
+ 2606  sudo service httpd restart
+ 2607  sudo service mysqld restart
+ 2608  rails s
+ 2609  history
+ 2610  git add .
+ 2611  git commit -m "status機能をつけてblogテーブルを変更。下書き機能の取り付けが完了"
+ 2612  git push heroku master
+ 2613  git push -u origin master
+ 2614  history
+ 2615  history 2000
+ 2616  history > commands.txt

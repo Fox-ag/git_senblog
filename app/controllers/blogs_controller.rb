@@ -7,6 +7,7 @@ class BlogsController < ApplicationController
         @blog = Blog.find(params[:id])
         @like = Like.new
         @blog_photos = @blog.blog_photos.all
+        @blog_images = @blog.blog_images.all
     end
     
     def new
@@ -16,26 +17,46 @@ class BlogsController < ApplicationController
         @themes = Theme.all
         @blog.blog_topics.build
         @blog_photo = @blog.blog_photos.build
+        @blog_image = @blog.blog_images.build
     end
     
     def show
         @blog = Blog.find(params[:id])
         @like = Like.new
         @blog_photos = @blog.blog_photos.all
+        @blog_images = @blog.blog_images.all
     end
     
     def create
         # Blog.create(blog_params)
-        @blog = Blog.new(blog_params) 
-        
+        @blog = Blog.new(blog_params)
         
             respond_to do |format|
-                if params[:blog_photos]==nil && @blog.save
+                if params[:blog_photos]==nil && params[:blog_images]==nil && @blog.save
+                   @blog_image = @blog.blog_images.create!(:image => 'edit-24px.png')   #何故かいれておかないとimage_uploader.rbのdefault画像機能が動作しない。
+                   @blog_photo = @blog.blog_photos.create!(:photo => 'edit-24px.png')   #何故かいれておかないとimage_uploader.rbのdefault画像機能が動作しない。
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+                elsif params[:blog_photos]==nil && params[:blog_images]!=nil && @blog.save
+                   @blog_photo = @blog.blog_photos.create!(:photo => 'edit-24px.png')   #何故かいれておかないとimage_uploader.rbのdefault画像機能が動作しない。
+                  params[:blog_images]['image'].each do |b|
+                   @blog_image = @blog.blog_images.create!(:image => b)
+                  end
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                    
+                elsif params[:blog_photos]!=nil && params[:blog_images]==nil && @blog.save
+                   @blog_image = @blog.blog_images.create!(:image => 'edit-24px.png')   #何故かいれておかないとimage_uploader.rbのdefault画像機能が動作しない。
+                  params[:blog_photos]['photo'].each do |a|
+                   @blog_photo = @blog.blog_photos.create!(:photo => a)
+                  end
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
                 elsif @blog.save
                   params[:blog_photos]['photo'].each do |a|
                    @blog_photo = @blog.blog_photos.create!(:photo => a)
+                  end
+                  params[:blog_images]['image'].each do |b|
+                   @blog_image = @blog.blog_images.create!(:image => b)
                   end
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
@@ -65,21 +86,54 @@ class BlogsController < ApplicationController
         
         @blog = Blog.find(params[:id])
        
+        #↓この辺いらないコマンドがありますな。
         respond_to do |format|
-                if params[:blog_photos]==nil && @blog.update(blog_params)
+                if params[:blog_photos]==nil && params[:blog_images]==nil && @blog.update(blog_params)
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+                elsif params[:blog_photos]==nil && params[:blog_images]!=nil && @blog.update(blog_params)
+                  params[:blog_images]['image'].each do |b|
+                   @blog_image = @blog.blog_images.update(:image => b)
+                  end
+                format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                    
+                elsif params[:blog_photos]!=nil && params[:blog_images]==nil && @blog.update(blog_params)
+                  params[:blog_photos]['photo'].each do |a|
+                   @blog_photo = @blog.blog_photos.update(:photo => a)
+                  end
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
                 elsif @blog.update(blog_params)
                   params[:blog_photos]['photo'].each do |a|
-                  @blog_photo = @blog.blog_photos.update(:photo => a)
+                   @blog_photo = @blog.blog_photos.update(:photo => a)
+                  end
+                  params[:blog_images]['image'].each do |b|
+                   @blog_image = @blog.blog_images.update(:image => b)
                   end
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
                 else
                 format.html { redirect_to @blog, notice: 'Item was not created.' }
                 end
-            end
-        
+        end
+        #↓うまくいってた複数画像編集basic_ver変更前↓
+        #  respond_to do |format|
+        #         if params[:blog_photos]==nil && params[:blog_images]==nil  && @blog.update(blog_params)
+        #         format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+        #         elsif @blog.update(blog_params)
+        #           params[:blog_photos]['photo'].each do |a|
+        #           @blog_photo = @blog.blog_photos.update(:photo => a)
+        #           end
+        #           params[:blog_images]['image'].each do |b|
+        #           @blog_image = @blog.blog_images.update(:image => b)
+        #           end
+        #         format.html { redirect_to @blog, notice: 'Item was successfully created.' }
+                
+        #         else
+        #         format.html { redirect_to @blog, notice: 'Item was not created.' }
+        #         end
+        #     end
         
     end
     
@@ -102,7 +156,7 @@ class BlogsController < ApplicationController
     end
     
     def blog_params
-        params.require(:blog).permit(:user_name, :title, :text, :status, blog_photos_attributes: [:id, :blog_id, :photo], emotion_ids: [], theme_ids: []).merge(user_id: current_user.id)
+        params.require(:blog).permit(:user_name, :title, :text, :status, blog_photos_attributes: [:id, :blog_id, :photo], blog_images_attributes: [:id, :blog_id, :image], emotion_ids: [], theme_ids: []).merge(user_id: current_user.id)
     end
     
 end

@@ -222,7 +222,18 @@
                     <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
                   </div>
                   <div class="choose-right-photo">
-                    <%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>
+                    <!--%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>-->
+                  </div>
+                </div>
+                <% end %>
+                <%= f.fields_for :blog_images do |q| %>
+                <div class="choose-photo-title">感想文の内容に関する写真を選択してください。（２枚まで）</div>
+                <div class="div-choose-area">
+                  <div class="choose-left-photo">
+                    <%= q.file_field :image, multiple: true, name: "blog_images[image][]", class: "upload-image" %>
+                  </div>
+                  <div class="choose-right-photo">
+                    <!--%= p.file_field :photo, multiple: true, name: "blog_photos[photo][]", class: "upload-image" %>-->
                   </div>
                 </div>
                 <% end %>
