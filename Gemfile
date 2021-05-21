@@ -77,6 +77,7 @@ gem 'font-awesome-rails'
 gem 'mini_magick'
 gem 'ransack'
 gem 'carrierwave'
+gem 'enum_help'
 group :production do
   gem 'rails_12factor'
 end

@@ -113,6 +113,8 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    enum_help (0.0.17)
+      activesupport (>= 3.0.0)
     erubi (1.10.0)
     execjs (2.7.0)
     ffi (1.13.1)
@@ -310,6 +312,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   compass-rails (= 3.1.0)
   devise
+  enum_help
   font-awesome-rails
   hirb
   hirb-unicode

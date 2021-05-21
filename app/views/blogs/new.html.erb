@@ -235,7 +235,8 @@
             <div class="selection-content">
             <%= f.collection_check_boxes(:theme_ids, Theme.all, :id, :topic) do |c| %>
                            <%= c.label {c.check_box + c.text} %>          
-            <% end %>  
+            <% end %>
+             
             </div>
             <div class="select-content-photo">
               <div class="div-block-160">
@@ -288,14 +289,16 @@
           </div>
           
         </div>
+        
+        <%= f.select :status, Blog.statuses.keys.map { |k| [t("enums.blog.status.#{k}"),k]} %>
+                
         <div class="submit-write-blog">
+          
           <%= button_tag type: "submit", class: "btn btn--block" do %>
           <div class="submit-button-write-blog">
             <div class="submit-image-write-blog"></div>
             <div class="submit-word-write-blog">
-              <div class="submit-write-blog-text">投稿する
-                
-              </div>
+              <div class="submit-write-blog-text">投稿する</div>
             </div>
           </div>
           <% end %>

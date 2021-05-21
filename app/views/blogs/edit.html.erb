@@ -133,6 +133,7 @@
           </div>
           
         </div>
+        <%= f.select :status, Blog.statuses.keys.map { |k| [t("enums.blog.status.#{k}"),k]} %>
         <div class="submit-write-blog">
           <%= button_tag type: "submit", class: "btn btn--block" do %>
           <div class="submit-button-write-blog">
