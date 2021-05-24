@@ -125,7 +125,7 @@
               <div class="tb-mypage">マイページ</div>
             </div>
             <% end %>
-            <%= link_to(new_blog_path) do %>
+            <%= link_to(new_blog_path, data: {"turbolinks" => false}) do %>
             <div class="div-write-blog">
               <div class="div-nav-image-3"></div>
               <div class="tb-write-blog">感想文投稿</div>

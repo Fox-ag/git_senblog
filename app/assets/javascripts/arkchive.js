@@ -3,6 +3,8 @@ window.onload = function(){  // ローディング画面をフェードアウト
         $("#loading").fadeOut();
     });
 }
+
+
      
 $(function() {   //ロード中はコンテンツの高さをページの高さに合わせる
     var h = $(window).height();
@@ -77,3 +79,13 @@ document.addEventListener("turbolinks:load",function() {
    $('.sp_login_loginarea').fadeOut();
   });
 });
+
+$(function(){
+
+  $('#js-count').keyup(function(){
+    var count = $(this).val().length;
+    $('.show-count').text(count);
+  });
+});
+
+
