@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+    before_action :move_to_index
     def index
         @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
     end
@@ -159,4 +160,7 @@ class BlogsController < ApplicationController
         params.require(:blog).permit(:user_name, :title, :text, :status, blog_photos_attributes: [:id, :blog_id, :photo], blog_images_attributes: [:id, :blog_id, :image], emotion_ids: [], theme_ids: []).merge(user_id: current_user.id)
     end
     
+    def move_to_index
+       redirect_to  '/' unless user_signed_in?
+    end
 end

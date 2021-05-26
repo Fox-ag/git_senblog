@@ -1,4 +1,6 @@
 class TopController < ApplicationController
+    before_action :move_to_index, except: :index
+    
     def index
         # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
         #↓Blogの複数ワード検索フォームの作成を試みたが無理↓
@@ -25,9 +27,11 @@ class TopController < ApplicationController
       @themes = Theme.all
         # @user=User.all #userテーブルの情報を拾うときに必要かと思われたが、いらないみたい。
       @bloges = @q.result.includes(:emotions, :themes)  #検索結果が得られる。
-      
       @blogs = Blog.published.order("created_at DESC").page(params[:page]).per(5)
     end
     
-   
+    def move_to_index
+      redirect_to action: :index unless user_signed_in?
+    end
+    
 end

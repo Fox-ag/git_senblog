@@ -139,6 +139,37 @@
 <!-- ここから下が新タイムライン20201108 PCver -->
 <div class="pc_area">
   <div class="sec-for-timeline-body">
+    <canvas id="myChart"></canvas>
+            <script>
+            var ctx = document.getElementById("myChart");
+            var myChart = new Chart(ctx, {
+              type: 'doughnut',
+              data: {
+                labels: ["<%= BlogFeeling.group(:emotion_id).count.keys[0] %>",
+                         "<%= BlogFeeling.group(:emotion_id).count.keys[1] %>",
+                         "<%= BlogFeeling.group(:emotion_id).count.keys[2] %>",
+                         "<%= BlogFeeling.group(:emotion_id).count.keys[3] %>",
+                         "<%= BlogFeeling.group(:emotion_id).count.keys[4] %>",
+                         "<%= BlogFeeling.group(:emotion_id).count.keys[5] %>",
+                         "<%= BlogFeeling.group(:emotion_id).count.keys[6] %>"],
+                
+                datasets:[{
+                data: [<%= BlogFeeling.group(:emotion_id).count.values[0] %>,
+                       <%= BlogFeeling.group(:emotion_id).count.values[1] %>,
+                       <%= BlogFeeling.group(:emotion_id).count.values[2] %>,
+                       <%= BlogFeeling.group(:emotion_id).count.values[3] %>,
+                       <%= BlogFeeling.group(:emotion_id).count.values[4] %>,
+                       <%= BlogFeeling.group(:emotion_id).count.values[5] %>,
+                       <%= BlogFeeling.group(:emotion_id).count.values[6] %>], 
+                backgroundColor: ["rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)"]},
+                
+                ],
+              },
+              options: { 
+                
+              }
+            });
+            </script>
         <div class="search-div">
           <%= search_form_for(@q, url: '/blogs/search') do |f| %>
               <div class="form-block-for-search w-form">

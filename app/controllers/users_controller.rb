@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    before_action :move_to_index
     def mypage
         @blogs = Blog.where(user_id: current_user.id).page(params[:page]).per(5)
         @journals = Journal.where(user_id: current_user.id).page(params[:page]).per(5)
@@ -24,6 +25,10 @@ class UsersController < ApplicationController
     
     def update
         current_user.update(update_params)
+    end
+    
+    def move_to_index
+       redirect_to  '/' unless user_signed_in?
     end
     
     private
