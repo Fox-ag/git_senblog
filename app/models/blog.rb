@@ -1,6 +1,6 @@
 class Blog < ApplicationRecord
     after_create :create_feed_content
-    
+    validates :title, presence: true
     enum status: { draft: 0, published: 1}
     
     has_many :blog_photos, foreign_key: :blog_id, dependent: :destroy

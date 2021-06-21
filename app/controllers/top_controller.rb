@@ -27,7 +27,7 @@ class TopController < ApplicationController
       @themes = Theme.all
         # @user=User.all #userテーブルの情報を拾うときに必要かと思われたが、いらないみたい。
       @bloges = @q.result.includes(:emotions, :themes)  #検索結果が得られる。
-      @blogs = Blog.published.order("created_at DESC").page(params[:page]).per(5)
+      @blogs = Blog.published.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     end
     
     def move_to_index

@@ -2614,3 +2614,96 @@
  2614  history
  2615  history 2000
  2616  history > commands.txt
+ 2617  history | head
+ 2618  history | head
+ 2619  history
+ 2620  history -w history.txt
+ 2621  history | grep photo
+ 2622  rails s
+ 2623  rails generate model BlogImage blog_id:integer photo:string
+ 2624  rails generate uploader Image
+ 2625  rails db:migrate
+ 2626  rails generate migration RemovePhotoFromBlogImage photo:string
+ 2627  rails db:migrate
+ 2628  rails generate migration AddImageToBlogImage image:string
+ 2629  rails db:migrate
+ 2630  rails s
+ 2631  cd Rails/git_senblog/
+ 2632  rake routes
+ 2633  git add .
+ 2634  git commit -a -m "画像を複数入れて編集もできる機能を作成。結局画像アップロードにはモデルを二つ作成することで問題に対処。よって、新たにimageモデルが追加された。"
+ 2635  git push -u origin master
+ 2636  rails s
+ 2637  ls
+ 2638  cd Rails/git_senblog/
+ 2639  sudo service httpd restart
+ 2640  sudo service mysqld restart
+ 2641  rails s
+ 2642  cd Rails/git_senblog/
+ 2643  sudo service httpd restart
+ 2644  sudo service mysqld restart
+ 2645  rails s
+ 2646  ls
+ 2647  cd app
+ 2648  ls
+ 2649  cd assets
+ 2650  ls
+ 2651  cd javascripts/
+ 2652  ls
+ 2653  cd ..
+ 2654  rails s
+ 2655  ls
+ 2656  cd Rails/git_senblog/
+ 2657  sudo service httpd restart
+ 2658  sudo service mysqld restart
+ 2659  rails s
+ 2660  cd Rails/git_senblog/
+ 2661  sudo service httpd restart
+ 2662  sudo service mysqld restart
+ 2663  rails s
+ 2664  git add .
+ 2665  git commit -a -m "ひとまず、文字数カウント機能を感想タイトル記入欄にて試せた。"
+ 2666  git push -u origin master
+ 2667  rails s
+ 2668  sudo service httpd restart
+ 2669  sudo service mysqld restart
+ 2670  rails s
+ 2671  cd Rails/git_senblog/
+ 2672  sudo service httpd restart
+ 2673  sudo service mysqld restart
+ 2674  rails s
+ 2675  cd Rails/git_senblog/
+ 2676  sudo service httpd restart
+ 2677  sudo service mysqld restart
+ 2678  rails s
+ 2679  rails c
+ 2680  rails s
+ 2681  rails c
+ 2682  rails s
+ 2683  rails c
+ 2684  rails s
+ 2685  sudo service httpd restart
+ 2686  sudo service mysqld restart
+ 2687  rails s
+ 2688  cd Rails/git_senblog/
+ 2689  sudo service httpd restart
+ 2690  sudo service mysqld restart
+ 2691  rails s
+ 2692  cd Rails/git_senblog/
+ 2693  sudo service httpd restart
+ 2694  sudo service mysqld restart
+ 2695  rails s
+ 2696  rake routs
+ 2697  rake routes
+ 2698  rails s
+ 2699  rails routes
+ 2700  rails s
+ 2701  rake routes
+ 2702  rails s
+ 2703  git add .
+ 2704  git commit -a -m "グラフの追加が一応できた。ログインしていないときでもタイムラインは見れるように変更。"
+ 2705  git push -u origin master
+ 2706  bundle install
+ 2707  rails s
+ 2708  history
+ 2709  history > commands.txt

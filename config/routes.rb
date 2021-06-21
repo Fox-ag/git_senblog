@@ -11,6 +11,9 @@ Rails.application.routes.draw do
       collection do
         get 'search'
       end
+      collection do
+        get 'topmap'
+      end
       member do
         get 'detailpage'
       end

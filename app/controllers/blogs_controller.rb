@@ -11,6 +11,17 @@ class BlogsController < ApplicationController
         @blog_images = @blog.blog_images.all
     end
     
+    def topmap
+        @blogkanagawas = Blog.order("created_at DESC").where(status: 'published').joins(:user).where("users.prefecture = ?","神奈川").limit(1)
+        # @blogkanagawaemotions = @blogkanagawas.joins(:blog_feelings).select('blog_feelings.emotion_id')
+        @blogkanagawaemotions = @blogkanagawas.joins(:blog_feelings).select('blogs.*,blog_feelings.emotion_id')
+        
+        # @blogkanagawadatas = @blogkanagawaemotions.order('emotion_id DESC').limit(1).count(:emotion_id)
+    
+        # @blogkanagawaemotions = @blogkanagawas.joins(:blog_feelings).order('count_blogfeelings.emotion_id DESC').limit(1).count(:emotion_id).select('blog_feelings.emotion_id')
+        
+    end
+    
     def new
         @blog = Blog.new
         @emotions = Emotion.all
@@ -62,9 +73,10 @@ class BlogsController < ApplicationController
                 format.html { redirect_to @blog, notice: 'Item was successfully created.' }
                 
                 else
-                format.html { redirect_to @blog, notice: 'Item was not created.' }
+                format.html { render 'blogs/new', notice: 'Item was not created.' }
                 end
             end
+       
     end
     
     def destroy
@@ -146,7 +158,7 @@ class BlogsController < ApplicationController
         # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
         
         @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%") #←これいる？
-        @q = Blog.search(search_params)
+        @q = Blog.published.search(search_params)
         params.require(:q).permit(:title_cont)   #:qオブジェクトを指定し、さらに:qオブジェクトの中に定義された:title_contキーを指定している
         @bloges = @q.result.includes(:emotions,:themes)
     end

@@ -282,13 +282,25 @@
                   <div class="pe-birth-date-text">生年月日（Birthdate）:</div>
                   <p class="pe-birth-date-var"><%= f.date_select :birth_date, use_month_numbers: true,start_year: 1900, end_year: (Time.now.year - 5), default: Date.new(2020, 1, 1) %></p>
                 </div>
+                <div class="pe-birth-date">
+                  <div class="pe-birth-date-text">性別（sex）:</div>
+                  <p class="pe-birth-date-var"><%= f.select :sex,[["未選択","未選択"],["男性","男性"],["女性","女性"],["無回答","無回答"]], class: "form-controling" %></p>
+                </div>
+                <div class="pe-birth-date">
+                  <div class="pe-birth-date-text">職業（occupation）:</div>
+                  <p class="pe-birth-date-var"><%= f.select :occupation,[["未選択","未選択"],["管理的業務従事者","管理的業務従事者"],["専門的・技術的職業従事者","専門的・技術的職業従事者"],["事務従事者","事務従事者"],["販売従事者","販売従事者"],["サービス職業従事者","サービス職業従事者"],["保安職業従事者","保安職業従事者"],["農林漁業従事者","農林漁業従事者"],["生産工程従事者","生産工程従事者"],["輸送・機械運転従事者","輸送・機械運転従事者"],["建設・採掘従事者","建設・採掘従事者"],["運搬・清掃・包装等従事者","運搬・清掃・包装等従事者"],["分類不能の職業","分類不能の職業"],["主婦","主婦"],["学生","学生"],["無職","無職"]], class: "form-controling" %></p>
+                </div>
                 <div class="pe-country">
                   <div class="pe-country-text">お住まいの国（Country）:</div>
-                  <p class="pe-country-var"><%= f.text_field :country, placeholder: "お住いの国", class: "form-controling" %></p>
+                  <p class="pe-country-var"><%= f.select :country,[["未選択","未選択"],["日本","日本"],["アメリカ合衆国","アメリカ合衆国"]], class: "form-controling" %></p>
+                </div>
+                <div class="pe-country">
+                  <div class="pe-country-text">お住まいの県（Prefecture）:</div>
+                  <p class="pe-country-var"><%= f.select :prefecture,[["未選択","未選択"],["東京","東京"],["神奈川","神奈川"]], class: "form-controling" %></p>
                 </div>
                 <div class="pe-city">
                   <div class="pe-city-text">お住まいの町（City）:</div>
-                  <p class="pe-city-var"><%= f.text_field :city, placeholder: "お住いの市町村", class: "form-controling" %></p>
+                  <p class="pe-city-var"><%= f.text_field :city, placeholder: "お住いの市町村区", class: "form-controling" %></p>
                 </div>
                    <p>extraversion</p>
                    <label><%= f.radio_button :extraversion, "1" %>どちらかといえばおしゃべり好きで他人との付き合いに刺激を求める</label>

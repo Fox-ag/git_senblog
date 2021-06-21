@@ -131,10 +131,10 @@
               <div class="tb-write-blog">感想文投稿</div>
             </div>
             <% end %>
-            <%= link_to(new_journal_path) do %>
+            <%= link_to(topmap_blogs_path) do %>
             <div class="div-write-journal">
               <div class="div-nav-image-4"></div>
-              <div class="tb-write-journal">下書きを書く</div>
+              <div class="tb-write-journal">マップを書く</div>
             </div>
             <% end %>
             <%= link_to(user_path(current_user)) do %>
@@ -165,7 +165,13 @@
       <div data-collapse="medium" data-animation="default" data-duration="400" role="banner" class="navbar-for-header w-nav">
         <div class="w-container">
           <nav role="navigation" class="nav-menu-header w-nav-menu">
-            
+            <%= link_to(root_path, data: {"turbolinks" => false}) do %>
+            <div class="div-timeline">
+              <div class="div-nav-image-1"></div>
+              <div class="tb-timeline">タイムライン</div>
+               <!--%= link_to('タイムライン', root_path, {class: "tl"}) %>-->
+            </div>
+            <% end %>
             <%= link_to(new_user_session_path, method: :get) do %>
             <div class="div-log-out">
               <div class="div-nav-image-6"></div>

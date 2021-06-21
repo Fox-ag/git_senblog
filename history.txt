@@ -2615,5 +2615,96 @@ history
 history 2000
 history > commands.txt
 history | head
+history | head
 history
+history -w history.txt
+history | grep photo
+rails s
+rails generate model BlogImage blog_id:integer photo:string
+rails generate uploader Image
+rails db:migrate
+rails generate migration RemovePhotoFromBlogImage photo:string
+rails db:migrate
+rails generate migration AddImageToBlogImage image:string
+rails db:migrate
+rails s
+cd Rails/git_senblog/
+rake routes
+git add .
+git commit -a -m "画像を複数入れて編集もできる機能を作成。結局画像アップロードにはモデルを二つ作成することで問題に対処。よって、新たにimageモデルが追加された。"
+git push -u origin master
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd app
+ls
+cd assets
+ls
+cd javascripts/
+ls
+cd ..
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "ひとまず、文字数カウント機能を感想タイトル記入欄にて試せた。"
+git push -u origin master
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails c
+rails s
+rails c
+rails s
+rails c
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routs
+rake routes
+rails s
+rails routes
+rails s
+rake routes
+rails s
+git add .
+git commit -a -m "グラフの追加が一応できた。ログインしていないときでもタイムラインは見れるように変更。"
+git push -u origin master
+bundle install
+rails s
+history
+history > commands.txt
 history -w history.txt

@@ -214,7 +214,7 @@
               <div class="counter">
                 <span class="show-count">0</span>文字
               </div>
-              <p class="wb-text"><%= f.text_field :title, id: "js-count", placeholder: 'title', style:'width: 100%;' %></p>
+              <p class="wb-text"><%= f.text_field :title, id: "js-count", placeholder: 'title', style:'width: 100%;',minlength:"10" %></p>
               <div class="wb-sentence-title">未来の人へ向けて250文字以上で感想文を記入してください。</div>
               <p class="wb-word-section"><%= f.text_area :text, placeholder:'text', style:'height: 70vh; width: 100%;', minlength: "250" %></p>
               <div class="choose-photo">

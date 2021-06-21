@@ -72,12 +72,14 @@ gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-material-design', '0.1.4'
 gem 'jquery-rails'
+gem 'jcanvas-rails'
 gem 'jquery-turbolinks'
 gem 'font-awesome-rails'
 gem 'mini_magick'
 gem 'ransack'
 gem 'carrierwave'
 gem 'enum_help'
+gem 'bullet', :group => :development
 group :production do
   gem 'rails_12factor'
 end

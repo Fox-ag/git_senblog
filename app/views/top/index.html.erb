@@ -144,33 +144,87 @@
             var ctx = document.getElementById("myChart");
             var myChart = new Chart(ctx, {
               type: 'doughnut',
+              // data: {
+              //   labels: ["%= BlogFeeling.group(:emotion_id).count.keys[0] %>",
+              //           "%= BlogFeeling.group(:emotion_id).count.keys[1] %>",
+              //           "%= BlogFeeling.group(:emotion_id).count.keys[2] %>",
+              //           "%= BlogFeeling.group(:emotion_id).count.keys[3] %>",
+              //           "%= BlogFeeling.group(:emotion_id).count.keys[4] %>",
+              //           "%= BlogFeeling.group(:emotion_id).count.keys[5] %>",
+              //           "%= BlogFeeling.group(:emotion_id).count.keys[6] %>"],
+                
+              //   datasets:[{
+              //   data: [%= BlogFeeling.group(:emotion_id).count.values[0] %>,
+              //         %= BlogFeeling.group(:emotion_id).count.values[1] %>,
+              //         %= BlogFeeling.group(:emotion_id).count.values[2] %>,
+              //         %= BlogFeeling.group(:emotion_id).count.values[3] %>,
+              //         %= BlogFeeling.group(:emotion_id).count.values[4] %>,
+              //         %= BlogFeeling.group(:emotion_id).count.values[5] %>,
+              //         %= BlogFeeling.group(:emotion_id).count.values[6] %>], 
+              //   backgroundColor: ["rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+              //                     "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+              //                     "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)"]},
+                
+              //   ],
+              // },
+              
               data: {
-                labels: ["<%= BlogFeeling.group(:emotion_id).count.keys[0] %>",
-                         "<%= BlogFeeling.group(:emotion_id).count.keys[1] %>",
-                         "<%= BlogFeeling.group(:emotion_id).count.keys[2] %>",
-                         "<%= BlogFeeling.group(:emotion_id).count.keys[3] %>",
-                         "<%= BlogFeeling.group(:emotion_id).count.keys[4] %>",
-                         "<%= BlogFeeling.group(:emotion_id).count.keys[5] %>",
-                         "<%= BlogFeeling.group(:emotion_id).count.keys[6] %>"],
+                labels: ["喜び",
+                         "信頼",
+                         "恐れ",
+                         "驚き",
+                         "悲しみ",
+                         "嫌悪",
+                         "怒り",
+                         "期待",
+                         "愛",
+                         "服従",
+                         "畏怖",
+                         "拒絶",
+                         "後悔",
+                         "軽蔑",
+                         "攻撃",
+                         "楽観"
+                         ],
                 
                 datasets:[{
-                data: [<%= BlogFeeling.group(:emotion_id).count.values[0] %>,
-                       <%= BlogFeeling.group(:emotion_id).count.values[1] %>,
-                       <%= BlogFeeling.group(:emotion_id).count.values[2] %>,
-                       <%= BlogFeeling.group(:emotion_id).count.values[3] %>,
-                       <%= BlogFeeling.group(:emotion_id).count.values[4] %>,
-                       <%= BlogFeeling.group(:emotion_id).count.values[5] %>,
-                       <%= BlogFeeling.group(:emotion_id).count.values[6] %>], 
-                backgroundColor: ["rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)"]},
+                data: [<%= BlogFeeling.where(emotion_id: 1).count %>,
+                       <%= BlogFeeling.where(emotion_id: 2).count %>,
+                       <%= BlogFeeling.where(emotion_id: 3).count %>,
+                       <%= BlogFeeling.where(emotion_id: 4).count %>,
+                       <%= BlogFeeling.where(emotion_id: 5).count %>,
+                       <%= BlogFeeling.where(emotion_id: 6).count %>,
+                       <%= BlogFeeling.where(emotion_id: 7).count %>,
+                       <%= BlogFeeling.where(emotion_id: 8).count %>,
+                       <%= BlogFeeling.where(emotion_id: 9).count %>,
+                       <%= BlogFeeling.where(emotion_id: 10).count %>,
+                       <%= BlogFeeling.where(emotion_id: 11).count %>,
+                       <%= BlogFeeling.where(emotion_id: 12).count %>,
+                       <%= BlogFeeling.where(emotion_id: 13).count %>,
+                       <%= BlogFeeling.where(emotion_id: 14).count %>,
+                       <%= BlogFeeling.where(emotion_id: 15).count %>,
+                       <%= BlogFeeling.where(emotion_id: 16).count %>
+                       ], 
+                backgroundColor: ["rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)",
+                                  "rgba(100, 181, 246, 0.6)","rgba(100, 181, 246, 0.6)"]},
                 
                 ],
               },
+              
               options: { 
                 
               }
             });
             </script>
+          
         <div class="search-div">
+          
           <%= search_form_for(@q, url: '/blogs/search') do |f| %>
               <div class="form-block-for-search w-form">
                 <div class="search-text-block">検索用語一つ</div>
@@ -179,6 +233,23 @@
                   <div class="div-cb-emo"><label for="emotion" class="w-checkbox"><%= f.collection_check_boxes :emotions_id_in, @emotions, :id, :feeling %></label></div>
                   <div class="div-cb-content"><label for="theme" class="w-checkbox checkbox-field"><%= f.collection_check_boxes :themes_id_in, @themes, :id, :topic %></label></div>
                  
+                   
+                  
+                   
+                   
+                   <!-- 性別選択 -->
+                   <!--<label><%= f.radio_button :user_sex_eq, '未選択'%>未選択</label>-->
+                   <!--<label><%= f.radio_button :user_sex_eq, '男性'%>男性</label>-->
+                   <!--<label><%= f.radio_button :user_sex_eq, '女性'%>女性</label>-->
+                   <!--<label><%= f.radio_button :user_sex_eq, '無回答'%>無回答</label>-->
+                   
+                   <!-- 職業選択 -->
+                   <!--<label><%= f.select :user_occupation_eq, [["未選択","未選択"],["管理的業務従事者","管理的業務従事者"],["専門的・技術的職業従事者","専門的・技術的職業従事者"],["事務従事者","事務従事者"],["販売従事者","販売従事者"],["サービス職業従事者","サービス職業従事者"],["保安職業従事者","保安職業従事者"],["農林漁業従事者","農林漁業従事者"],["生産工程従事者","生産工程従事者"],["輸送・機械運転従事者","輸送・機械運転従事者"],["建設・採掘従事者","建設・採掘従事者"],["運搬・清掃・包装等従事者","運搬・清掃・包装等従事者"],["分類不能の職業","分類不能の職業"],["主婦","主婦"],["学生","学生"],["無職","無職"]] %></label>-->
+                   
+                   <!-- 県選択 -->
+                   <!--<label><%= f.select :user_prefecture_eq,[["未選択","未選択"],["東京","東京"],["神奈川","神奈川"]] %></label>-->
+                   
+                   <!-- ビッグファイブ選択 -->
                    <!--<label><%= f.radio_button :user_extraversion_eq, 1 %>おしゃべり好きで他人との付き合いに刺激を求める</label>-->
                    <!--<label><%= f.radio_button :user_extraversion_eq, 0 %>どちらでもない</label>-->
                    <!--<label><%= f.radio_button :user_extraversion_eq, 2 %>よそよそしくて自己完結</label>-->
@@ -199,6 +270,8 @@
                    <!--<label><%= f.radio_button :user_neuroticism_eq, 0 %>どちらでもない</label>-->
                    <!--<label><%= f.radio_button :user_neuroticism_eq, 2 %>感情が安定していて悩むことやストレスを感じることが比較的少ない</label>-->
                    
+                   
+                   
                   <%= button_tag type: "submit" do %>
                   <div class="div-search-button">
                     <!--<div class="searching-text-block">%= f.submit("Search") %></div>-->
@@ -216,7 +289,33 @@
               </div>
           <% end %>
         </div>
-    
+     <canvas id="myChart2"></canvas>
+              <script>
+              var ctx = document.getElementById("myChart2");
+              var myChart2 = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                  labels: ["Rate", "Kindness", "Sadness", "Bitterness","Additional"],
+                  datasets: 
+                  [
+                      {
+                      label: '自己分析第1回',
+                      backgroundColor: 'rgba(102,255,129,0.2)',
+                      borderColor: 'rgba(122,255,129,0.2)',
+                      data: [0, 2, 2, 1,2]
+                      }
+                  ]
+                },
+                options: {
+                    scale: {
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 2
+                        }
+                    }
+                }
+              });
+              </script>
     <% @blogs.each do |blog| %>
     <div class="div-blog-block">
       <h2 class="blog-heading"><%= simple_format(blog.title) %></h2>
@@ -224,6 +323,10 @@
       <div class="div-readit">
         <div class="readit-text">読んだよ！件数:</div>
         <div class="readit-var"><%= blog.likes.count %></div>
+        <div class="readit-var"><%= blog.created_at.strftime('%Y%m%d') %></div>
+        <div class="readit-var"><%= blog.user.birth_date.strftime('%Y%m%d') %></div>
+        <% value = (blog.created_at.strftime('%Y%m%d').to_i-blog.user.birth_date.strftime('%Y%m%d').to_i)/10000 %>
+        <div class="readit-var"><%= value %></div>
       </div>
       
       <%= link_to("/blogs/#{blog.id}/detailpage", method: :get) do %>
@@ -305,8 +408,11 @@
               <h4 class="sp_blog_title"><%= simple_format(blog.title) %></h4>
               <div class="sp_blog_readit">
                 <div class="sp_blog_read_word">読んだよ!件数:</div>
-                <div class="sp_blog_read_number"><%= blog.likes.count %></div>
+                
+                <div class="sp_blog_read_number"><%= blog.likes.count %>></div>
+                
               </div>
+              
             </div>
             <% end %>
         <% end %>

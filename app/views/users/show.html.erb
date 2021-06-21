@@ -153,12 +153,24 @@
         <div class="profile-birthdate-text">生年月日:</div>
         <div class="profile-birthdate-var"><%= "#{@user.birth_date}" %></div>
       </div>
+      <div class="profile-birthdate">
+        <div class="profile-birthdate-text">性別:</div>
+        <div class="profile-birthdate-var"><%= "#{@user.sex}" %></div>
+      </div>
+      <div class="profile-birthdate">
+        <div class="profile-birthdate-text">職業:</div>
+        <div class="profile-birthdate-var"><%= "#{@user.occupation}" %></div>
+      </div>
       <div class="profile-country">
         <div class="profile-country-text">お住まいの国:</div>
         <div class="profile-country-var"><%= "#{@user.country}" %></div>
       </div>
+      <div class="profile-country">
+        <div class="profile-country-text">お住まいの県:</div>
+        <div class="profile-country-var"><%= "#{@user.prefecture}" %></div>
+      </div>
       <div class="profile-city">
-        <div class="profile-city-text">お住まいの町:</div>
+        <div class="profile-city-text">お住まいの市町村区:</div>
         <div class="profile-city-var"><%= "#{@user.city}" %></div>
       </div>
       
