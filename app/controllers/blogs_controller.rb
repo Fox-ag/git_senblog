@@ -9,6 +9,7 @@ class BlogsController < ApplicationController
         @like = Like.new
         @blog_photos = @blog.blog_photos.all
         @blog_images = @blog.blog_images.all
+        @comments = @blog.comments
     end
     
     def topmap

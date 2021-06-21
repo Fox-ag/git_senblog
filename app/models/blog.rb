@@ -22,6 +22,8 @@ class Blog < ApplicationRecord
     has_many :blog_topics, dependent: :destroy
     has_many :themes, through: :blog_topics
     accepts_nested_attributes_for :blog_topics, allow_destroy: true
+    
+    has_many :comments, dependent: :destroy
 
     private
     def create_feed_content

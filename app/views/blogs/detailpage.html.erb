@@ -133,6 +133,28 @@
         </div>
         <p class="self-show-paragraph"><%= simple_format(@blog.user.selfintroduction) %></p>
       </div>
+      
+      <div class="self-show">
+        <% if current_user %>
+        <%= form_tag("/blogs/#{@blog.id}/comments", method: :post) do %>
+          <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
+          <input type="submit" value="SEND">
+        <% end %>
+        <% end %>
+    </div>
+    
+    <div class="self-show">
+        <% if @comments %>
+        <% @comments.each do |comment| %>
+        <%= link_to 'コメントを削除する', blog_comment_path(@blog, comment), confirm: 'Are you sure?', method: :delete %>
+          <p>
+           
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+      
   </div>
 </div>
 <!-- ここまでタイムラインブログ詳細20201109 PC ver おわり! -->
@@ -177,6 +199,7 @@
       <h4 class="sp_readit_introduction_heading">Heading</h4>
       <div class="sp_readit_introduction_sentence"><%= simple_format(@blog.user.selfintroduction) %></div>
     </div>
+    
   </div>
 </div>
 <!-- ここまでタイムラインブログ詳細20210109 Smartphone ver おわり! -->
