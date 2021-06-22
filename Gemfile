@@ -79,6 +79,8 @@ gem 'mini_magick'
 gem 'ransack'
 gem 'carrierwave'
 gem 'enum_help'
+gem 'cancancan'
+gem 'rails_admin'
 gem 'bullet', :group => :development
 group :production do
   gem 'rails_12factor'

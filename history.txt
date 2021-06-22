@@ -2700,6 +2700,8 @@ rails routes
 rails s
 rake routes
 rails s
+cd Rails/git_senblog/
+rake routes
 git add .
 git commit -a -m "グラフの追加が一応できた。ログインしていないときでもタイムラインは見れるように変更。"
 git push -u origin master
@@ -2707,4 +2709,155 @@ bundle install
 rails s
 history
 history > commands.txt
+history -w history.txt
+rails s
+rails g migration add_columns_to_users
+rails g migration AddPrefectureToUsers prefecture:string
+rails db:migrate
+rails s
+history
+rails s
+history
+rails g migration AddSexToUsers sex:string
+rails db:migrate
+rails s
+history
+rails g migration AddOccupationToUsers occupation:string
+rails db:migrate
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+rake routes
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+bundle install
+rails s
+cd Rails/git_senblog/
+sudo service httpd restarty
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails c
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails c
+rails s
+blogdata=Blog.includes(:user)
+blogdata = Blog.includes(:user)
+rails c
+rails s
+sudo service httpd restart
+rails s
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails server -h
+pa aux
+ps aux
+ps -a
+ps -ax | grep rails
+rails s
+lsof -wni tcp:8080
+killall -9 ruby
+rails s
+history
+killall -9 ruby
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+add .
+git add .
+git commit -a -m "日本地図の実装済み。モデルに変化は無いはず。"
+git push -u origin master
+rails g model comment
+rails db:migrate
+history
+rails routes
+rails g controller comments
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+rails s
+rake routes
+rails s
+rake routes
+rails s
+git add .
+git commit -a -m "コメント機能を追加した。新たにcommentモデルも追加している。コメントをいくつ作成できるか、そしてだれがコメントを削除できるか、といった機能はまだ設置していない。コメントの追加と削除のみが現段階"
+git push -u origin master
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails g migration AddAdminToUsers
+rake db:migrate
+bundle install
+history
+rails g cancan:ability
+rails g rails_admin:install
+bundle install
+rails g rails_admin:install
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
 history -w history.txt
