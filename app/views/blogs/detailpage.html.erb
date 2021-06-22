@@ -129,13 +129,13 @@
       </div>
       <div class="self-show">
         <div class="welf-show-title">
-          <h2 class="self-show-heading">Heading</h2>
+          <h2 class="self-show-heading">Heading<%= current_user.commenter%></h2>
         </div>
         <p class="self-show-paragraph"><%= simple_format(@blog.user.selfintroduction) %></p>
       </div>
       
       <div class="self-show">
-        <% if current_user %>
+        <% if current_user && current_user.commenter == "normal" %>
         <%= form_tag("/blogs/#{@blog.id}/comments", method: :post) do %>
           <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
           <input type="submit" value="SEND">

@@ -159,7 +159,7 @@ class BlogsController < ApplicationController
         # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
         
         @blogs = Blog.where('title LIKE(?)', "%#{params[:keyword]}%") #←これいる？
-        @q = Blog.published.search(search_params)
+        @q = Blog.published.order(excellent: :desc).search(search_params)
         params.require(:q).permit(:title_cont)   #:qオブジェクトを指定し、さらに:qオブジェクトの中に定義された:title_contキーを指定している
         @bloges = @q.result.includes(:emotions,:themes)
     end
