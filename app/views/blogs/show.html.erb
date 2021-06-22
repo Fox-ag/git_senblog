@@ -98,6 +98,7 @@
         </div>
       </div>
       <div class="div-edit-section-journal">
+        <% if current_user.blogger == "general" %>
         <% if user_signed_in? && current_user.id == @blog.user_id %>
         <div class="div-edit-journals">
           <%= link_to '編集しちゃおう', "/blogs/#{@blog.id}/edit", method: :get %>
@@ -105,6 +106,7 @@
         <div class="div-delete-journals">
           <%= link_to '削除しちゃおう', "/blogs/#{@blog.id}", method: :delete %>
         </div>
+        <% end %>
         <% end %>
       </div>
     </div>

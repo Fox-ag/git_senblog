@@ -2861,3 +2861,29 @@ sudo service httpd restart
 sudo service mysqld restart
 rails s
 history -w history.txt
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history
+git add .
+git commit -a -m "rails_admin機能およびcancancan gemを追加した。"
+git push -u origin master
+rails g migration AddExcellentToBlogs status:integer
+rails db:migrate
+rails s
+git add .
+git commit -m "ブログの秀逸な記事を分類するためのカラムをblogモデルに追加完了"
+git push -u origin master
+rails s
+rails g migration AddCommenterToUsers commenter:integer
+rails db:migrate
+e})
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "検索画面でも秀逸な記事が上位に来るように編集。その後、userモデルにcommenterカラムを追加。commentbanされた人はコメントできない機能とした。"
+git push -u origin master
+history -w history.txt
