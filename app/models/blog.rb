@@ -3,6 +3,8 @@ class Blog < ApplicationRecord
     validates :title, presence: true
     enum status: { draft: 0, published: 1}
     
+    enum excellent: { normal: 0, excellent: 1}
+    
     has_many :blog_photos, foreign_key: :blog_id, dependent: :destroy
     accepts_nested_attributes_for :blog_photos, allow_destroy: true, reject_if: proc { |attributes| attributes['photo'].blank? }
     
