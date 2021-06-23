@@ -5,7 +5,7 @@ class User < ApplicationRecord
   enum blogger: { general: 0, blogban: 1 }
   
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable, :confirmable
+         :recoverable, :rememberable, :validatable, :confirmable, :trackable
   has_many :blogs, dependent: :destroy
   has_many :journals, dependent: :destroy
   has_many :likes, dependent: :destroy

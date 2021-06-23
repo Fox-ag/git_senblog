@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-    before_action :move_to_index
+    # before_action :move_to_index
     def index
         @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
     end
@@ -174,6 +174,8 @@ class BlogsController < ApplicationController
     end
     
     def move_to_index
-       redirect_to  '/' unless user_signed_in?
+       
+           redirect_to  '/' unless user_signed_in?
+    
     end
 end

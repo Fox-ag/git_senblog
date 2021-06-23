@@ -1,5 +1,5 @@
 class TopController < ApplicationController
-    before_action :move_to_index, except: :index
+    # before_action :move_to_index, except: :index
     
     def index
         # @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)

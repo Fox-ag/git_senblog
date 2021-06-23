@@ -240,6 +240,14 @@
             <% if alert %>
             <p class='alert alert-danger'><%= alert %></p>
             <% end %>
+            <% if notice %>
+            <p class='alert alert-danger'><%= notice %></p>
+            <% end %>
+            <% flash.each do |key, value| %>
+            <p class='alert alert-danger'><%= content_tag(:div, value, class: "#{key}") %></p>
+              
+            <% end %>
+            <p class="notice"><%= notice %></p>
             <div class="sp_login_form_area">
               <div class="sp_login_mail_text">
                 <%= f.label :メールアドレス %>

@@ -150,6 +150,7 @@
           </div>
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
+          <%= flash[:notice] %>
           <div class="pc_added_login_form_mail">
             <%= f.label :メールアドレス %>
             <%= f.email_field :email, autofocus: true, class: 'form-control' %>

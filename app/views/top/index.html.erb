@@ -139,6 +139,7 @@
 <!-- ここから下が新タイムライン20201108 PCver -->
 <div class="pc_area">
   <div class="sec-for-timeline-body">
+     
     <canvas id="myChart"></canvas>
             <script>
             var ctx = document.getElementById("myChart");
@@ -316,6 +317,8 @@
                 }
               });
               </script>
+              <p class='alert alert-danger'><%= notice %></p>
+              <p class='alert alert-danger'><%= alert %></p>
     <% @blogs.each do |blog| %>
     <div class="div-blog-block">
       <h2 class="blog-heading"><%= simple_format(blog.title) %></h2>
