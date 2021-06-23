@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-    devise_for :users
+    # devise_for :users //before
+    devise_for :users, controllers: {
+      confirmations: "users/confirmations",
+      registrations: "users/registrations",
+      sessions: "users/sessions",
+      passwords: "users/passwords",
+      unlocks: "users/unlocks"
+    }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
     root to: 'top#index'
     resources :users, only: [:show, :edit, :update] do
