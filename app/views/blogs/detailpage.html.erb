@@ -135,24 +135,23 @@
       </div>
       
       <div class="self-show">
-        <% if current_user && current_user.commenter == "normal" %>
-        <%= form_tag("/blogs/#{@blog.id}/comments", method: :post) do %>
-          <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
-          <input type="submit" value="SEND">
+        <% if current_user && current_user.commenter == "normal" && current_user.id != @blog.user_id%>
+          <%= form_tag("/blogs/#{@blog.id}/comments", method: :post) do %>
+            <textarea name="text" placeholder="コメントする" rows="2" cols="30"></textarea>
+            <input type="submit" value="SEND">
+          <% end %>
         <% end %>
-        <% end %>
-    </div>
+      </div>
     
     <div class="self-show">
         <% if @comments %>
-        <% @comments.each do |comment| %>
-        <%= link_to 'コメントを削除する', blog_comment_path(@blog, comment), confirm: 'Are you sure?', method: :delete %>
-          <p>
-           
-            <%= comment.text %>
-          </p>
+          <% @comments.each do |comment| %>
+            <% if (current_user && current_user.id == @blog.user_id) || (current_user && current_user.id == comment.user_id) %>
+              <%= link_to 'コメントを削除する', blog_comment_path(@blog, comment), confirm: 'Are you sure?', method: :delete %>
+            <% end %>
+          <p><%= comment.text %></p>
+          <% end %>
         <% end %>
-      <% end %>
     </div>
       
   </div>

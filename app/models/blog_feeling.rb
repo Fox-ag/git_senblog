@@ -1,4 +1,4 @@
 class BlogFeeling < ApplicationRecord
-    belongs_to :blog
-    belongs_to :emotion
+    belongs_to :blog, optional: true
+    belongs_to :emotion, optional: true
 end

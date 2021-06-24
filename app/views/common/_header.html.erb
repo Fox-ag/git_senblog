@@ -125,11 +125,11 @@
               <div class="tb-mypage">マイページ</div>
             </div>
             <% end %>
-            <% if current_user.blogger == "general" %>
+            <% if (current_user.blogger == "general") && (current_user.blogs.count <= 100) %>
             <%= link_to(new_blog_path, data: {"turbolinks" => false}) do %>
             <div class="div-write-blog">
               <div class="div-nav-image-3"></div>
-              <div class="tb-write-blog">感想文投稿</div>
+              <div class="tb-write-blog">感想文投稿<%=  %></div>
             </div>
             <% end %>
             <% end %>

@@ -111,6 +111,15 @@
       </div>
     </div>
   </div>
+    
+    <div class="self-show">
+        <% if @comments %>
+          <% @comments.each do |comment| %>
+          <%= link_to 'コメントを削除する', blog_comment_path(@blog, comment), confirm: 'Are you sure?', method: :delete %>
+            <p><%= comment.text %></p>
+          <% end %>
+        <% end %>
+    </div>
 </div>
 <!-- ここまで新ブログ詳細20201109 PCver new おわり! -->
 
