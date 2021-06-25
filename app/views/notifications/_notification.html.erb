@@ -1,0 +1,20 @@
+<div class="pc_area">
+    <!--% visitor = notification.visitor %>-->
+    <!--% visited = notification.visited %>-->
+    
+    <div class="user-view clearfix ">
+      <% if notification.action == 'like' then %>
+      <p><%=link_to 'あなたのドラマ', notification.blog %>が読まれました</p>
+      
+      <% elsif notification.action == 'comment' then %>
+      <p><%=link_to 'あなたのドラマ', notification.blog %>にコメントがありました</p>
+      <% end %>
+      <%= link_to 'コメントを削除する', notification_path(@blog, notification), confirm: 'Are you sure?', method: :delete %>
+      
+      <!--% case @notifications.action when "like" %>-->
+      <!--<p>あなたのドラマが読まれました</p>-->
+      <!--% when "comment" %>-->
+      <!--<p>あなたに文章修正コメントがありました</p>-->
+      <!--% end %>-->
+    </div>
+</div>

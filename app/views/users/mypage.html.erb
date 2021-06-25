@@ -25,8 +25,18 @@
 
 <!-- ここから下が新マイページ20201108 PCnew -->
 <div class="pc_area">
+  
   <div class="section-mypage">
-   
+  
+        <% if @notifications.exists? %>
+        <%= link_to 'コメントを削除する', notification_path, confirm: 'Are you sure?', method: :delete %>
+          <% @notifications.each do |notification| %>
+          <%= render partial: 'notification', locals: {notification: notification} %>
+          <% end %>
+        <% else %>
+          <p>通知はありません</p>
+        <% end %>
+      
       <%= render @feed_contents_resource %>
     
     <%= paginate(@feed_contents) %>

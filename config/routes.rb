@@ -29,4 +29,5 @@ Rails.application.routes.draw do
       resources :likes, only: [:create, :destroy]
     end
     resources :journals, only: [:new, :create, :destroy, :edit, :update, :show]
+    resources :notifications, only: [:create, :destroy]
 end
