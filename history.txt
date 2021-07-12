@@ -2909,3 +2909,116 @@ rails g migration add_column_sign_in_count_to_users
 rails db:migrate
 history
 history -w history.txt
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo serivce mysqld restart
+sudo service mysqld restart
+rails s
+history
+rails g migration add_column_current_sign_in_at_to_users
+rails db:migrate
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "Deviseのtrackable機能を追加。userモデルの変更。migration fileを変更。誤って序盤のuserモデルを変更してしまった。万が一影響が出るかもしれないので、注意。"
+git push -u origin master
+rails g devise:controllers users
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rake routes
+rails s
+rake routes
+rails s
+rake routes
+rails s
+rake routes
+rails s
+rake routes
+rails s
+rake routes
+rails s
+history
+git add .
+git commit -a -m "deviseをrails g devise:views usersを用いてカスタマイズ。サインアップ後のリダイレクト先とログイン時のリダイレクト先を実装"
+git push -u origin master
+rails s
+rake routes
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+rails ss
+rails s
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rake routes
+git add .
+git commit -a -m "flashメッセージの搭載実験。まだ未完。コメントを書ける人とコメント消せる人の設定。投稿数の数の上限設定。"
+git push -u origin master
+rails g model Notification
+rails db:migrate
+rails db:rollback
+rails db:migrate
+rails g controller notifications
+rails s
+rake routes
+rails s
+rake routes
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+git add .
+git commit -a -m "通知機能の表示と削除の実装"
+git push -u origin master
+bundle install
+rails g impressionist
+rake db:migrate
+cd Rails/git_senblog/
+rake routes
+rails s
+rails g migration AddImpressionsCountToBlogs impressions_count:integer
+rails db:migrate
+rails s
+bundle update
+rails 
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+ls
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+cd Rails/git_senblog/
+history
+rails s
+cd Rails/git_senblog/
+sudo service httpd restart
+sudo service mysqld restart
+rails s
+history -w history.txt

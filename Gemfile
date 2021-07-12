@@ -81,6 +81,7 @@ gem 'carrierwave'
 gem 'enum_help'
 gem 'cancancan'
 gem 'rails_admin'
+gem 'impressionist','~>1.6.1'
 gem 'bullet', :group => :development
 group :production do
   gem 'rails_12factor'

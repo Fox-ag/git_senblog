@@ -22,6 +22,9 @@ Rails.application.routes.draw do
       collection do
         get 'topmap'
       end
+      collection do
+        get 'adminpage'
+      end
       member do
         get 'detailpage'
       end

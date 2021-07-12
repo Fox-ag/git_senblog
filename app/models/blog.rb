@@ -1,4 +1,5 @@
 class Blog < ApplicationRecord
+    is_impressionable counter_cache: true  #PV数確認のために実装したが、エラー発生により使用中止
     after_create :create_feed_content
     validates :title, presence: true
     enum status: { draft: 0, published: 1}

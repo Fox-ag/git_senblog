@@ -1,0 +1,11 @@
+<div class="pc_area">
+  <div class="sec-for-timeline-body">
+       PV数取得のために設置
+     <% @blogs.each do |t| %>
+          <p><%= t.id%><%=  t.impressions_count %></p>
+          
+      <% end %>
+      <p>Total:<%= Blog.all.sum(:impressions_count) %></p>
+     
+  </div>
+</div>

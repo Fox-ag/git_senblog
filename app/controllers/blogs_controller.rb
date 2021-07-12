@@ -1,7 +1,12 @@
 class BlogsController < ApplicationController
+    impressionist :actions=> [:detailpage] #PV数実装のため。現在は外す。
     # before_action :move_to_index
     def index
         @blogs = Blog.order("created_at DESC").page(params[:page]).per(5)
+    end
+    
+    def adminpage
+        @blogs = Blog.all
     end
     
     def detailpage
@@ -10,6 +15,8 @@ class BlogsController < ApplicationController
         @blog_photos = @blog.blog_photos.all
         @blog_images = @blog.blog_images.all
         @comments = @blog.comments
+        # impressionist(@blog, nil, unique: [session_url: session_url.to_s])  #PV数確認のために実装を試みたが、謎のエラーにより外した
+        impressionist(@blog, nil, unique: [:ip_address]) 
     end
     
     def topmap

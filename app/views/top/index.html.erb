@@ -228,6 +228,7 @@
           
           <%= search_form_for(@q, url: '/blogs/search') do |f| %>
               <div class="form-block-for-search w-form">
+                  
                 <div class="search-text-block">検索用語一つ</div>
                 <form id="email-form" name="email-form" data-name="Email Form" class="form-for-search">
                   <div class="search-block-div"></label for="search"><%= f.search_field :text_or_title_cont %></div>
@@ -319,6 +320,9 @@
               </script>
               <p class='alert alert-danger'><%= notice %></p>
               <p class='alert alert-danger'><%= alert %></p>
+              <!--% @blogs.each do |t| %>             <!--後ほど消す。PV数確認のための実験-->-->
+                    <!--%= t.impressionist_count %>   <!--後ほど消す。PV数確認のための実験-->-->
+                  <!--% end %>                        <!--後ほど消す。PV数確認のための実験-->-->
     <% @blogs.each do |blog| %>
     <div class="div-blog-block">
       <h2 class="blog-heading"><%= simple_format(blog.title) %></h2>
